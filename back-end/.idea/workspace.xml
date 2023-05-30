@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/forms/LoginForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/forms/RegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/BackEndApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/BackEndApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/Agent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/enums/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +58,9 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "spring.configuration.checksum": "a115a25065b29adfe4c0b73391cd5b3a",
     "vue.rearranger.settings.migration": "true"
   },
@@ -114,7 +115,10 @@
       <updated>1685360305061</updated>
       <workItem from="1685360307951" duration="812000" />
       <workItem from="1685361391074" duration="814000" />
-      <workItem from="1685362512240" duration="977000" />
+      <workItem from="1685362512240" duration="1393000" />
+      <workItem from="1685364150200" duration="2435000" />
+      <workItem from="1685444561457" duration="223000" />
+      <workItem from="1685444889613" duration="2974000" />
     </task>
     <servers />
   </component>
