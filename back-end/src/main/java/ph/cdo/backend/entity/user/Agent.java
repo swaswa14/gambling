@@ -8,6 +8,7 @@ import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import ph.cdo.backend.enums.Role;
 
 import java.util.ArrayList;
@@ -16,20 +17,11 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder(builderMethodName = "childBuilder")
+@SuperBuilder
 public class Agent extends User{
 
     private String agentCode;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @Builder.Default
-    @JsonManagedReference
-    private List<Client> clientList = new ArrayList<>();
-
-    @Builder(builderMethodName = "childBuilder")
-    public Agent(Long id, String email, String password, boolean isEnabled, boolean isLocked) {
-        super(id, email, password, Role.Agent, isEnabled, isLocked);
-    }
 
 
 }

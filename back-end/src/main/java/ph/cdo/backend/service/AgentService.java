@@ -1,4 +1,7 @@
 package ph.cdo.backend.service;
 
-public interface AgentService {
+import ph.cdo.backend.entity.user.Agent;
+import ph.cdo.backend.entity.user.Client;
+
+public interface AgentService extends IUserService<Agent>{
 }

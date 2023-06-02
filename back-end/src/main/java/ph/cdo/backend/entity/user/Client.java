@@ -6,8 +6,10 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import ph.cdo.backend.entity.Transaction;
-import ph.cdo.backend.entity.wallet.ClientWallet;
+
 import ph.cdo.backend.enums.Role;
 
 import java.util.ArrayList;
@@ -16,16 +18,13 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder(builderMethodName = "childBuilder")
+@SuperBuilder
+@EnableJpaAuditing
+
 public class Client extends User{
 
-    private String mobilePhone;
-    private Double balance;
-    @Builder(builderMethodName = "childBuilder")
-    public Client(Long id, String email, String password, boolean isEnabled, boolean isLocked) {
-        super(id, email, password, Role.Client, isEnabled, isLocked);
-    }
 
+    private Double balance;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @Builder.Default
@@ -47,7 +46,8 @@ public class Client extends User{
         this.transactions.add(transaction);
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

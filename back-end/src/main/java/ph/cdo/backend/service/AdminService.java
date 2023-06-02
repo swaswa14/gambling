@@ -1,4 +1,7 @@
 package ph.cdo.backend.service;
 
-public interface AdminService {
+import ph.cdo.backend.entity.user.Admin;
+import ph.cdo.backend.entity.user.Agent;
+
+public interface AdminService extends IUserService<Admin>{
 }

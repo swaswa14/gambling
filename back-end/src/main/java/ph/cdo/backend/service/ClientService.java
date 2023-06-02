@@ -1,4 +1,9 @@
 package ph.cdo.backend.service;
 
-public interface ClientService {
+import ph.cdo.backend.entity.user.Client;
+
+import java.util.List;
+
+public interface ClientService  extends IUserService<Client>{
+
 }
