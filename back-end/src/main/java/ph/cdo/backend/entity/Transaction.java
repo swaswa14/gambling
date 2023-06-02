@@ -51,8 +51,3 @@ public class Transaction {
 
 }
 
-enum TransactionType{
-    DEBIT,
-    CREDIT,
-    TRANSFER
-}
