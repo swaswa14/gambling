@@ -12,11 +12,11 @@ import ph.cdo.backend.service.IUserService;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@Service("UserServiceImpl")
 @RequiredArgsConstructor
 //todo ADD error handling !!!!
 public class IUserServiceImpl<T extends User> implements IUserService<T> {
-    private final UserRepository<T> userRepository;
+    private final UserRepository<T> userRepository; //TODO FIX Just name a bean!!
     @Override
     public T save(T user) {
         if(user == null){

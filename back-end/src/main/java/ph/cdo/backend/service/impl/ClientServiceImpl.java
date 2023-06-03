@@ -2,6 +2,7 @@ package ph.cdo.backend.service.impl;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.entity.user.Client;
@@ -14,6 +15,7 @@ import ph.cdo.backend.service.ClientService;
 
 
 public class ClientServiceImpl extends IUserServiceImpl<Client> implements ClientService {
+    @Qualifier("ClientRepository")
     private final ClientRepository clientRepository;
 
     public ClientServiceImpl( @Autowired UserRepository<Client> userRepository, @Autowired ClientRepository clientRepository) {

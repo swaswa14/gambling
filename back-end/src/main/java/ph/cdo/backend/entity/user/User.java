@@ -17,7 +17,7 @@ import java.util.List;
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@MappedSuperclass
 public abstract class User implements UserDetails {
     @Id
     @SequenceGenerator(

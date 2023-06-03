@@ -1,4 +1,4 @@
-package ph.cdo.backend.service.impl;
+package ph.cdo.backend.service.unitTests;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,6 +18,8 @@ import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.repository.TransactionRepository;
 import ph.cdo.backend.service.ClientService;
 import ph.cdo.backend.service.TransactionService;
+import ph.cdo.backend.service.impl.ClientServiceImpl;
+import ph.cdo.backend.service.impl.TransactionServiceImpl;
 
 import java.time.Instant;
 import java.time.LocalDate;

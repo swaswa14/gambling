@@ -3,9 +3,7 @@ package ph.cdo.backend.entity.user;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import ph.cdo.backend.entity.Transaction;
@@ -15,11 +13,14 @@ import ph.cdo.backend.enums.Role;
 import java.util.ArrayList;
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
 @EnableJpaAuditing
+@Data
+@SequenceGenerator(name = "user_sequence", sequenceName = "client_id_seq", allocationSize = 1)
 
 public class Client extends User{
 

@@ -2,6 +2,8 @@ package ph.cdo.backend.service.impl;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.entity.TransactionType;
@@ -23,13 +25,19 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
+
 public class TransactionServiceImpl implements TransactionService {
     private final TransactionRepository transactionRepository;
+
+    @Qualifier("ClientRepository")
     private final ClientRepository clientRepository;
 
 
-
+    @Autowired
+    public TransactionServiceImpl(TransactionRepository transactionRepository, ClientRepository clientRepository) {
+        this.transactionRepository = transactionRepository;
+        this.clientRepository = clientRepository;
+    }
 
     @Override
     public List<Transaction> findAllByClientID(Long id) throws EntityDoesNotExistsException, EmptyListException {
