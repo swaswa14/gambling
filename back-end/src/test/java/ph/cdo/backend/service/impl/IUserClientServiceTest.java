@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -55,6 +56,11 @@ public class IUserClientServiceTest {
     public void setUp() {
         testUser = createRandomClient();
         testUser.setId(1L);
+    }
+
+    @AfterEach void reset(){
+        userRepository.deleteAll();
+        transactionRepository.deleteAll();
     }
 
     // ... existing tests ...
@@ -210,7 +216,7 @@ public class IUserClientServiceTest {
     @Test
     void testAddTransactionWithInvalidId() {
         Transaction transaction = createRandomTransaction();
-        when(userRepository.save(any())).thenReturn(testUser);
+
         Long id = 1L;
 
         when(userRepository.findById(1L)).thenReturn(Optional.empty());

@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/TransactionType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/TransactionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/EmptyListException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/InvalidValueException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/impl/TransactionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/IUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/IUserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/impl/IUserClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/impl/IUserClientServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/TransactionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/TransactionType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/ClientService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/ClientServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/ClientServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/TransactionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/IUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/IUserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/impl/IUserClientServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/impl/IUserClientServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +67,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Transaction",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/admin/Documents/GitHub/groupD/back-end",
     "node.js.detected.package.eslint": "true",
@@ -98,23 +97,8 @@
       <recent name="ph.cdo.backend.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IUserClientServiceTest.testAddTransactionWithInvalidId">
-    <configuration name="BackEndApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="back-end" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.BackEndApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IUserClientServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.java in back-end">
+    <configuration name="TransactionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
@@ -123,13 +107,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ph.cdo.backend.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.impl.IUserClientServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.impl.TransactionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IUserClientServiceTest.testAddTransaction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionTest.testDeleteTransactionByIdValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
@@ -138,14 +122,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ph.cdo.backend.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.impl.IUserClientServiceTest" />
-      <option name="METHOD_NAME" value="testAddTransaction" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.impl.TransactionTest" />
+      <option name="METHOD_NAME" value="testDeleteTransactionByIdValid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IUserClientServiceTest.testAddTransactionWithInvalidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionTest.testFindByID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +138,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ph.cdo.backend.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.impl.IUserClientServiceTest" />
-      <option name="METHOD_NAME" value="testAddTransactionWithInvalidId" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.impl.TransactionTest" />
+      <option name="METHOD_NAME" value="testFindByID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionTest.testFindByIDWithNonExistingID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.impl.TransactionTest" />
+      <option name="METHOD_NAME" value="testFindByIDWithNonExistingID" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -179,20 +179,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.IUserClientServiceTest" />
-      <item itemvalue="JUnit.IUserClientServiceTest.testAddTransaction" />
-      <item itemvalue="JUnit.IUserClientServiceTest.testAddTransactionWithInvalidId" />
+      <item itemvalue="JUnit.TransactionTest" />
+      <item itemvalue="JUnit.TransactionTest.testDeleteTransactionByIdValid" />
+      <item itemvalue="JUnit.TransactionTest.testFindByID" />
+      <item itemvalue="JUnit.TransactionTest.testFindByIDWithNonExistingID" />
       <item itemvalue="JUnit.java in back-end" />
-      <item itemvalue="JUnit.BackEndApplicationTests" />
       <item itemvalue="Spring Boot.BackEndApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IUserClientServiceTest.testAddTransactionWithInvalidId" />
-        <item itemvalue="JUnit.IUserClientServiceTest.testAddTransaction" />
-        <item itemvalue="JUnit.BackEndApplicationTests" />
-        <item itemvalue="JUnit.IUserClientServiceTest" />
         <item itemvalue="JUnit.java in back-end" />
+        <item itemvalue="JUnit.TransactionTest" />
+        <item itemvalue="JUnit.TransactionTest.testDeleteTransactionByIdValid" />
+        <item itemvalue="JUnit.TransactionTest.testFindByIDWithNonExistingID" />
+        <item itemvalue="JUnit.TransactionTest.testFindByID" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +215,7 @@
       <workItem from="1685678333472" duration="907000" />
       <workItem from="1685683483328" duration="2538000" />
       <workItem from="1685707416332" duration="601000" />
-      <workItem from="1685726710616" duration="22160000" />
+      <workItem from="1685726710616" duration="33621000" />
     </task>
     <servers />
   </component>
@@ -232,6 +232,20 @@
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/impl/IUserClientServiceTest.java</url>
           <line>23</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ClientServiceImpl.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/impl/IUserClientServiceTest.java</url>
+          <line>216</line>
+          <properties class="ph.cdo.backend.service.impl.IUserClientServiceTest" method="testAddTransactionWithInvalidId">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
