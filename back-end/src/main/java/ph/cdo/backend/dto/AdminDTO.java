@@ -1,5 +1,6 @@
 package ph.cdo.backend.dto;
 
+import ph.cdo.backend.entity.user.Admin;
 import ph.cdo.backend.enums.Role;
 
 public record AdminDTO(
@@ -7,6 +8,11 @@ public record AdminDTO(
         Role role,
         String email,
         String mobilePhone,
-        String name
-) {
+        String name,
+        String agentCode
+) implements DTOEntity{
+
+
+
+
 }

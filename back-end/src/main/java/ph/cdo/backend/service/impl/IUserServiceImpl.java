@@ -1,8 +1,7 @@
 package ph.cdo.backend.service.impl;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import ph.cdo.backend.dto.DTOEntity;
+import ph.cdo.backend.dto.mapper.UserDTOMapper;
 import ph.cdo.backend.entity.user.User;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.errors.EntityDoesNotExistsException;
@@ -12,17 +11,18 @@ import ph.cdo.backend.service.IUserService;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Function;
+import java.util.stream.Collectors;
 
 
 //todo ADD error handling !!!!
-public class IUserServiceImpl<T extends User, R, S> implements IUserService<T, R> {
+public class IUserServiceImpl<T extends User, R extends DTOEntity, S extends UserDTOMapper<T, R>> implements IUserService<T, R> {
 
-
+    protected final S userDTOMapper;
 
     protected final UserRepository<T> userRepository; //TODO FIX Just name a bean!!
 
-    public IUserServiceImpl(UserRepository<T> userRepository) {
+    public IUserServiceImpl(S userDTOMapper, UserRepository<T> userRepository) {
+        this.userDTOMapper = userDTOMapper;
         this.userRepository = userRepository;
     }
 
@@ -32,18 +32,22 @@ public class IUserServiceImpl<T extends User, R, S> implements IUserService<T, R
             throw new NullEntityException();
         }
 
-        return userRepository.save(user);
+        return userDTOMapper.apply(userRepository.save(user));
     }
 
     @Override
     public R retrieve(Long id) {
-        return userRepository.findById(id)
-                .orElseThrow(()-> new EntityDoesNotExistsException(id));
+        return userDTOMapper.apply(userRepository.findById(id)
+                .orElseThrow(()-> new EntityDoesNotExistsException(id)));
     }
 
     @Override
     public List<R> retrieve() {
-        return userRepository.findAll();
+        return userRepository.findAll()
+                .stream()
+                .map(userDTOMapper)
+                .collect(Collectors.toList());
+
     }
 
     @Override
@@ -51,7 +55,8 @@ public class IUserServiceImpl<T extends User, R, S> implements IUserService<T, R
         if(t.getId() == null) {
             throw new EntityDoesNotExistsException(id);
         }
-        return userRepository.save(t);
+        userRepository.findById(id).orElseThrow(()-> new EntityDoesNotExistsException(id));
+        return userDTOMapper.apply(userRepository.save(t));
     }
 
     @Override
@@ -97,26 +102,47 @@ public class IUserServiceImpl<T extends User, R, S> implements IUserService<T, R
 
     @Override
     public List<R> findAllEnabled() {
-        return userRepository.findByIsEnabledTrue();
+        return userRepository
+                .findByIsEnabledTrue()
+                .stream()
+                .map(userDTOMapper)
+                .collect(Collectors.toList());
+
     }
 
     @Override
     public List<R> findAllDisabled() {
-        return userRepository.findByIsEnabledFalse();
+        return userRepository
+                .findByIsEnabledFalse()
+                .stream()
+                .map(userDTOMapper)
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<R> findAllLocked() {
-        return userRepository.findByIsLockedTrue();
+        return userRepository
+                .findByIsLockedTrue()
+                .stream()
+                .map(userDTOMapper)
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<R> findAllUnlocked() {
-        return userRepository.findByIsLockedFalse();
+        return userRepository
+                .findByIsLockedFalse()
+                .stream()
+                .map(userDTOMapper)
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<R> findAllByRole(Role role) {
-        return userRepository.findByRole(role);
+        return userRepository
+                .findByRole(role)
+                .stream()
+                .map(userDTOMapper)
+                .collect(Collectors.toList());
     }
 }

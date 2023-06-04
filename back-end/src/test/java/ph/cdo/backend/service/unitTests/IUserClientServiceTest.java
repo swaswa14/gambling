@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 import com.github.javafaker.Faker;
+import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,7 +15,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
+import ph.cdo.backend.dto.AgentDTO;
+import ph.cdo.backend.dto.ClientDTO;
+import ph.cdo.backend.dto.mapper.ClientDTOMapper;
 import ph.cdo.backend.entity.Transaction;
+import ph.cdo.backend.entity.user.Agent;
 import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
@@ -44,6 +49,9 @@ public class IUserClientServiceTest {
     @MockBean
     private TransactionRepository transactionRepository;
 
+    @MockBean
+    private ClientDTOMapper clientDTOMapper;
+
     private static final Faker faker = new Faker();
 
     @MockBean
@@ -69,9 +77,9 @@ public class IUserClientServiceTest {
     public void testSave() {
         when(userRepository.save(any())).thenReturn(testUser);
 
-        Client savedUser = userService.save(testUser);
+        ClientDTO savedUser = userService.save(testUser);
 
-        assertEquals(testUser, savedUser);
+        assertEquals(clientDTOMapper.apply(testUser), savedUser);
         verify(userRepository, times(1)).save(testUser);
     }
 
@@ -85,9 +93,9 @@ public class IUserClientServiceTest {
         when(userRepository.save(any())).thenReturn(testUser);
         when(userRepository.findById(anyLong())).thenReturn(Optional.of(testUser));
 
-        Client retrievedUser = userService.retrieve(testUser.getId());
+        ClientDTO retrievedUser = userService.retrieve(testUser.getId());
 
-        assertEquals(testUser, retrievedUser);
+        assertEquals(clientDTOMapper.apply(testUser), retrievedUser);
         verify(userRepository, times(1)).findById(testUser.getId());
     }
 
@@ -102,22 +110,37 @@ public class IUserClientServiceTest {
     public void testRetrieveAll() {
         when(userRepository.findAll()).thenReturn(Collections.singletonList(testUser));
 
-        List<Client> users = userService.retrieve();
+        List<ClientDTO> users = userService.retrieve();
 
         assertEquals(1, users.size());
-        assertEquals(testUser, users.get(0));
+        assertEquals(clientDTOMapper.apply(testUser), users.get(0));
         verify(userRepository, times(1)).findAll();
     }
 
     @Test
     public void testUpdate() {
-        when(userRepository.save(any())).thenReturn(testUser);
+        when(userRepository.findById(any())).thenReturn(Optional.of(testUser));
+        when(userRepository.save(testUser)).thenReturn(testUser);
+        ClientDTO mockClientDTO = new ClientDTO(
+                1L, // id
+                Role.Client, // role
+                "swaswa@gmail.com", // email
+                "Default Phone", // phone
+                new BigDecimal("20000.00")
+
+        );
+
+        when(clientDTOMapper.apply(any(Client.class))).thenReturn(mockClientDTO);
 
         testUser.setEmail("swaswa@gmail.com");
-        Client updatedUser = userService.update(testUser.getId(), testUser);
+        assertEquals("swaswa@gmail.com", testUser.getEmail());
+        ClientDTO updatedUser = userService.update(testUser.getId(), testUser);
 
-        assertEquals("swaswa@gmail.com", updatedUser.getEmail());
+        when(clientDTOMapper.apply(any(Client.class))).thenReturn(updatedUser);
+
+        assertEquals("swaswa@gmail.com", updatedUser.email());
         verify(userRepository, times(1)).save(testUser);
+
     }
 
     @Test
@@ -133,10 +156,10 @@ public class IUserClientServiceTest {
         enabledUser.setEnabled(true);
         when(userRepository.findByIsEnabledTrue()).thenReturn(Collections.singletonList(enabledUser));
 
-        List<Client> users = userService.findAllEnabled();
+        List<ClientDTO> users = userService.findAllEnabled();
 
         assertEquals(1, users.size());
-        assertEquals(enabledUser, users.get(0));
+        assertEquals(clientDTOMapper.apply(enabledUser), users.get(0));
         verify(userRepository, times(1)).findByIsEnabledTrue();
     }
 
@@ -146,10 +169,10 @@ public class IUserClientServiceTest {
         disabledUser.setEnabled(false);
         when(userRepository.findByIsEnabledFalse()).thenReturn(Collections.singletonList(disabledUser));
 
-        List<Client> users = userService.findAllDisabled();
+        List<ClientDTO> users = userService.findAllDisabled();
 
         assertEquals(1, users.size());
-        assertEquals(disabledUser, users.get(0));
+        assertEquals(clientDTOMapper.apply(disabledUser), users.get(0));
         verify(userRepository, times(1)).findByIsEnabledFalse();
     }
 
@@ -159,10 +182,10 @@ public class IUserClientServiceTest {
         lockedUser.setLocked(true);
         when(userRepository.findByIsLockedTrue()).thenReturn(Collections.singletonList(lockedUser));
 
-        List<Client> users = userService.findAllLocked();
+        List<ClientDTO> users = userService.findAllLocked();
         System.out.println(users.toString());
         assertEquals(1, users.size());
-        assertEquals(lockedUser, users.get(0));
+        assertEquals(clientDTOMapper.apply(lockedUser), users.get(0));
         verify(userRepository, times(1)).findByIsLockedTrue();
     }
 
@@ -172,10 +195,10 @@ public class IUserClientServiceTest {
         unlockedUser.setLocked(false);
         when(userRepository.findByIsLockedFalse()).thenReturn(Collections.singletonList(unlockedUser));
 
-        List<Client> users = userService.findAllUnlocked();
+        List<ClientDTO> users = userService.findAllUnlocked();
 
         assertEquals(1, users.size());
-        assertEquals(unlockedUser, users.get(0));
+        assertEquals(clientDTOMapper.apply(unlockedUser), users.get(0));
         verify(userRepository, times(1)).findByIsLockedFalse();
     }
 
@@ -186,10 +209,10 @@ public class IUserClientServiceTest {
         clientUser.setRole(testRole);
         when(userRepository.findByRole(testRole)).thenReturn(Collections.singletonList(clientUser));
 
-        List<Client> users = userService.findAllByRole(testRole);
+        List<ClientDTO> users = userService.findAllByRole(testRole);
 
         assertEquals(1, users.size());
-        assertEquals(clientUser, users.get(0));
+        assertEquals(clientDTOMapper.apply(clientUser), users.get(0));
         verify(userRepository, times(1)).findByRole(testRole);
     }
 

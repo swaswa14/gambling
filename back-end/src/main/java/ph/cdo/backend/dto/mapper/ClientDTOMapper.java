@@ -4,12 +4,10 @@ import org.springframework.stereotype.Service;
 import ph.cdo.backend.dto.ClientDTO;
 import ph.cdo.backend.entity.user.Client;
 
-import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.function.Function;
 
-@Service
-public class ClientDTOMapper extends UserDTOMapper implements Function<Client, ClientDTO> {
+@Service("ClientDTOMapper")
+public  class ClientDTOMapper  extends UserDTOMapper<Client, ClientDTO>{
 
     @Override
     public ClientDTO apply(Client client) {

@@ -13,6 +13,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
+import ph.cdo.backend.dto.AdminDTO;
+import ph.cdo.backend.dto.AgentDTO;
+import ph.cdo.backend.dto.mapper.AgentDTOMapper;
+import ph.cdo.backend.entity.user.Admin;
 import ph.cdo.backend.entity.user.Agent;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
@@ -41,6 +45,9 @@ public class IUserAgentServiceTest {
 
     private AgentRepository userRepository;
 
+    @MockBean
+    private AgentDTOMapper agentDTOMapper;
+
     private Agent testUser;
 
     @BeforeEach
@@ -55,9 +62,9 @@ public class IUserAgentServiceTest {
     public void testSave() {
         when(userRepository.save(any())).thenReturn(testUser);
 
-        Agent savedUser = userService.save(testUser);
+        AgentDTO savedUser = userService.save(testUser);
 
-        assertEquals(testUser, savedUser);
+        assertEquals(agentDTOMapper.apply(testUser), savedUser);
         verify(userRepository, times(1)).save(testUser);
     }
 
@@ -71,9 +78,9 @@ public class IUserAgentServiceTest {
         when(userRepository.save(any())).thenReturn(testUser);
         when(userRepository.findById(anyLong())).thenReturn(Optional.of(testUser));
 
-        Agent retrievedUser = userService.retrieve(testUser.getId());
+        AgentDTO retrievedUser = userService.retrieve(testUser.getId());
 
-        assertEquals(testUser, retrievedUser);
+        assertEquals(agentDTOMapper.apply(testUser), retrievedUser);
         verify(userRepository, times(1)).findById(testUser.getId());
     }
 
@@ -88,22 +95,41 @@ public class IUserAgentServiceTest {
     public void testRetrieveAll() {
         when(userRepository.findAll()).thenReturn(Collections.singletonList(testUser));
 
-        List<Agent> users = userService.retrieve();
+        List<AgentDTO> users = userService.retrieve();
 
         assertEquals(1, users.size());
-        assertEquals(testUser, users.get(0));
+        assertEquals(agentDTOMapper.apply(testUser), users.get(0));
         verify(userRepository, times(1)).findAll();
     }
 
     @Test
     public void testUpdate() {
-        when(userRepository.save(any())).thenReturn(testUser);
+        when(userRepository.findById(any())).thenReturn(Optional.of(testUser));
+        when(userRepository.save(testUser)).thenReturn(testUser);
+        AgentDTO mockAgentDTO = new AgentDTO(
+                1L, // id
+                Role.Client, // role
+                "swaswa@gmail.com", // email
+                "Default Phone", // phone
+                "Default Agent Code"
+
+        );
+
+        when(agentDTOMapper.apply(any(Agent.class))).thenReturn(mockAgentDTO);
 
         testUser.setEmail("swaswa@gmail.com");
-        Agent updatedUser = userService.update(testUser.getId(), testUser);
+        assertEquals("swaswa@gmail.com", testUser.getEmail());
+        AgentDTO updatedUser = userService.update(testUser.getId(), testUser);
 
-        assertEquals("swaswa@gmail.com", updatedUser.getEmail());
+        when(agentDTOMapper.apply(any(Agent.class))).thenReturn(updatedUser);
+
+        assertEquals("swaswa@gmail.com", updatedUser.email());
         verify(userRepository, times(1)).save(testUser);
+
+
+
+
+
     }
 
     @Test
@@ -120,10 +146,10 @@ public class IUserAgentServiceTest {
         enabledUser.setEnabled(true);
         when(userRepository.findByIsEnabledTrue()).thenReturn(Collections.singletonList(enabledUser));
 
-        List<Agent> users = userService.findAllEnabled();
+        List<AgentDTO> users = userService.findAllEnabled();
 
         assertEquals(1, users.size());
-        assertEquals(enabledUser, users.get(0));
+        assertEquals(agentDTOMapper.apply(enabledUser), users.get(0));
         verify(userRepository, times(1)).findByIsEnabledTrue();
     }
 
@@ -133,10 +159,10 @@ public class IUserAgentServiceTest {
         disabledUser.setEnabled(false);
         when(userRepository.findByIsEnabledFalse()).thenReturn(Collections.singletonList(disabledUser));
 
-        List<Agent> users = userService.findAllDisabled();
+        List<AgentDTO> users = userService.findAllDisabled();
 
         assertEquals(1, users.size());
-        assertEquals(disabledUser, users.get(0));
+        assertEquals(agentDTOMapper.apply(disabledUser), users.get(0));
         verify(userRepository, times(1)).findByIsEnabledFalse();
     }
 
@@ -146,10 +172,10 @@ public class IUserAgentServiceTest {
         lockedUser.setLocked(true);
         when(userRepository.findByIsLockedTrue()).thenReturn(Collections.singletonList(lockedUser));
 
-        List<Agent> users = userService.findAllLocked();
+        List<AgentDTO> users = userService.findAllLocked();
 
         assertEquals(1, users.size());
-        assertEquals(lockedUser, users.get(0));
+        assertEquals(agentDTOMapper.apply(lockedUser), users.get(0));
         verify(userRepository, times(1)).findByIsLockedTrue();
     }
 
@@ -159,10 +185,10 @@ public class IUserAgentServiceTest {
         unlockedUser.setLocked(false);
         when(userRepository.findByIsLockedFalse()).thenReturn(Collections.singletonList(unlockedUser));
 
-        List<Agent> users = userService.findAllUnlocked();
+        List<AgentDTO> users = userService.findAllUnlocked();
 
         assertEquals(1, users.size());
-        assertEquals(unlockedUser, users.get(0));
+        assertEquals(agentDTOMapper.apply(unlockedUser), users.get(0));
         verify(userRepository, times(1)).findByIsLockedFalse();
     }
 
@@ -173,10 +199,10 @@ public class IUserAgentServiceTest {
         clientUser.setRole(testRole);
         when(userRepository.findByRole(testRole)).thenReturn(Collections.singletonList(clientUser));
 
-        List<Agent> users = userService.findAllByRole(testRole);
+        List<AgentDTO> users = userService.findAllByRole(testRole);
 
         assertEquals(1, users.size());
-        assertEquals(clientUser, users.get(0));
+        assertEquals(agentDTOMapper.apply(clientUser), users.get(0));
         verify(userRepository, times(1)).findByRole(testRole);
     }
 

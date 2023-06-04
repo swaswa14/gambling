@@ -1,6 +1,7 @@
 package ph.cdo.backend.service;
 
 import org.springframework.stereotype.Service;
+import ph.cdo.backend.dto.DTOEntity;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.entity.user.User;
 import ph.cdo.backend.enums.Role;
@@ -8,7 +9,7 @@ import ph.cdo.backend.enums.Role;
 import java.util.List;
 
 
-public interface IUserService<T extends User, R> {
+public interface IUserService<T extends User, R extends DTOEntity> {
 
     R save(T user);
 
