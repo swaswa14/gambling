@@ -1,6 +1,7 @@
 package ph.cdo.backend.service.spring_boot_test;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,18 +10,18 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import ph.cdo.backend.entity.Transaction;
-import ph.cdo.backend.entity.TransactionType;
+import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.service.ClientService;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 @SpringBootTest
-@ActiveProfiles("dev")
+@ActiveProfiles("test")
 
 public class ClientTest {
 
@@ -43,16 +44,22 @@ public class ClientTest {
 
     @BeforeEach
     public void init(){
+
         this.clientList = new ArrayList<>();
 
         for(int i = 0; i < faker.number().numberBetween(10,20); i++){
             var temp = createRandomClient();
             clientList.add(temp);
             temp = clientService.save(temp);
-            for(int y = 0; y< faker.number().numberBetween(1,50); i++ ){
+            for(int y = 0; y< faker.number().numberBetween(1,50); y++ ){
                 clientService.addTransaction(temp.getId(), createRandomTransaction());
             }
         }
+    }
+
+    @AfterEach
+    public void reset(){
+        this.clientRepository.deleteAll();
     }
 
     @Test
@@ -70,11 +77,12 @@ public class ClientTest {
     public  Client createRandomClient() {
         return Client.builder()
                 .role(Role.Client)
-                .balance(faker.number().numberBetween(100, 100_000_000) * 1.0)
                 .email(faker.internet().emailAddress())
                 .password(faker.internet().password())
                 .mobilePhone(faker.phoneNumber().cellPhone())
-                .balance(faker.number().randomDouble(2, 0, 10000))
+                .balance(BigDecimal.valueOf(faker.number().randomDouble(2, 0, 10000)))
+                .isEnabled(true)
+                .isLocked(false)
                 .build();
     }
 
@@ -83,13 +91,11 @@ public class ClientTest {
         Faker faker = new Faker();
 
         return Transaction.builder()
-                .id(faker.number().randomNumber())
                 .transactionType(TransactionType.values()[faker.number().numberBetween(0, TransactionType.values().length)])
-                .value(faker.number().randomDouble(2, 0, 10000))
-                .createDate(faker.date().past(10, TimeUnit.DAYS))
+                .value(BigDecimal.valueOf(faker.number().randomDouble(2, 0, 10000)))
                 // For client, you should create a method that generates a random client or fetches one from your database.
                 // For simplicity sake, I'm just creating a new client here. You should replace this with your actual logic.
-                .client(new Client())
+
                 .build();
     }
 }

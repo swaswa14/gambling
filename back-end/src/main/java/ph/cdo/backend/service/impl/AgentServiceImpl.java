@@ -10,11 +10,11 @@ import ph.cdo.backend.service.AgentService;
 
 @Service("AgentService")
 public class AgentServiceImpl extends IUserServiceImpl<Agent> implements AgentService {
-    @Qualifier("AgentRepository")
-    private final AgentRepository agentRepository;
 
-    public AgentServiceImpl( @Autowired UserRepository<Agent> userRepository,  @Autowired AgentRepository agentRepository) {
-        super(userRepository);
-        this.agentRepository = agentRepository;
+
+
+    public AgentServiceImpl( @Autowired @Qualifier("AgentRepository") AgentRepository agentRepository) {
+        super(agentRepository);
+
     }
 }

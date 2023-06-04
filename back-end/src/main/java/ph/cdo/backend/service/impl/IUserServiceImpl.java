@@ -1,6 +1,7 @@
 package ph.cdo.backend.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ph.cdo.backend.entity.user.User;
 import ph.cdo.backend.enums.Role;
@@ -11,14 +12,22 @@ import ph.cdo.backend.service.IUserService;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 
-@Service("UserServiceImpl")
-@RequiredArgsConstructor
+
 //todo ADD error handling !!!!
-public class IUserServiceImpl<T extends User> implements IUserService<T> {
-    private final UserRepository<T> userRepository; //TODO FIX Just name a bean!!
+public class IUserServiceImpl<T extends User, R, S> implements IUserService<T, R> {
+
+
+
+    protected final UserRepository<T> userRepository; //TODO FIX Just name a bean!!
+
+    public IUserServiceImpl(UserRepository<T> userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
-    public T save(T user) {
+    public R save(T user) {
         if(user == null){
             throw new NullEntityException();
         }
@@ -27,18 +36,18 @@ public class IUserServiceImpl<T extends User> implements IUserService<T> {
     }
 
     @Override
-    public T retrieve(Long id) {
+    public R retrieve(Long id) {
         return userRepository.findById(id)
                 .orElseThrow(()-> new EntityDoesNotExistsException(id));
     }
 
     @Override
-    public List<T> retrieve() {
+    public List<R> retrieve() {
         return userRepository.findAll();
     }
 
     @Override
-    public T update(Long id, T t) {
+    public R update(Long id, T t) {
         if(t.getId() == null) {
             throw new EntityDoesNotExistsException(id);
         }
@@ -87,27 +96,27 @@ public class IUserServiceImpl<T extends User> implements IUserService<T> {
     }
 
     @Override
-    public List<T> findAllEnabled() {
+    public List<R> findAllEnabled() {
         return userRepository.findByIsEnabledTrue();
     }
 
     @Override
-    public List<T> findAllDisabled() {
+    public List<R> findAllDisabled() {
         return userRepository.findByIsEnabledFalse();
     }
 
     @Override
-    public List<T> findAllLocked() {
+    public List<R> findAllLocked() {
         return userRepository.findByIsLockedTrue();
     }
 
     @Override
-    public List<T> findAllUnlocked() {
+    public List<R> findAllUnlocked() {
         return userRepository.findByIsLockedFalse();
     }
 
     @Override
-    public List<T> findAllByRole(Role role) {
+    public List<R> findAllByRole(Role role) {
         return userRepository.findByRole(role);
     }
 }

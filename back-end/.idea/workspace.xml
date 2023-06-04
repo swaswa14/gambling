@@ -5,42 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/data_jpa_test/ClientRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/spring_boot_test/ClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/AdminDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/AgentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/ClientDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/AdminDTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/AgentDTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/ClientDTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/UserDTOMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/TransactionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/enums/TransactionType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Agent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/AdminRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/AgentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/AgentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/TransactionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AdminServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AgentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AgentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ClientServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/IUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/IUserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/TransactionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/impl/IUserAdminServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserAdminServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/impl/IUserAgentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserAgentServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/impl/IUserClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/impl/TransactionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TransactionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/data_jpa_test/ClientRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/data_jpa_test/ClientRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/spring_boot_test/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/spring_boot_test/ClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserAdminServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserAdminServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserAgentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserAgentServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TransactionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TransactionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/Transaction$TransactionBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/Transaction$TransactionBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/Transaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/TransactionType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin$AdminBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin$AdminBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin$AdminBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin$AdminBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Agent$AgentBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Agent$AgentBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Agent$AgentBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Agent$AgentBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Agent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client$ClientBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client$ClientBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client$ClientBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client$ClientBuilderImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/User$UserBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/AdminRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/AdminRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/AgentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/AgentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/ClientRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/ClientRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/TransactionService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AdminServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AgentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AgentServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/ClientServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/ClientServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/IUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/IUserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/TransactionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/TransactionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/impl/IUserAdminServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/impl/IUserAgentServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/impl/IUserClientServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/impl/TransactionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/data_jpa_test/ClientRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/data_jpa_test/ClientRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/spring_boot_test/ClientTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/spring_boot_test/ClientTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserAdminServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserAdminServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserAgentServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserAgentServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserClientServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserClientServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/TransactionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/TransactionTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +71,7 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -78,39 +98,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Transaction",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/groupD/back-end",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "a115a25065b29adfe4c0b73391cd5b3a",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Transaction&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Documents/GitHub/groupD/back-end&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;a115a25065b29adfe4c0b73391cd5b3a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -122,34 +142,18 @@
       <recent name="ph.cdo.backend.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClientTest.testingIfArrayIsEmpty">
-    <configuration name="ClientRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.backend in back-end">
+    <configuration name="ClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.data_jpa_test.*" />
+          <option name="PATTERN" value="ph.cdo.backend.service.spring_boot_test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.db_test" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest" />
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.spring_boot_test" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.spring_boot_test.ClientTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClientRepositoryTest.testSaveClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="back-end" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.data_jpa_test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.db_test" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest" />
-      <option name="METHOD_NAME" value="testSaveClient" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,18 +174,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in back-end" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IUserClientServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.IUserClientServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="unitTests in back-end" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IUserClientServiceTest.testAddTransaction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.IUserClientServiceTest" />
+      <option name="METHOD_NAME" value="testAddTransaction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="backend in back-end" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests" />
+      <dir value="$PROJECT_DIR$/src/test/java/ph/cdo/backend" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -196,20 +223,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ClientRepositoryTest" />
-      <item itemvalue="JUnit.ClientRepositoryTest.testSaveClient" />
+      <item itemvalue="JUnit.ClientTest" />
+      <item itemvalue="JUnit.IUserClientServiceTest" />
+      <item itemvalue="JUnit.IUserClientServiceTest.testAddTransaction" />
+      <item itemvalue="JUnit.backend in back-end" />
       <item itemvalue="JUnit.ClientTest.testingIfArrayIsEmpty" />
-      <item itemvalue="JUnit.java in back-end" />
-      <item itemvalue="JUnit.unitTests in back-end" />
       <item itemvalue="Spring Boot.BackEndApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.backend in back-end" />
+        <item itemvalue="JUnit.IUserClientServiceTest.testAddTransaction" />
+        <item itemvalue="JUnit.IUserClientServiceTest" />
+        <item itemvalue="JUnit.ClientTest" />
         <item itemvalue="JUnit.ClientTest.testingIfArrayIsEmpty" />
-        <item itemvalue="JUnit.ClientRepositoryTest" />
-        <item itemvalue="JUnit.ClientRepositoryTest.testSaveClient" />
-        <item itemvalue="JUnit.unitTests in back-end" />
-        <item itemvalue="JUnit.java in back-end" />
       </list>
     </recent_temporary>
   </component>
@@ -233,6 +260,7 @@
       <workItem from="1685683483328" duration="2538000" />
       <workItem from="1685707416332" duration="601000" />
       <workItem from="1685726710616" duration="36867000" />
+      <workItem from="1685895667875" duration="7522000" />
     </task>
     <servers />
   </component>
@@ -247,18 +275,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java</url>
-          <line>23</line>
+          <line>22</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ClientServiceImpl.java</url>
-          <line>30</line>
+          <line>29</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java</url>
           <line>216</line>
-          <properties class="ph.cdo.backend.service.impl.IUserClientServiceTest" method="testAddTransactionWithInvalidId">
+          <properties class="ph.cdo.backend.service.unitTests.IUserClientServiceTest" method="testAddTransactionWithInvalidId">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

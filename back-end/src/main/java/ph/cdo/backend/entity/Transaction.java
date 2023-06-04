@@ -8,7 +8,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import ph.cdo.backend.entity.user.Client;
+import ph.cdo.backend.enums.TransactionType;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
@@ -16,6 +18,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Table(name = "transaction")
 public class Transaction {
 
     @Id
@@ -35,9 +38,12 @@ public class Transaction {
     @Column(name="create_date")
     private Date createDate;
 
+
+    @Enumerated(EnumType.STRING)
+
     private TransactionType transactionType;
 
-    private Double value;
+    private BigDecimal value;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name="client_id", nullable = false)

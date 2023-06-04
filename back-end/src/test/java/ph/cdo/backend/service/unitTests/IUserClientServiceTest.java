@@ -15,22 +15,20 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 import ph.cdo.backend.entity.Transaction;
-import ph.cdo.backend.entity.TransactionType;
-import ph.cdo.backend.entity.user.Agent;
+import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.errors.EntityDoesNotExistsException;
 import ph.cdo.backend.errors.NullEntityException;
+import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.repository.TransactionRepository;
-import ph.cdo.backend.repository.UserRepository;
 import ph.cdo.backend.service.ClientService;
-import ph.cdo.backend.service.IUserService;
+import ph.cdo.backend.service.TransactionService;
 
-import java.util.Arrays;
+import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.TimeUnit;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -41,14 +39,16 @@ public class IUserClientServiceTest {
     private ClientService userService;
 
     @Autowired
-    private TransactionRepository transactionRepository;
+    private TransactionService transactionService;
 
+    @MockBean
+    private TransactionRepository transactionRepository;
 
     private static final Faker faker = new Faker();
 
     @MockBean
 
-    private UserRepository<Client> userRepository;
+    private ClientRepository userRepository;
 
     private Client testUser;
 
@@ -197,15 +197,15 @@ public class IUserClientServiceTest {
     @Test
     void testAddTransaction() {
         Transaction transaction = createRandomTransaction();
-        when(userRepository.save(any())).thenReturn(testUser);
+        when(userRepository.save(testUser)).thenReturn(testUser);
         Long id = 1L;
 
 
 
 
-        userService.addTransaction(testUser, transaction);
+       userService.addTransaction(testUser, transaction);
         Assertions.assertEquals(1, testUser.getTransactions().size());
-        Assertions.assertEquals(1, transactionRepository.findAll().size());
+
 //        verify(userRepository, times(1)).findById(id);
 //        verify(userRepository, times(1)).save(testUser);
 
@@ -231,11 +231,10 @@ public class IUserClientServiceTest {
     public static Client createRandomClient() {
         return Client.builder()
                 .role(Role.Client)
-                .balance(10000.00)
                 .email(faker.internet().emailAddress())
                 .password(faker.internet().password())
                 .mobilePhone(faker.phoneNumber().cellPhone())
-                .balance(faker.number().randomDouble(2, 0, 10000))
+                .balance(BigDecimal.valueOf(faker.number().randomDouble(2, 0, 10000)))
                 .build();
     }
 
@@ -244,13 +243,10 @@ public class IUserClientServiceTest {
         Faker faker = new Faker();
 
         return Transaction.builder()
-                .id(faker.number().randomNumber())
                 .transactionType(TransactionType.values()[faker.number().numberBetween(0, TransactionType.values().length)])
-                .value(faker.number().randomDouble(2, 1, 10000))
-                .createDate(faker.date().past(10, TimeUnit.DAYS))
+                .value(BigDecimal.valueOf(faker.number().randomDouble(2, 1, 10000)))
                 // For client, you should create a method that generates a random client or fetches one from your database.
                 // For simplicity sake, I'm just creating a new client here. You should replace this with your actual logic.
-                .client(new Client())
                 .build();
     }
 

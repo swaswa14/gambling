@@ -8,24 +8,24 @@ import lombok.experimental.SuperBuilder;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import ph.cdo.backend.entity.Transaction;
 
-import ph.cdo.backend.enums.Role;
-
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-@EqualsAndHashCode(callSuper = true)
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
 @EnableJpaAuditing
 @Data
-@SequenceGenerator(name = "user_sequence", sequenceName = "client_id_seq", allocationSize = 1)
+
 
 public class Client extends User{
 
 
-    private Double balance;
+    private BigDecimal balance;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @Builder.Default
@@ -50,5 +50,20 @@ public class Client extends User{
     @Override
     public String toString() {
         return super.toString();
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Client client)) return false;
+        if (!super.equals(o)) return false;
+        return Double.compare(client.balance.doubleValue(), balance.doubleValue()) == 0 &&
+                Objects.equals(transactions, client.transactions);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), balance, transactions);
     }
 }

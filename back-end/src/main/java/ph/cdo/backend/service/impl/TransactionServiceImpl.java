@@ -1,17 +1,14 @@
 package ph.cdo.backend.service.impl;
 
-import jakarta.validation.constraints.NotNull;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import ph.cdo.backend.entity.Transaction;
-import ph.cdo.backend.entity.TransactionType;
+import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.errors.EmptyListException;
 import ph.cdo.backend.errors.EntityDoesNotExistsException;
 import ph.cdo.backend.errors.InvalidValueException;
-import ph.cdo.backend.errors.NullEntityException;
 import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.repository.TransactionRepository;
 import ph.cdo.backend.service.TransactionService;
@@ -19,9 +16,6 @@ import ph.cdo.backend.service.TransactionService;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Service
@@ -87,7 +81,7 @@ public class TransactionServiceImpl implements TransactionService {
         if(min > max || min <= 0 || max <= 0 )
             throw new InvalidValueException(min, max);
         var list = findAll().stream()
-                .filter(t-> (t.getValue() >= min && t.getValue() <= max))
+                .filter(t-> (t.getValue().doubleValue() >= min && t.getValue().doubleValue() <= max))
                 .toList();
         if(list.size() == 0)
             throw new EmptyListException("List of Transactions by Range Amount");

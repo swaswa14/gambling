@@ -10,6 +10,7 @@ import ph.cdo.backend.enums.Role;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
 
 
 @Getter
@@ -34,7 +35,7 @@ public abstract class User implements UserDetails {
     private String password;
     private String mobilePhone;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     @Builder.Default
@@ -89,4 +90,29 @@ public abstract class User implements UserDetails {
     public boolean isEnabled() {
         return isEnabled;
     }
+
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return isEnabled == user.isEnabled &&
+                isLocked == user.isLocked &&
+                Objects.equals(id, user.id) &&
+                Objects.equals(email, user.email) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(mobilePhone, user.mobilePhone) &&
+                role == user.role;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, email, password, mobilePhone, role, isEnabled, isLocked);
+    }
+
 }
+
+

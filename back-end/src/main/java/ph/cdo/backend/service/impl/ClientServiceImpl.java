@@ -15,28 +15,29 @@ import ph.cdo.backend.service.ClientService;
 
 
 public class ClientServiceImpl extends IUserServiceImpl<Client> implements ClientService {
-    @Qualifier("ClientRepository")
-    private final ClientRepository clientRepository;
 
-    public ClientServiceImpl( @Autowired UserRepository<Client> userRepository, @Autowired ClientRepository clientRepository) {
-        super(userRepository);
-        this.clientRepository = clientRepository;
+
+    public ClientServiceImpl( @Autowired @Qualifier("ClientRepository") ClientRepository clientRepository) {
+        super(clientRepository);
+
     }
 
 
     @Override
     @Transactional
     public void addTransaction(Long id, Transaction transaction) {
-        var client = clientRepository.findById(id)
+        var client = super.userRepository.findById(id)
                 .orElseThrow(()-> new EntityDoesNotExistsException(id));
 
         client.addToChildren(transaction);
-        clientRepository.save(client);
+        super.userRepository.save(client);
     }
 
     @Override
     public void addTransaction(Client client, Transaction transaction) {
         client.addToChildren(transaction);
-        clientRepository.save(client);
+        super.userRepository.save(client);
     }
+
+
 }

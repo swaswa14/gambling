@@ -18,6 +18,7 @@ import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.errors.EntityDoesNotExistsException;
 import ph.cdo.backend.errors.NullEntityException;
+import ph.cdo.backend.repository.AgentRepository;
 import ph.cdo.backend.repository.UserRepository;
 import ph.cdo.backend.service.AgentService;
 import ph.cdo.backend.service.IUserService;
@@ -38,7 +39,7 @@ public class IUserAgentServiceTest {
 
     @MockBean
 
-    private UserRepository<Agent> userRepository;
+    private AgentRepository userRepository;
 
     private Agent testUser;
 

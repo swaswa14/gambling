@@ -10,11 +10,10 @@ import ph.cdo.backend.service.AdminService;
 
 @Service("AdminService")
 public class AdminServiceImpl extends IUserServiceImpl<Admin> implements AdminService {
-    @Qualifier("AdminRepository")
-    private final AdminRepository adminRepository;
 
-    public AdminServiceImpl(@Autowired UserRepository<Admin> userRepository, @Autowired AdminRepository adminRepository) {
-        super(userRepository);
-        this.adminRepository = adminRepository;
+
+
+    public AdminServiceImpl(@Autowired @Qualifier("AdminRepository") AdminRepository adminRepository) {
+        super(adminRepository);
     }
 }

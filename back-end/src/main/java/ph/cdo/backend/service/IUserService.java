@@ -8,25 +8,25 @@ import ph.cdo.backend.enums.Role;
 import java.util.List;
 
 
-public interface IUserService<T extends User> {
+public interface IUserService<T extends User, R> {
 
-    T save(T client);
+    R save(T user);
 
-    T retrieve(Long id);
+    R retrieve(Long id);
 
-    List<T> retrieve();
+    List<R> retrieve();
 
-    T update(Long id, T t);
+    R update(Long id, T t);
 
     boolean deleteById(Long id);
     boolean deleteUser(T t);
 
 
-    List<T> findAllEnabled();
-    List<T> findAllDisabled();
+    List<R> findAllEnabled();
+    List<R> findAllDisabled();
 
-    List<T> findAllLocked();
-    List<T> findAllUnlocked();
+    List<R> findAllLocked();
+    List<R> findAllUnlocked();
 
-    List<T> findAllByRole(Role role);
+    List<R> findAllByRole(Role role);
 }

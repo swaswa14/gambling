@@ -1,4 +1,4 @@
-package ph.cdo.backend.entity;
+package ph.cdo.backend.enums;
 
 public enum TransactionType {
     DEBIT,

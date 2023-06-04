@@ -9,6 +9,8 @@ import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.repository.ClientRepository;
 
+import java.math.BigDecimal;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
@@ -29,7 +31,7 @@ public class ClientRepositoryTest {
                 .password("password")
                 .mobilePhone("123456789")
                 .role(Role.Client)
-                .balance(100.0)
+                .balance(BigDecimal.valueOf(100.0))
                 .build();
 
         // Save the client using the repository
@@ -48,7 +50,7 @@ public class ClientRepositoryTest {
         assertThat(retrievedClient.getPassword()).isEqualTo("password");
         assertThat(retrievedClient.getMobilePhone()).isEqualTo("123456789");
         assertThat(retrievedClient.getRole()).isEqualTo(Role.Client);
-        assertThat(retrievedClient.getBalance()).isEqualTo(100.0);
+        assertThat(retrievedClient.getBalance().doubleValue()).isEqualTo(100.0);
     }
 
 
