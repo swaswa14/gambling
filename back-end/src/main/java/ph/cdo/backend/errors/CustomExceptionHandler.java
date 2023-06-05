@@ -53,13 +53,20 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, error, new HttpHeaders(), error.getStatus(), request);
     }
 
+    @ExceptionHandler(InvalidRequestException.class)
+    public ResponseEntity<Object> handleInvalidRequestException(InvalidRequestException ex) {
+            return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(
+                   ex.getErrors()
 
+            );
+    }
     private ApiError apiErrorBuilder(Exception ex, HttpStatus httpStatus){
         return ApiError.builder()
-                .message(ex.getMessage())
+                .errorMessage(ex.getMessage())
                 .status(httpStatus)
                 .statusCode(Integer.toString(httpStatus.value()))
                 .timeStamp(ZonedDateTime.now(ZoneId.of("Z")))
+                .exception(ex.getClass().getSimpleName())
                 .build();
     }
 }

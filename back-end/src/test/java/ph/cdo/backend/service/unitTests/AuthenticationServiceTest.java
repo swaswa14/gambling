@@ -112,9 +112,11 @@ public class AuthenticationServiceTest {
 
         // Assert
         assertNotNull(response);
-        assertEquals("Registration Successful", response.getHeader());
-        assertTrue(response.getBody().contains("Please confirm your email to activate your account!"));
-        assertEquals("Email will expired in 24 hours", response.getFooter());
+        assertEquals("Registration Successful", response.getResponse().getMappedBody().get("header"));
+
+        System.out.println(response.getResponse().getMappedBody().get("body"));
+        assertTrue(response.getResponse().getMappedBody().get("body").equals("Please confirm your email to activate your account!"));
+        assertEquals("Email will expired in 24 hours", response.getResponse().getMappedBody().get("footer"));
     }
 
     @Test
@@ -143,8 +145,8 @@ public class AuthenticationServiceTest {
 
         // Assert
         assertNotNull(response);
-        assertEquals("testToken", response.getToken());
-        assertEquals(Role.Client, response.getRole());
+        assertEquals("testToken", response.getResponse().getMappedBody().get("token"));
+        assertEquals(Role.Client, response.getResponse().getMappedBody().get("role"));
     }
 
     @Test

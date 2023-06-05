@@ -110,8 +110,10 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
             return ClientRegistrationResponse.builder()
                     .header("Registration Successful")
-                    .body("Please confirm your email to activate your account!" + authenticatedClient.getEmail())
+                    .body("Please confirm your email to activate your account!")
                     .footer("Email will expired in 24 hours")
+                    .email(authenticatedClient.getEmail())
+                    .token(jwtToken)
                     .build();
         }
         else throw new UserRegistrationErrorException();

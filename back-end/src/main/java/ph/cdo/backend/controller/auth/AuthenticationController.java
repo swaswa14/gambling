@@ -1,15 +1,21 @@
 package ph.cdo.backend.controller.auth;
 
+import jakarta.validation.Valid;
+import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ph.cdo.backend.errors.ApiError;
+import ph.cdo.backend.errors.InvalidValueException;
 import ph.cdo.backend.request.ClientRegistrationRequest;
 import ph.cdo.backend.response.ClientRegistrationResponse;
 import ph.cdo.backend.service.AuthenticationService;
@@ -19,18 +25,19 @@ import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
 public class AuthenticationController {
+
+
     private final AuthenticationService authenticationService;
 
 //todo test this!!!!
-    @PostMapping(value= "/register/client")
-    public ResponseEntity<Object> registerClient(
-            @RequestBody ClientRegistrationRequest request ,
+    @PostMapping(value= "/register/client", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ClientRegistrationResponse> registerClient(
+            @RequestBody @Valid @Validated ClientRegistrationRequest request ,
             BindingResult bindingResult){
 
         if(bindingResult.hasErrors()){
@@ -40,18 +47,22 @@ public class AuthenticationController {
             for(FieldError t : fieldErrorList) {
                 errorMap.put(t.getField(),
                         ApiError.builder()
-                                .message(t.getDefaultMessage())
+                                .errorMessage(t.getDefaultMessage() + "\n field name : " + t.getField() +" \n value: " + t.getRejectedValue())
                                 .timeStamp(ZonedDateTime.now(ZoneId.of("Z")))
                                 .status(HttpStatus.UNPROCESSABLE_ENTITY)
                                 .statusCode(Integer.toString(HttpStatus.UNPROCESSABLE_ENTITY.value()))
+                                .exception(t.getClass().getSimpleName())
                                 .build());
             }
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMap);
+            throw new InvalidValueException("Invalid request parameters", errorMap);
+
+        }else {
+            ClientRegistrationResponse response = authenticationService.registerClient(request);
+
+            return ResponseEntity.status(HttpStatus.CREATED).body(response);
         }
 
-        ClientRegistrationResponse response = authenticationService.registerClient(request);
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(response);
 
     }
 }

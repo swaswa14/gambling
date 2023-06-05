@@ -2,13 +2,17 @@ package ph.cdo.backend.request;
 
 import jakarta.validation.GroupSequence;
 import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import ph.cdo.backend.errors.validtion_group.*;
 
 
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @GroupSequence({Group1.class, Group2.class, Group3.class, Group4.class, Group5.class, ClientRegistrationRequest.class})
 public class ClientRegistrationRequest {
 
@@ -31,6 +35,8 @@ public class ClientRegistrationRequest {
     private String invitationCode;
 
 
-    @Pattern(regexp = "^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]\\d{3}[\\s.-]\\d{4}$", message = "Phone number is not a valid number", groups = Group5.class)
+    @Pattern(regexp = "^(\\+\\d{1,3}( )?)?((\\(\\d{3}\\))|\\d{3})[- .]?\\d{3}[- .]?\\d{4}$"
+            + "|^(\\+\\d{1,3}( )?)?(\\d{3}[ ]?){2}\\d{3}$"
+            + "|^(\\+\\d{1,3}( )?)?(\\d{3}[ ]?)(\\d{2}[ ]?){2}\\d{2}$", message = "Phone number is not a valid number", groups = Group5.class)
     private String mobilePhone;
 }

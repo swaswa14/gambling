@@ -1,6 +1,7 @@
 package ph.cdo.backend.config;
 
 import com.github.javafaker.Faker;
+import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -95,5 +96,12 @@ public class ApplicationConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+    @Bean
+    public Gson gson(){
+        return new Gson();
+    }
+
+
 
 }
