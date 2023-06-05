@@ -1,11 +1,15 @@
 package ph.cdo.backend.service.impl;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ph.cdo.backend.dto.ClientDTO;
@@ -28,6 +32,8 @@ import ph.cdo.backend.service.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -54,6 +60,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     private final JwtService jwtService;
 
+    private final UserDetailsService userDetailsService;
+
 
 
 
@@ -62,7 +70,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     private final AuthenticationManager authenticationManager;
 
     @Autowired
-    public AuthenticationServiceImpl(ClientRepository clientRepository, AdminRepository adminRepository, AgentRepository agentRepository, ClientService clientService, AdminService adminService, AgentService agentService, JwtService jwtService, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager) {
+    public AuthenticationServiceImpl(ClientRepository clientRepository, AdminRepository adminRepository, AgentRepository agentRepository, ClientService clientService, AdminService adminService, AgentService agentService, JwtService jwtService, UserDetailsService userDetailsService, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager) {
         this.clientRepository = clientRepository;
         this.adminRepository = adminRepository;
         this.agentRepository = agentRepository;
@@ -70,6 +78,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         this.adminService = adminService;
         this.agentService = agentService;
         this.jwtService = jwtService;
+        this.userDetailsService = userDetailsService;
 
         this.passwordEncoder = passwordEncoder;
         this.authenticationManager = authenticationManager;
@@ -92,7 +101,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .invitationCode(request.getInvitationCode())
                 .mobilePhone(request.getMobilePhone())
-                .isEnabled(false)
+                .isEnabled(true)
                 .isLocked(false)
                 .role(Role.Client)
                 .balance(BigDecimal.valueOf(0.0))
@@ -123,7 +132,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
 
 
-    public AuthenticationResponse authenticate(AuthenticationRequest request) throws Exception {
+    public AuthenticationResponse authenticate(AuthenticationRequest request) throws JsonProcessingException {
 
         try{
             authenticationManager.authenticate(
@@ -148,7 +157,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
             }else if(optionalAgent.isPresent()) {
                 user = optionalAgent.get();
             } else{
-                throw new BadCredentialsException("INVALID_CREDENTIALS");
+                throw new BadCredentialsException("Incorrect username/password"); //todo  handle error
             }
 
 
@@ -158,12 +167,19 @@ public class AuthenticationServiceImpl implements AuthenticationService {
             return AuthenticationResponse
                     .builder()
                     .token(jwtToken)
-                    .role(user.getRole())
+                    .role(user.getRole().name())
                     .build();
         }catch (DisabledException e){
-            throw new DisabledException("USER_DISABLED");
+            throw new DisabledException("USER_DISABLED"); //todo  handle error
         }catch (BadCredentialsException e){
-            throw new BadCredentialsException("INVALID_CREDENTIALS");
+            // Create a map to hold your error details
+            Map<String, String> errorDetails = new HashMap<>();
+            errorDetails.put("error", "Incorrect username/password");
+
+            // Convert the map to a JSON string
+            ObjectMapper mapper = new ObjectMapper();
+            String jsonErrorDetails = mapper.writeValueAsString(errorDetails);
+            throw new BadCredentialsException(jsonErrorDetails); //todo handle error
         }
 
 

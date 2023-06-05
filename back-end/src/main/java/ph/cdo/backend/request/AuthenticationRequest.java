@@ -11,5 +11,5 @@ public class AuthenticationRequest {
     private String username;
 
     @NotBlank(message = "PASSWORD IS BLANK")
-    private String password;
+    String password;
 }

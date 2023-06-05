@@ -5,21 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/FieldErrorDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/FieldErrorDTOMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/CustomFieldError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/SpecificFieldError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/ValidationFieldException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9/storage_v2/_src_/database/gambling-db.5rK5Zw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9/storage_v2/_src_/database/gambling-db.5rK5Zw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/ApiError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/ApiError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/ClientDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/ClientDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/CustomExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/CustomExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/AuthenticationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/AuthenticationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/AuthenticationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AuthenticationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/AuthenticationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/AuthenticationControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/AuthenticationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/AuthenticationServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/ApiError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/ApiError.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/CustomExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/CustomExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/response/ClientRegistrationResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/response/ClientRegistrationResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AuthenticationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AuthenticationServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,40 +64,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Authentication&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/admin/Documents/GitHub/gambling/back-end/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Documents/GitHub/groupD/back-end&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;a115a25065b29adfe4c0b73391cd5b3a&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "Authentication",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_directory_selection": "C:/Users/admin/Documents/GitHub/gambling/back-end/src/test/java",
+    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/groupD/back-end",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "a115a25065b29adfe4c0b73391cd5b3a",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -122,6 +126,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthenticationControllerTest.testingAValidAuthentication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.service.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.controller" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.controller.AuthenticationControllerTest" />
+      <option name="METHOD_NAME" value="testingAValidAuthentication" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthenticationControllerTest.testingDuplicateEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
@@ -133,22 +153,6 @@
       <option name="PACKAGE_NAME" value="ph.cdo.backend.service.controller" />
       <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.controller.AuthenticationControllerTest" />
       <option name="METHOD_NAME" value="testingDuplicateEmail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="back-end" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.AuthenticationServiceTest" />
-      <option name="METHOD_NAME" value="registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,19 +193,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.AuthenticationControllerTest" />
+      <item itemvalue="JUnit.AuthenticationControllerTest.testingAValidAuthentication" />
       <item itemvalue="JUnit.AuthenticationControllerTest.testingDuplicateEmail" />
       <item itemvalue="JUnit.BackEndApplicationTests" />
-      <item itemvalue="JUnit.AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" />
       <item itemvalue="JUnit.java in back-end" />
       <item itemvalue="Spring Boot.BackEndApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.java in back-end" />
+        <item itemvalue="JUnit.AuthenticationControllerTest" />
+        <item itemvalue="JUnit.AuthenticationControllerTest.testingAValidAuthentication" />
         <item itemvalue="JUnit.BackEndApplicationTests" />
         <item itemvalue="JUnit.AuthenticationControllerTest.testingDuplicateEmail" />
-        <item itemvalue="JUnit.AuthenticationControllerTest" />
-        <item itemvalue="JUnit.AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +230,7 @@
       <workItem from="1685707416332" duration="601000" />
       <workItem from="1685726710616" duration="36867000" />
       <workItem from="1685895667875" duration="51011000" />
-      <workItem from="1685970221800" duration="17415000" />
+      <workItem from="1685970221800" duration="26072000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,8 @@ package ph.cdo.backend.errors;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -82,5 +84,17 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
                 .timeStamp(ZonedDateTime.now(ZoneId.of("Z")))
                 .exception(ex.getClass().getSimpleName())
                 .build();
+    }
+
+    @ExceptionHandler(DisabledException.class)
+    @ResponseStatus(HttpStatus.LOCKED)
+    public ResponseEntity<Object> handleDisabledException(DisabledException ex){
+        return ResponseEntity.status(HttpStatus.LOCKED).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(BadCredentialsException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<Object> handleBadCredentialsException(BadCredentialsException ex){
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 }

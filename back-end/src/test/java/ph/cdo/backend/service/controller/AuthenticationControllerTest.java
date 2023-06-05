@@ -17,6 +17,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -25,15 +26,22 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.client.RestTemplate;
 import ph.cdo.backend.controller.auth.AuthenticationController;
+import ph.cdo.backend.dto.ClientDTO;
+import ph.cdo.backend.entity.user.Client;
+import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.errors.ApiError;
 import ph.cdo.backend.errors.CustomExceptionHandler;
+import ph.cdo.backend.request.AuthenticationRequest;
 import ph.cdo.backend.request.ClientRegistrationRequest;
+import ph.cdo.backend.response.AuthenticationResponse;
 import ph.cdo.backend.response.ClientRegistrationResponse;
 import ph.cdo.backend.response.IResponseBody;
 import ph.cdo.backend.response.ResponseObject;
 import ph.cdo.backend.service.AuthenticationService;
+import ph.cdo.backend.service.ClientService;
 import ph.cdo.backend.service.JwtService;
 
+import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
@@ -56,9 +64,16 @@ public class AuthenticationControllerTest {
     @Autowired
     private AuthenticationController controller;
 
+    @Autowired AuthenticationService authenticationService;
+
+    @Autowired private  ClientService clientService;
+
 
     private TestRestTemplate testRestTemplate;
     private ClientRegistrationRequest request;
+
+
+    @Autowired private PasswordEncoder passwordEncoder;
 
     HttpHeaders headers;
 
@@ -86,7 +101,8 @@ public class AuthenticationControllerTest {
 
         headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+
+
 
 
 
@@ -211,7 +227,55 @@ public class AuthenticationControllerTest {
 
 
 
+    @Test
+    public void testingAValidAuthentication() throws Exception {
+        Client client = Client.builder()
+                .role(Role.Client)
+                .email("swaswa14@gmail.com")
+                .password(passwordEncoder.encode(request.getPassword()))
+                .mobilePhone(request.getMobilePhone())
+                .balance(BigDecimal.valueOf(1000_000L))
+                .isEnabled(true)
+                .isLocked(false)
+                .build();
 
+        System.out.println("Pass " + client.getPassword());
+
+        ClientDTO clientDTO = clientService.save(client);
+
+        Assertions.assertNotNull(clientDTO);
+
+        System.out.println(clientDTO.email());
+
+        // Setup the AuthenticationRequest object
+        AuthenticationRequest authRequest = AuthenticationRequest.builder()
+                .username("swaswa14@gmail.com")
+                .password("ValidPassword123!!")
+                .build();
+
+
+
+        // Setup the URL
+        final String baseUrl = "http://localhost:" + randomServerPort + "/api/v1/auth/authenticate";
+        URI uri = new URI(baseUrl);
+
+        // Make the request
+        HttpEntity<AuthenticationRequest> myRequest = new HttpEntity<>(authRequest, headers);
+        ResponseEntity<Object> response = this.testRestTemplate.postForEntity(uri, myRequest,Object.class);
+        System.out.println(response.getBody());
+        // Assert that the response status is OK (200)
+        Assertions.assertEquals(200, response.getStatusCode().value());
+
+
+
+//        // Assert that the Set-Cookie header exists and contains a token
+//        List<String> setCookieHeaders = response.getHeaders().get(HttpHeaders.SET_COOKIE);
+//        Assertions.assertNotNull(setCookieHeaders);
+//        Assertions.assertTrue(setCookieHeaders.stream().anyMatch(header -> header.startsWith("token=")));
+
+
+        Assertions.assertNotNull( response.getBody());
+    }
 
 
 

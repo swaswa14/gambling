@@ -145,8 +145,8 @@ public class AuthenticationServiceTest {
 
         // Assert
         assertNotNull(response);
-        assertEquals("testToken", response.getResponse().getMappedBody().get("token"));
-        assertEquals(Role.Client, response.getResponse().getMappedBody().get("role"));
+        assertEquals("testToken", response.getToken());
+        assertEquals(Role.Client.toString(), response.getRole());
     }
 
     @Test

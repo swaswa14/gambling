@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>49171</IntrospectionStateNumber>
+      <IntrospectionStateNumber>49570</IntrospectionStateNumber>
       <ServerVersion>15.2</ServerVersion>
       <StartupTime>1685644203</StartupTime>
       <TimeZones>true ACDT
@@ -809,7 +801,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>49171</IntrospectionStateNumber>
+      <IntrospectionStateNumber>49570</IntrospectionStateNumber>
       <ObjectId>75949</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -822,12 +814,12 @@ false Zulu
       <ObjectId>16398</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <database id="5" parent="1" name="unscathed">
-      <ObjectId>24662</ObjectId>
+    <database id="5" parent="1" name="slp">
+      <ObjectId>75950</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <database id="6" parent="1" name="slp">
-      <ObjectId>75950</ObjectId>
+    <database id="6" parent="1" name="unscathed">
+      <ObjectId>24662</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
     <role id="7" parent="1" name="pg_checkpoint">
@@ -4239,7 +4231,7 @@ false Zulu
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>49171</IntrospectionStateNumber>
+      <IntrospectionStateNumber>49570</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4255,303 +4247,309 @@ false Zulu
     <sequence id="267" parent="265" name="user_sequence">
       <DasType>bigint|0s</DasType>
       <ObjectId>76640</ObjectId>
-      <SequenceIdentity>1(10)</SequenceIdentity>
+      <SequenceIdentity>1(18)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>49028</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="268" parent="265" name="agent">
-      <ObjectId>76612</ObjectId>
-      <StateNumber>49021</StateNumber>
+      <ObjectId>76714</ObjectId>
+      <StateNumber>49555</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="269" parent="265" name="client">
-      <ObjectId>76620</ObjectId>
-      <StateNumber>49030</StateNumber>
+      <ObjectId>76722</ObjectId>
+      <StateNumber>49562</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="270" parent="265" name="client_transactions">
-      <ObjectId>76628</ObjectId>
-      <StateNumber>49029</StateNumber>
+      <ObjectId>76730</ObjectId>
+      <StateNumber>49561</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="271" parent="265" name="transaction">
-      <ObjectId>76631</ObjectId>
-      <StateNumber>49029</StateNumber>
+      <ObjectId>76733</ObjectId>
+      <StateNumber>49561</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <check id="272" parent="268" name="agent_role_check">
       <ColNames>role</ColNames>
-      <ObjectId>76615</ObjectId>
-      <Predicate>(role &gt;= 0) AND (role &lt;= 2)</Predicate>
-      <StateNumber>49021</StateNumber>
+      <ObjectId>76717</ObjectId>
+      <Predicate>(role)::text = ANY ((ARRAY[&apos;Admin&apos;::character varying, &apos;Agent&apos;::character varying, &apos;Client&apos;::character varying])::text[])</Predicate>
+      <StateNumber>49555</StateNumber>
     </check>
     <column id="273" parent="268" name="dtype">
       <DasType>varchar(31)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>49021</StateNumber>
+      <StateNumber>49555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="274" parent="268" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>49021</StateNumber>
+      <StateNumber>49555</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="275" parent="268" name="email">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
-      <StateNumber>49021</StateNumber>
+      <StateNumber>49555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="276" parent="268" name="is_enabled">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>49021</StateNumber>
+      <StateNumber>49555</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="277" parent="268" name="is_locked">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>49021</StateNumber>
+      <StateNumber>49555</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="278" parent="268" name="mobile_phone">
       <DasType>varchar(255)|0s</DasType>
       <Position>6</Position>
-      <StateNumber>49021</StateNumber>
+      <StateNumber>49555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="279" parent="268" name="password">
       <DasType>varchar(255)|0s</DasType>
       <Position>7</Position>
-      <StateNumber>49021</StateNumber>
+      <StateNumber>49555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="280" parent="268" name="role">
-      <DasType>smallint|0s</DasType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>8</Position>
-      <StateNumber>49021</StateNumber>
-      <TypeId>21</TypeId>
+      <StateNumber>49555</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="281" parent="268" name="agent_code">
       <DasType>varchar(255)|0s</DasType>
       <Position>9</Position>
-      <StateNumber>49021</StateNumber>
+      <StateNumber>49555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="282" parent="268" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>10</Position>
-      <StateNumber>49021</StateNumber>
+      <StateNumber>49555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="283" parent="268" name="agent_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>76618</ObjectId>
+      <ObjectId>76720</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>49021</StateNumber>
+      <StateNumber>49555</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="284" parent="268" name="agent_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>76619</ObjectId>
+      <ObjectId>76721</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>49021</StateNumber>
-      <UnderlyingIndexId>76618</UnderlyingIndexId>
+      <StateNumber>49555</StateNumber>
+      <UnderlyingIndexId>76720</UnderlyingIndexId>
     </key>
     <check id="285" parent="269" name="client_role_check">
       <ColNames>role</ColNames>
-      <ObjectId>76623</ObjectId>
-      <Predicate>(role &gt;= 0) AND (role &lt;= 2)</Predicate>
-      <StateNumber>49022</StateNumber>
+      <ObjectId>76725</ObjectId>
+      <Predicate>(role)::text = ANY ((ARRAY[&apos;Admin&apos;::character varying, &apos;Agent&apos;::character varying, &apos;Client&apos;::character varying])::text[])</Predicate>
+      <StateNumber>49556</StateNumber>
     </check>
     <column id="286" parent="269" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>49022</StateNumber>
+      <StateNumber>49556</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="287" parent="269" name="email">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
-      <StateNumber>49022</StateNumber>
+      <StateNumber>49556</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="288" parent="269" name="is_enabled">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>49022</StateNumber>
+      <StateNumber>49556</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="289" parent="269" name="is_locked">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>49022</StateNumber>
+      <StateNumber>49556</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="290" parent="269" name="mobile_phone">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
-      <StateNumber>49022</StateNumber>
+      <StateNumber>49556</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="291" parent="269" name="password">
       <DasType>varchar(255)|0s</DasType>
       <Position>6</Position>
-      <StateNumber>49022</StateNumber>
+      <StateNumber>49556</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="292" parent="269" name="role">
-      <DasType>smallint|0s</DasType>
+      <DasType>varchar(255)|0s</DasType>
       <Position>7</Position>
-      <StateNumber>49022</StateNumber>
-      <TypeId>21</TypeId>
+      <StateNumber>49556</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="293" parent="269" name="balance">
-      <DasType>double precision|0s</DasType>
+      <DasType>numeric(38,2 digit)|0s</DasType>
       <Position>8</Position>
-      <StateNumber>49159</StateNumber>
-      <TypeId>701</TypeId>
+      <StateNumber>49556</StateNumber>
+      <TypeId>1700</TypeId>
     </column>
-    <index id="294" parent="269" name="client_pkey">
+    <column id="294" parent="269" name="invitation_code">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>9</Position>
+      <StateNumber>49556</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="295" parent="269" name="client_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>76626</ObjectId>
+      <ObjectId>76728</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>49022</StateNumber>
+      <StateNumber>49556</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="295" parent="269" name="client_pkey">
+    <key id="296" parent="269" name="client_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>76627</ObjectId>
+      <ObjectId>76729</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>49022</StateNumber>
-      <UnderlyingIndexId>76626</UnderlyingIndexId>
+      <StateNumber>49556</StateNumber>
+      <UnderlyingIndexId>76728</UnderlyingIndexId>
     </key>
-    <column id="296" parent="270" name="client_id">
+    <column id="297" parent="270" name="client_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>49023</StateNumber>
+      <StateNumber>49557</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="297" parent="270" name="transactions_id">
+    <column id="298" parent="270" name="transactions_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>49023</StateNumber>
+      <StateNumber>49557</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="298" parent="270" name="FKl72lly385bn01j9duvbsdw2ho">
+    <foreign-key id="299" parent="270" name="FKl72lly385bn01j9duvbsdw2ho">
       <ColNames>client_id</ColNames>
-      <ObjectId>76646</ObjectId>
+      <ObjectId>76746</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>49030</StateNumber>
-      <RefTableId>76620</RefTableId>
+      <StateNumber>49562</StateNumber>
+      <RefTableId>76722</RefTableId>
       <RefTableName>client</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="299" parent="270" name="FKnswbmly1xou5ms2q8wt2v8d4k">
+    <foreign-key id="300" parent="270" name="FKnswbmly1xou5ms2q8wt2v8d4k">
       <ColNames>transactions_id</ColNames>
-      <ObjectId>76641</ObjectId>
+      <ObjectId>76741</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>49029</StateNumber>
-      <RefTableId>76631</RefTableId>
+      <StateNumber>49561</StateNumber>
+      <RefTableId>76733</RefTableId>
       <RefTableName>transaction</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="300" parent="270" name="uk_kvyjw0qssvfalf0et5w8lilqk">
+    <index id="301" parent="270" name="uk_kvyjw0qssvfalf0et5w8lilqk">
       <ColNames>transactions_id</ColNames>
-      <ObjectId>76637</ObjectId>
-      <StateNumber>49026</StateNumber>
+      <ObjectId>76739</ObjectId>
+      <StateNumber>49560</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="301" parent="270" name="uk_kvyjw0qssvfalf0et5w8lilqk">
-      <ObjectId>76638</ObjectId>
-      <StateNumber>49026</StateNumber>
-      <UnderlyingIndexId>76637</UnderlyingIndexId>
+    <key id="302" parent="270" name="uk_kvyjw0qssvfalf0et5w8lilqk">
+      <ObjectId>76740</ObjectId>
+      <StateNumber>49560</StateNumber>
+      <UnderlyingIndexId>76739</UnderlyingIndexId>
     </key>
-    <check id="302" parent="271" name="transaction_transaction_type_check">
+    <check id="303" parent="271" name="transaction_transaction_type_check">
       <ColNames>transaction_type</ColNames>
-      <ObjectId>76634</ObjectId>
-      <Predicate>(transaction_type &gt;= 0) AND (transaction_type &lt;= 2)</Predicate>
-      <StateNumber>49024</StateNumber>
+      <ObjectId>76736</ObjectId>
+      <Predicate>(transaction_type)::text = ANY ((ARRAY[&apos;DEBIT&apos;::character varying, &apos;CREDIT&apos;::character varying, &apos;TRANSFER&apos;::character varying])::text[])</Predicate>
+      <StateNumber>49558</StateNumber>
     </check>
-    <column id="303" parent="271" name="id">
+    <column id="304" parent="271" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>49024</StateNumber>
+      <StateNumber>49558</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="304" parent="271" name="create_date">
+    <column id="305" parent="271" name="create_date">
       <DasType>timestamp(6)|0s</DasType>
       <Position>2</Position>
-      <StateNumber>49160</StateNumber>
+      <StateNumber>49568</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="305" parent="271" name="transaction_type">
-      <DasType>smallint|0s</DasType>
+    <column id="306" parent="271" name="transaction_type">
+      <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
-      <StateNumber>49024</StateNumber>
-      <TypeId>21</TypeId>
+      <StateNumber>49558</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="306" parent="271" name="value">
-      <DasType>double precision|0s</DasType>
+    <column id="307" parent="271" name="value">
+      <DasType>numeric(38,2 digit)|0s</DasType>
       <Position>4</Position>
-      <StateNumber>49161</StateNumber>
-      <TypeId>701</TypeId>
+      <StateNumber>49558</StateNumber>
+      <TypeId>1700</TypeId>
     </column>
-    <column id="307" parent="271" name="client_id">
+    <column id="308" parent="271" name="client_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>49024</StateNumber>
+      <StateNumber>49558</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="308" parent="271" name="FKkp75daqk1ox73pkpga513weh5">
+    <foreign-key id="309" parent="271" name="FKkp75daqk1ox73pkpga513weh5">
       <ColNames>client_id</ColNames>
-      <ObjectId>76651</ObjectId>
+      <ObjectId>76751</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>49031</StateNumber>
-      <RefTableId>76620</RefTableId>
+      <StateNumber>49563</StateNumber>
+      <RefTableId>76722</RefTableId>
       <RefTableName>client</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="309" parent="271" name="transaction_pkey">
+    <index id="310" parent="271" name="transaction_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>76635</ObjectId>
+      <ObjectId>76737</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>49024</StateNumber>
+      <StateNumber>49558</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="310" parent="271" name="transaction_pkey">
+    <key id="311" parent="271" name="transaction_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>76636</ObjectId>
+      <ObjectId>76738</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>49024</StateNumber>
-      <UnderlyingIndexId>76635</UnderlyingIndexId>
+      <StateNumber>49558</StateNumber>
+      <UnderlyingIndexId>76737</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
