@@ -19,25 +19,7 @@ public class ClientRegistrationResponse implements IResponseBody{
     String footer;
     String token;
 
-    private String getHeader() {
-        return header;
-    }
 
-    private String getBody() {
-        return body;
-    }
-
-    private String getEmail() {
-        return email;
-    }
-
-    private String getFooter() {
-        return footer;
-    }
-
-    private String getToken() {
-        return token;
-    }
 
 
 

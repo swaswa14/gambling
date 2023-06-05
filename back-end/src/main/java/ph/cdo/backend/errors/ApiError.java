@@ -25,17 +25,28 @@ public class ApiError {
 
     @Override
     public String toString() {
-        return String.format("""
-                Status : %s
-                Status code : %s
-                Error message : %s
-                Time stamp : %s
-                Exception name : %s """,
-                status.name(),
-                statusCode,
-                errorMessage,
-                timeStamp.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME),
-                exception
+        return String.format(
+                """
+                        Error message : %s
+                        """,
+                    formatErrorMessage(errorMessage)
                 );
+    }
+
+
+    private  String formatErrorMessage(String errorMessage) {
+        if (errorMessage == null || errorMessage.length() == 0) {
+            return errorMessage;
+        }
+
+        // Make the first character to upper case
+        errorMessage = errorMessage.substring(0, 1).toUpperCase() + errorMessage.substring(1);
+
+        // Add period at the end if it's not there already
+        if (!errorMessage.endsWith(".")) {
+            errorMessage += ".";
+        }
+
+        return errorMessage;
     }
 }

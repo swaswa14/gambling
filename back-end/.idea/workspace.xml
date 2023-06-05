@@ -5,33 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/InvalidRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/IResponseBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/ResponseObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/AuthenticationControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/FieldErrorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/FieldErrorDTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/CustomFieldError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/SpecificFieldError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/ValidationFieldException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/ApplicationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/ApiError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/ApiError.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/CustomExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/CustomExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/DuplicateEmailException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/DuplicateEmailException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientRegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientRegistrationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/AuthenticationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/ClientRegistrationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/ClientRegistrationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AuthenticationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/AuthenticationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/AuthenticationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/config/ApplicationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/AuthenticationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/AuthenticationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/AuthenticationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/AuthenticationControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/ApiError$ApiErrorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/ApiError$ApiErrorBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/ApiError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/ApiError.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/CustomExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/CustomExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientRegistrationRequest$ClientRegistrationRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientRegistrationRequest$ClientRegistrationRequestBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientRegistrationRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientRegistrationRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/response/ClientRegistrationResponse$ClientRegistrationResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/response/ClientRegistrationResponse$ClientRegistrationResponseBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/response/ClientRegistrationResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/response/ClientRegistrationResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AuthenticationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AuthenticationServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +30,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Record" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -118,7 +106,7 @@
       <recent name="ph.cdo.backend.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AuthenticationControllerTest.testingDuplicateEmail">
+  <component name="RunManager" selected="JUnit.java in back-end">
     <configuration name="AuthenticationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
@@ -130,22 +118,6 @@
       <option name="PACKAGE_NAME" value="ph.cdo.backend.service.controller" />
       <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.controller.AuthenticationControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthenticationControllerTest.multipleInvalidFieldsClientRegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="back-end" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.controller" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.controller.AuthenticationControllerTest" />
-      <option name="METHOD_NAME" value="multipleInvalidFieldsClientRegistrationTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,21 +138,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="back-end" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.AuthenticationServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
@@ -197,7 +154,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BackEndApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.BackEndApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in back-end" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="dev" />
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="back-end" />
@@ -208,19 +189,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.AuthenticationControllerTest" />
-      <item itemvalue="JUnit.AuthenticationControllerTest.multipleInvalidFieldsClientRegistrationTest" />
       <item itemvalue="JUnit.AuthenticationControllerTest.testingDuplicateEmail" />
-      <item itemvalue="JUnit.AuthenticationServiceTest" />
+      <item itemvalue="JUnit.BackEndApplicationTests" />
       <item itemvalue="JUnit.AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" />
+      <item itemvalue="JUnit.java in back-end" />
       <item itemvalue="Spring Boot.BackEndApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in back-end" />
+        <item itemvalue="JUnit.BackEndApplicationTests" />
         <item itemvalue="JUnit.AuthenticationControllerTest.testingDuplicateEmail" />
         <item itemvalue="JUnit.AuthenticationControllerTest" />
         <item itemvalue="JUnit.AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" />
-        <item itemvalue="JUnit.AuthenticationServiceTest" />
-        <item itemvalue="JUnit.AuthenticationControllerTest.multipleInvalidFieldsClientRegistrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +226,7 @@
       <workItem from="1685707416332" duration="601000" />
       <workItem from="1685726710616" duration="36867000" />
       <workItem from="1685895667875" duration="51011000" />
-      <workItem from="1685970221800" duration="12377000" />
+      <workItem from="1685970221800" duration="17415000" />
     </task>
     <servers />
   </component>

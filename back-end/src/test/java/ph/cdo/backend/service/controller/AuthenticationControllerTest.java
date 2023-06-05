@@ -191,7 +191,7 @@ public class AuthenticationControllerTest {
         final String baseUrl = "http://localhost:"+ randomServerPort+ "/api/v1/auth/register/client";
 
         URI uri = new URI(baseUrl);
-
+        request.setEmail("swaswaEmail@gmail.com");
 
         HttpEntity<ClientRegistrationRequest> myRequest = new HttpEntity<>(request, headers);
 
