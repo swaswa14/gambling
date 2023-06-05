@@ -50,7 +50,7 @@ public class ClientTest {
         for(int i = 0; i < faker.number().numberBetween(10,20); i++){
             var temp = createRandomClient();
             clientList.add(temp);
-            temp = clientService.save(temp);
+            var tempDTO = clientService.save(temp);
             for(int y = 0; y< faker.number().numberBetween(1,50); y++ ){
                 clientService.addTransaction(temp.getId(), createRandomTransaction());
             }

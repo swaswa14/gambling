@@ -3,8 +3,6 @@
   <component name="AdditionalModuleElements">
     <content url="file://$MODULE_DIR$" dumb="true">
       <excludeFolder url="file://$MODULE_DIR$/src/main/java/ph/cdo/backend/entity/wallet" />
-      <excludeFolder url="file://$MODULE_DIR$/src/test/java/ph/cdo/backend/service/data_jpa_test" />
-      <excludeFolder url="file://$MODULE_DIR$/src/test/java/ph/cdo/backend/service/spring_boot_test" />
     </content>
   </component>
   <component name="FacetManager">

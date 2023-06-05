@@ -1,5 +1,6 @@
 package ph.cdo.backend.service;
 
+import ph.cdo.backend.dto.TransactionDTO;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.enums.TransactionType;
 
@@ -8,20 +9,20 @@ import java.util.Date;
 import java.util.List;
 
 public interface TransactionService {
-    List<Transaction> findAllByClientID(Long id);
-    List<Transaction> findAll();
+    List<TransactionDTO> findAllByClientID(Long id);
+    List<TransactionDTO> findAll();
 
-    List<Transaction> findByMonth(int month, int year);
-    List<Transaction> findByRangeAmount(double min, double maxr);
+    List<TransactionDTO> findByMonth(int month, int year);
+    List<TransactionDTO> findByRangeAmount(double min, double maxr);
 
-    List<Transaction> findByRangeDate(Date startDate, Date endDate);
+    List<TransactionDTO> findByRangeDate(Date startDate, Date endDate);
 
-    Transaction findByID(Long id);
+    TransactionDTO findByID(Long id);
 
-    List<Transaction> findByType(TransactionType transactionType);
+    List<TransactionDTO> findByType(TransactionType transactionType);
 
 
-    List<Transaction> sortedList(List<Transaction> list, Comparator<Transaction> comparator);
+    List<TransactionDTO> sortedList(List<TransactionDTO> list, Comparator<TransactionDTO> comparator);
 
     boolean deleteTransactionById(Long id);
 

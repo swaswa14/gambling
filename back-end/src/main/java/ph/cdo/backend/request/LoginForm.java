@@ -1,4 +1,4 @@
-package ph.cdo.backend.forms;
+package ph.cdo.backend.request;
 
 import lombok.Builder;
 import lombok.Data;

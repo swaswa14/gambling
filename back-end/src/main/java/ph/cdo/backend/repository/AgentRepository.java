@@ -6,4 +6,6 @@ import ph.cdo.backend.entity.user.Agent;
 
 @Repository("AgentRepository")
 public interface AgentRepository extends UserRepository<Agent> {
+
+    boolean existsByAgentCode(String invitationCode);
 }
