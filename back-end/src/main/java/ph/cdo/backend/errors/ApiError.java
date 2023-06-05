@@ -15,7 +15,7 @@ public class ApiError {
     private String message;
     private ZonedDateTime timeStamp;
 
-    private int statusCode;
+    private String statusCode;
 
 
 }

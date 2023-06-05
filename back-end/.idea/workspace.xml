@@ -5,13 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/test/ExceptionThrowingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/ApiError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/CustomExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/DuplicateEmailException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/UserRegistrationErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/AuthenticationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/ClientRegistrationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AuthenticationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/test/ExceptionThrowingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/test/ExceptionThrowingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/ApiError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/ApiError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/CustomExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/errors/CustomExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientRegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientRegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/AuthenticationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/IUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/IUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/config/ApplicationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/test/ExceptionThrowingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/test/ExceptionThrowingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client$ClientBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client$ClientBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/ApiError$ApiErrorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/ApiError$ApiErrorBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/ApiError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/ApiError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/CustomExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/errors/CustomExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientRegistrationForm$ClientRegistrationFormBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientRegistrationForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/LoginForm$LoginFormBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/LoginForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/IUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/IUserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/controller/CustomExceptionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/controller/CustomExceptionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserClientServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserClientServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +133,7 @@
       <recent name="ph.cdo.backend.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomExceptionTest">
+  <component name="RunManager" selected="JUnit.java in back-end">
     <configuration name="CustomExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
@@ -114,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomExceptionTest.testHandleEntityDoesNotExistsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomExceptionTest.handleDuplicateEmailException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
@@ -124,39 +159,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="ph.cdo.backend.service.controller" />
       <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.controller.CustomExceptionTest" />
-      <option name="METHOD_NAME" value="testHandleEntityDoesNotExistsException" />
+      <option name="METHOD_NAME" value="handleDuplicateEmailException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomExceptionTest.testHandleInvalidValueException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IUserClientServiceTest.testIsEmailNotTaken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.controller.*" />
+          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.controller" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.controller.CustomExceptionTest" />
-      <option name="METHOD_NAME" value="testHandleInvalidValueException" />
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.IUserClientServiceTest" />
+      <option name="METHOD_NAME" value="testIsEmailNotTaken" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomExceptionTest.testHandleNullEntityException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IUserClientServiceTest.testIsEmailTaken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.controller.*" />
+          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.controller" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.controller.CustomExceptionTest" />
-      <option name="METHOD_NAME" value="testHandleNullEntityException" />
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.IUserClientServiceTest" />
+      <option name="METHOD_NAME" value="testIsEmailTaken" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -181,19 +216,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.CustomExceptionTest" />
-      <item itemvalue="JUnit.CustomExceptionTest.testHandleEntityDoesNotExistsException" />
-      <item itemvalue="JUnit.CustomExceptionTest.testHandleInvalidValueException" />
-      <item itemvalue="JUnit.CustomExceptionTest.testHandleNullEntityException" />
+      <item itemvalue="JUnit.CustomExceptionTest.handleDuplicateEmailException" />
+      <item itemvalue="JUnit.IUserClientServiceTest.testIsEmailNotTaken" />
+      <item itemvalue="JUnit.IUserClientServiceTest.testIsEmailTaken" />
       <item itemvalue="JUnit.java in back-end" />
       <item itemvalue="Spring Boot.BackEndApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomExceptionTest" />
-        <item itemvalue="JUnit.CustomExceptionTest.testHandleNullEntityException" />
-        <item itemvalue="JUnit.CustomExceptionTest.testHandleInvalidValueException" />
-        <item itemvalue="JUnit.CustomExceptionTest.testHandleEntityDoesNotExistsException" />
         <item itemvalue="JUnit.java in back-end" />
+        <item itemvalue="JUnit.CustomExceptionTest" />
+        <item itemvalue="JUnit.CustomExceptionTest.handleDuplicateEmailException" />
+        <item itemvalue="JUnit.IUserClientServiceTest.testIsEmailTaken" />
+        <item itemvalue="JUnit.IUserClientServiceTest.testIsEmailNotTaken" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +252,7 @@
       <workItem from="1685683483328" duration="2538000" />
       <workItem from="1685707416332" duration="601000" />
       <workItem from="1685726710616" duration="36867000" />
-      <workItem from="1685895667875" duration="40810000" />
+      <workItem from="1685895667875" duration="49229000" />
     </task>
     <servers />
   </component>
@@ -243,7 +278,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java</url>
-          <line>27</line>
+          <line>28</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -261,9 +296,19 @@
           <line>23</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/ApplicationConfig.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java</url>
-          <line>239</line>
+          <line>269</line>
           <properties class="ph.cdo.backend.service.unitTests.IUserClientServiceTest" method="testAddTransactionWithInvalidId">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -272,7 +317,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java</url>
-          <line>62</line>
+          <line>64</line>
           <properties class="ph.cdo.backend.service.controller.CustomExceptionTest" method="testHandleEntityDoesNotExistsException">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -281,7 +326,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java</url>
-          <line>75</line>
+          <line>77</line>
           <properties class="ph.cdo.backend.service.controller.CustomExceptionTest" method="testHandleInvalidValueException">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

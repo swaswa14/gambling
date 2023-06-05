@@ -1,8 +1,6 @@
 package ph.cdo.backend.service;
 
-import org.springframework.stereotype.Service;
 import ph.cdo.backend.dto.DTOEntity;
-import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.entity.user.User;
 import ph.cdo.backend.enums.Role;
 
@@ -21,6 +19,9 @@ public interface IUserService<T extends User, R extends DTOEntity> {
 
     boolean deleteById(Long id);
     boolean deleteUser(T t);
+
+
+    boolean isEmailTaken(String email);
 
 
     List<R> findAllEnabled();

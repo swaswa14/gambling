@@ -38,12 +38,27 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, error, new HttpHeaders(), error.getStatus(), request);
     }
 
+    @ExceptionHandler(DuplicateEmailException.class)
+    public ResponseEntity<Object> handleDuplicateEmailException(DuplicateEmailException ex, WebRequest request){
+        ApiError error = apiErrorBuilder(ex, HttpStatus.CONFLICT);
+
+        return handleExceptionInternal(ex, error, new HttpHeaders(), error.getStatus(), request);
+    }
+
+
+    @ExceptionHandler(UserRegistrationErrorException.class)
+    public ResponseEntity<Object> handleUserRegistrationErrorException(UserRegistrationErrorException ex, WebRequest request){
+        ApiError error = apiErrorBuilder(ex, HttpStatus.BAD_REQUEST);
+
+        return handleExceptionInternal(ex, error, new HttpHeaders(), error.getStatus(), request);
+    }
+
 
     private ApiError apiErrorBuilder(Exception ex, HttpStatus httpStatus){
         return ApiError.builder()
                 .message(ex.getMessage())
                 .status(httpStatus)
-                .statusCode(httpStatus.value())
+                .statusCode(Integer.toString(httpStatus.value()))
                 .timeStamp(ZonedDateTime.now(ZoneId.of("Z")))
                 .build();
     }

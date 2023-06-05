@@ -26,10 +26,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import ph.cdo.backend.config.SecurityConfig;
 import ph.cdo.backend.controller.test.ExceptionThrowingController;
 
-import ph.cdo.backend.errors.CustomExceptionHandler;
-import ph.cdo.backend.errors.EntityDoesNotExistsException;
-import ph.cdo.backend.errors.InvalidValueException;
-import ph.cdo.backend.errors.NullEntityException;
+import ph.cdo.backend.errors.*;
+import ph.cdo.backend.service.JwtService;
 
 import java.util.Objects;
 
@@ -44,6 +42,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class CustomExceptionTest {
     @Autowired
     private MockMvc mockMvc;
+
+
+    @MockBean
+    private JwtService jwtService;
 
     @InjectMocks
     private ExceptionThrowingController exceptionThrowingController;
@@ -81,6 +83,31 @@ public class CustomExceptionTest {
                 .andExpect(status().isUnprocessableEntity())
                 .andExpect(result -> Assertions.assertTrue(result.getResolvedException() instanceof InvalidValueException))
                 .andExpect(result -> Assertions.assertEquals("Invalid Value: [" + value +"]",
+                        Objects.requireNonNull(result.getResolvedException()).getMessage()));
+    }
+
+    @Test
+    public void handleDuplicateEmailException() throws Exception {
+        String value = "swaswa@gmail.com";
+        this.mockMvc.perform(MockMvcRequestBuilders
+                        .get("/tests/exception/duplicate-email/" + value) // Pass value as PathVariable
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isConflict())
+                .andExpect(result -> Assertions.assertTrue(result.getResolvedException() instanceof DuplicateEmailException))
+                .andExpect(result -> Assertions.assertEquals(String.format("email with %s already exists!", value.toLowerCase()),
+                        Objects.requireNonNull(result.getResolvedException()).getMessage()));
+    }
+
+
+    @Test
+    public void handleUserRegistrationError() throws Exception {
+
+        this.mockMvc.perform(MockMvcRequestBuilders
+                        .get("/tests/exception/registration-error/") // Pass value as PathVariable
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest())
+                .andExpect(result -> Assertions.assertTrue(result.getResolvedException() instanceof UserRegistrationErrorException))
+                .andExpect(result -> Assertions.assertEquals("There was an error encountered during the registration process",
                         Objects.requireNonNull(result.getResolvedException()).getMessage()));
     }
 

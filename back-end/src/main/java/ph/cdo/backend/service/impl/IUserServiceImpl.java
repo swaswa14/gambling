@@ -101,6 +101,11 @@ public class IUserServiceImpl<T extends User, R extends DTOEntity, S extends Use
     }
 
     @Override
+    public boolean isEmailTaken(String email) {
+        return !userRepository.findAllByEmail(email.toLowerCase()).isEmpty();
+    }
+
+    @Override
     public List<R> findAllEnabled() {
         return userRepository
                 .findByIsEnabledTrue()

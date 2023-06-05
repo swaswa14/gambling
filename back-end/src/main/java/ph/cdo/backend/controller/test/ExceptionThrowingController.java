@@ -2,9 +2,7 @@ package ph.cdo.backend.controller.test;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.*;
-import ph.cdo.backend.errors.EntityDoesNotExistsException;
-import ph.cdo.backend.errors.InvalidValueException;
-import ph.cdo.backend.errors.NullEntityException;
+import ph.cdo.backend.errors.*;
 
 @RestController
 @RequestMapping("/tests/exception")
@@ -25,4 +23,13 @@ public class ExceptionThrowingController {
     public @ResponseBody String nullEntity() {
         throw new NullEntityException();
     }
+
+
+    @GetMapping(value= "/duplicate-email/{email}")
+    public @ResponseBody String duplicateEmail(@PathVariable String email){throw new DuplicateEmailException(email);}
+
+
+    @GetMapping(value= "/registration-error")
+    public @ResponseBody String registrationError(){throw new UserRegistrationErrorException();}
+
 }

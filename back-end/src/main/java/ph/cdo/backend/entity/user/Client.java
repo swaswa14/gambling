@@ -27,6 +27,9 @@ public class Client extends User{
 
     private BigDecimal balance;
 
+    @Builder.Default
+    private String invitationCode = "";
+
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @Builder.Default
     @JsonManagedReference

@@ -17,8 +17,8 @@ import ph.cdo.backend.errors.CustomExceptionHandler;
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
-//    private final JwtAuthFilter jwtAuthFilter;
-//    private final AuthenticationProvider authenticationProvider;
+    private final JwtAuthFilter jwtAuthFilter;
+    private final AuthenticationProvider authenticationProvider;
     private final CustomExceptionHandler customExceptionHandler;
     private final String[] publicEndPoint = {"/tests/exception/**"};
     private final String[] superAdminEndPoint = {
@@ -30,9 +30,13 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
 //                .exceptionHandling(exception -> exception.authenticationEntryPoint(customExceptionHandler))
+
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .anyRequest().permitAll());
+                        .anyRequest().permitAll())
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
+                .authenticationProvider(authenticationProvider)
+        ;
 
         return http.build();
     }

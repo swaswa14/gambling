@@ -1,19 +1,16 @@
 package ph.cdo.backend.request;
 
-import jakarta.annotation.Nullable;
 import jakarta.validation.GroupSequence;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.security.core.parameters.P;
 import ph.cdo.backend.errors.validtion_group.*;
 
 
 @Data
 @Builder
-@GroupSequence({Group1.class, Group2.class, Group3.class, Group4.class, Group5.class, ClientRegistrationForm.class})
-public class ClientRegistrationForm {
+@GroupSequence({Group1.class, Group2.class, Group3.class, Group4.class, Group5.class, ClientRegistrationRequest.class})
+public class ClientRegistrationRequest {
 
     @NotNull(message = "Email is required", groups = Group1.class )
     @NotBlank(message = "Entered email is blank", groups = Group2.class)

@@ -20,6 +20,7 @@ import ph.cdo.backend.dto.ClientDTO;
 import ph.cdo.backend.dto.mapper.ClientDTOMapper;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.entity.user.Agent;
+import ph.cdo.backend.entity.user.User;
 import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
@@ -31,6 +32,7 @@ import ph.cdo.backend.service.ClientService;
 import ph.cdo.backend.service.TransactionService;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -234,6 +236,34 @@ public class IUserClientServiceTest {
 
         // Assert that transaction was added to the client
         assertTrue(testUser.getTransactions().contains(transaction));
+    }
+
+    @Test
+    public void testIsEmailTaken() {
+        // Arrange
+        String email = "test@test.com";
+        when(userRepository.findAllByEmail(email.toLowerCase()))
+                .thenReturn(Collections.singletonList(createRandomClient())); // Assuming User is your entity class
+
+        // Act
+        boolean isEmailTaken = userService.isEmailTaken(email);
+
+        // Assert
+        assertTrue(isEmailTaken, "Expected email to be taken");
+    }
+
+    @Test
+    public void testIsEmailNotTaken() {
+        // Arrange
+        String email = "notexist@test.com";
+        when(userRepository.findAllByEmail(email.toLowerCase()))
+                .thenReturn(List.of());
+
+        // Act
+        boolean isEmailTaken = userService.isEmailTaken(email);
+
+        // Assert
+        assertFalse(isEmailTaken, "Expected email to not be taken");
     }
 
     @Test
