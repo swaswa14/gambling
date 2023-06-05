@@ -138,14 +138,17 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
             User user = null;
 
-            if(optionalClient.isPresent())
+            if(optionalClient.isPresent()){
                 user = optionalClient.get();
-            if(optionalAdmin.isPresent())
+
+            }else if(optionalAdmin.isPresent()) {
                 user = optionalAdmin.get();
-            if(optionalAgent.isPresent())
+            }else if(optionalAgent.isPresent()) {
                 user = optionalAgent.get();
-            else
+            } else{
                 throw new BadCredentialsException("INVALID_CREDENTIALS");
+            }
+
 
 
             String jwtToken = jwtService.generateToken(user);

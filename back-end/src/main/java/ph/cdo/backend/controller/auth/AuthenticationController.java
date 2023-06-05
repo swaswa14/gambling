@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 public class AuthenticationController {
     private final AuthenticationService authenticationService;
 
-
+//todo test this!!!!
     @PostMapping(value= "/register/client")
     public ResponseEntity<Object> registerClient(
             @RequestBody ClientRegistrationRequest request ,
