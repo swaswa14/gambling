@@ -8,7 +8,7 @@ import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ph.cdo.backend.errors.validtion_group.Group5;
+import ph.cdo.backend.exceptions.validtion_group.Group5;
 import ph.cdo.backend.request.ClientRegistrationRequest;
 
 import java.util.Collections;

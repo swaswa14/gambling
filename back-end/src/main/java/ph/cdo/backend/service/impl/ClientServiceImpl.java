@@ -4,18 +4,18 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import ph.cdo.backend.dto.ClientDTO;
-import ph.cdo.backend.dto.mapper.ClientDTOMapper;
+import ph.cdo.backend.dto.records.ClientDTOEntity;
+import ph.cdo.backend.dto.mapper.impl.ClientDTOMapper;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.entity.user.Client;
-import ph.cdo.backend.errors.EntityDoesNotExistsException;
+import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
 import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.service.ClientService;
 
 @Service("ClientService")
 
 
-public class ClientServiceImpl extends IUserServiceImpl<Client, ClientDTO, ClientDTOMapper> implements ClientService {
+public class ClientServiceImpl extends IUserServiceImpl<Client, ClientDTOEntity, ClientDTOMapper> implements ClientService {
 
 
     public ClientServiceImpl(

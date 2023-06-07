@@ -1,8 +1,7 @@
 package ph.cdo.backend.controller.test;
 
-import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.*;
-import ph.cdo.backend.errors.*;
+import ph.cdo.backend.exceptions.*;
 
 @RestController
 @RequestMapping("/tests/exception")

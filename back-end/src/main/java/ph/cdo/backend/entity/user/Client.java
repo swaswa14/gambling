@@ -7,6 +7,7 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import ph.cdo.backend.entity.Transaction;
+import ph.cdo.backend.entity.base.User;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import java.util.Objects;
 @Data
 
 
-public class Client extends User{
+public class Client extends User {
 
 
     private BigDecimal balance;

@@ -8,19 +8,18 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import ph.cdo.backend.dto.ClientDTO;
+import ph.cdo.backend.dto.records.ClientDTOEntity;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.entity.user.Admin;
 import ph.cdo.backend.entity.user.Agent;
 import ph.cdo.backend.entity.user.Client;
-import ph.cdo.backend.entity.user.User;
+import ph.cdo.backend.entity.base.User;
 import ph.cdo.backend.enums.Role;
-import ph.cdo.backend.errors.DuplicateEmailException;
-import ph.cdo.backend.errors.UserRegistrationErrorException;
+import ph.cdo.backend.exceptions.DuplicateEmailException;
+import ph.cdo.backend.exceptions.UserRegistrationErrorException;
 import ph.cdo.backend.repository.AdminRepository;
 import ph.cdo.backend.repository.AgentRepository;
 import ph.cdo.backend.repository.ClientRepository;
@@ -108,7 +107,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 .transactions(new ArrayList<Transaction>())
                 .build();
 
-        ClientDTO registeredClient = clientService.save(client);
+        ClientDTOEntity registeredClient = clientService.save(client);
 
         Optional<Client> optionalClient = clientRepository.findById(registeredClient.id());
 

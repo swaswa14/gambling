@@ -1,57 +1,33 @@
 package ph.cdo.backend.service.controller;
 
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.RequestBuilder;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.client.RestTemplate;
 import ph.cdo.backend.controller.auth.AuthenticationController;
-import ph.cdo.backend.dto.ClientDTO;
+import ph.cdo.backend.dto.records.ClientDTOEntity;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
-import ph.cdo.backend.errors.ApiError;
-import ph.cdo.backend.errors.CustomExceptionHandler;
 import ph.cdo.backend.request.AuthenticationRequest;
 import ph.cdo.backend.request.ClientRegistrationRequest;
-import ph.cdo.backend.response.AuthenticationResponse;
-import ph.cdo.backend.response.ClientRegistrationResponse;
-import ph.cdo.backend.response.IResponseBody;
-import ph.cdo.backend.response.ResponseObject;
 import ph.cdo.backend.service.AuthenticationService;
 import ph.cdo.backend.service.ClientService;
-import ph.cdo.backend.service.JwtService;
 
 import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
 @SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -241,7 +217,7 @@ public class AuthenticationControllerTest {
 
         System.out.println("Pass " + client.getPassword());
 
-        ClientDTO clientDTO = clientService.save(client);
+        ClientDTOEntity clientDTO = clientService.save(client);
 
         Assertions.assertNotNull(clientDTO);
 

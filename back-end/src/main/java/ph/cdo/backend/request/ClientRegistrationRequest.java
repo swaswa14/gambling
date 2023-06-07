@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ph.cdo.backend.errors.validtion_group.*;
+import ph.cdo.backend.exceptions.validtion_group.*;
 
 
 @Data

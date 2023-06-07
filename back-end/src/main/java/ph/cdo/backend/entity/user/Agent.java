@@ -1,16 +1,10 @@
 package ph.cdo.backend.entity.user;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import ph.cdo.backend.enums.Role;
+import ph.cdo.backend.entity.base.User;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -18,7 +12,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @SuperBuilder
 @Data
-public class Agent extends User{
+public class Agent extends User {
 
     private String agentCode;
 

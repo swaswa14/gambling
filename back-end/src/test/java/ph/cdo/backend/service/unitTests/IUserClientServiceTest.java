@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 import com.github.javafaker.Faker;
-import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,24 +14,20 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
-import ph.cdo.backend.dto.AgentDTO;
-import ph.cdo.backend.dto.ClientDTO;
-import ph.cdo.backend.dto.mapper.ClientDTOMapper;
+import ph.cdo.backend.dto.records.ClientDTOEntity;
+import ph.cdo.backend.dto.mapper.impl.ClientDTOMapper;
 import ph.cdo.backend.entity.Transaction;
-import ph.cdo.backend.entity.user.Agent;
-import ph.cdo.backend.entity.user.User;
 import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
-import ph.cdo.backend.errors.EntityDoesNotExistsException;
-import ph.cdo.backend.errors.NullEntityException;
+import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
+import ph.cdo.backend.exceptions.NullEntityException;
 import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.repository.TransactionRepository;
 import ph.cdo.backend.service.ClientService;
 import ph.cdo.backend.service.TransactionService;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -79,7 +74,7 @@ public class IUserClientServiceTest {
     public void testSave() {
         when(userRepository.save(any())).thenReturn(testUser);
 
-        ClientDTO savedUser = userService.save(testUser);
+        ClientDTOEntity savedUser = userService.save(testUser);
 
         assertEquals(clientDTOMapper.apply(testUser), savedUser);
         verify(userRepository, times(1)).save(testUser);
@@ -95,7 +90,7 @@ public class IUserClientServiceTest {
         when(userRepository.save(any())).thenReturn(testUser);
         when(userRepository.findById(anyLong())).thenReturn(Optional.of(testUser));
 
-        ClientDTO retrievedUser = userService.retrieve(testUser.getId());
+        ClientDTOEntity retrievedUser = userService.retrieve(testUser.getId());
 
         assertEquals(clientDTOMapper.apply(testUser), retrievedUser);
         verify(userRepository, times(1)).findById(testUser.getId());
@@ -112,7 +107,7 @@ public class IUserClientServiceTest {
     public void testRetrieveAll() {
         when(userRepository.findAll()).thenReturn(Collections.singletonList(testUser));
 
-        List<ClientDTO> users = userService.retrieve();
+        List<ClientDTOEntity> users = userService.retrieve();
 
         assertEquals(1, users.size());
         assertEquals(clientDTOMapper.apply(testUser), users.get(0));
@@ -123,7 +118,7 @@ public class IUserClientServiceTest {
     public void testUpdate() {
         when(userRepository.findById(any())).thenReturn(Optional.of(testUser));
         when(userRepository.save(testUser)).thenReturn(testUser);
-        ClientDTO mockClientDTO = new ClientDTO(
+        ClientDTOEntity mockClientDTO = new ClientDTOEntity(
                 1L, // id
                 Role.Client, // role
                 "swaswa@gmail.com", // email
@@ -136,7 +131,7 @@ public class IUserClientServiceTest {
 
         testUser.setEmail("swaswa@gmail.com");
         assertEquals("swaswa@gmail.com", testUser.getEmail());
-        ClientDTO updatedUser = userService.update(testUser.getId(), testUser);
+        ClientDTOEntity updatedUser = userService.update(testUser.getId(), testUser);
 
         when(clientDTOMapper.apply(any(Client.class))).thenReturn(updatedUser);
 
@@ -158,7 +153,7 @@ public class IUserClientServiceTest {
         enabledUser.setEnabled(true);
         when(userRepository.findByIsEnabledTrue()).thenReturn(Collections.singletonList(enabledUser));
 
-        List<ClientDTO> users = userService.findAllEnabled();
+        List<ClientDTOEntity> users = userService.findAllEnabled();
 
         assertEquals(1, users.size());
         assertEquals(clientDTOMapper.apply(enabledUser), users.get(0));
@@ -171,7 +166,7 @@ public class IUserClientServiceTest {
         disabledUser.setEnabled(false);
         when(userRepository.findByIsEnabledFalse()).thenReturn(Collections.singletonList(disabledUser));
 
-        List<ClientDTO> users = userService.findAllDisabled();
+        List<ClientDTOEntity> users = userService.findAllDisabled();
 
         assertEquals(1, users.size());
         assertEquals(clientDTOMapper.apply(disabledUser), users.get(0));
@@ -184,7 +179,7 @@ public class IUserClientServiceTest {
         lockedUser.setLocked(true);
         when(userRepository.findByIsLockedTrue()).thenReturn(Collections.singletonList(lockedUser));
 
-        List<ClientDTO> users = userService.findAllLocked();
+        List<ClientDTOEntity> users = userService.findAllLocked();
         System.out.println(users.toString());
         assertEquals(1, users.size());
         assertEquals(clientDTOMapper.apply(lockedUser), users.get(0));
@@ -197,7 +192,7 @@ public class IUserClientServiceTest {
         unlockedUser.setLocked(false);
         when(userRepository.findByIsLockedFalse()).thenReturn(Collections.singletonList(unlockedUser));
 
-        List<ClientDTO> users = userService.findAllUnlocked();
+        List<ClientDTOEntity> users = userService.findAllUnlocked();
 
         assertEquals(1, users.size());
         assertEquals(clientDTOMapper.apply(unlockedUser), users.get(0));
@@ -211,7 +206,7 @@ public class IUserClientServiceTest {
         clientUser.setRole(testRole);
         when(userRepository.findByRole(testRole)).thenReturn(Collections.singletonList(clientUser));
 
-        List<ClientDTO> users = userService.findAllByRole(testRole);
+        List<ClientDTOEntity> users = userService.findAllByRole(testRole);
 
         assertEquals(1, users.size());
         assertEquals(clientDTOMapper.apply(clientUser), users.get(0));

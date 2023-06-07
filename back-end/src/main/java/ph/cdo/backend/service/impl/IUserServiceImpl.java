@@ -1,12 +1,12 @@
 package ph.cdo.backend.service.impl;
 
 import ph.cdo.backend.dto.DTOEntity;
-import ph.cdo.backend.dto.mapper.UserDTOMapper;
-import ph.cdo.backend.entity.user.User;
+import ph.cdo.backend.dto.mapper.impl.UserDTOMapper;
+import ph.cdo.backend.entity.base.User;
 import ph.cdo.backend.enums.Role;
-import ph.cdo.backend.errors.EntityDoesNotExistsException;
-import ph.cdo.backend.errors.NullEntityException;
-import ph.cdo.backend.repository.UserRepository;
+import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
+import ph.cdo.backend.exceptions.NullEntityException;
+import ph.cdo.backend.repository.noBean.UserRepository;
 import ph.cdo.backend.service.IUserService;
 
 import java.util.List;
@@ -150,4 +150,16 @@ public class IUserServiceImpl<T extends User, R extends DTOEntity, S extends Use
                 .map(userDTOMapper)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public void forgotPassword(Long id) {
+
+    }
+
+    @Override
+    public R changePassword(Long id, String newPassword) {
+        return null;
+    }
+
+
 }

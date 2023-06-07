@@ -1,7 +1,6 @@
 package ph.cdo.backend.service;
 
-import ph.cdo.backend.dto.TransactionDTO;
-import ph.cdo.backend.entity.Transaction;
+import ph.cdo.backend.dto.records.TransactionDTO;
 import ph.cdo.backend.enums.TransactionType;
 
 import java.util.Comparator;

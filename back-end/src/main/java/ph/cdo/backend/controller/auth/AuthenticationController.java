@@ -1,11 +1,8 @@
 package ph.cdo.backend.controller.auth;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
-import jakarta.validation.ValidationException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 
 import org.springframework.http.MediaType;
@@ -14,21 +11,16 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ph.cdo.backend.dto.FieldErrorDTO;
-import ph.cdo.backend.dto.mapper.FieldErrorDTOMapper;
-import ph.cdo.backend.errors.*;
+import ph.cdo.backend.dto.records.FieldErrorDTO;
+import ph.cdo.backend.dto.mapper.impl.FieldErrorDTOMapper;
+import ph.cdo.backend.exceptions.*;
 import ph.cdo.backend.request.AuthenticationRequest;
 import ph.cdo.backend.request.ClientRegistrationRequest;
 import ph.cdo.backend.response.AuthenticationResponse;
 import ph.cdo.backend.response.ClientRegistrationResponse;
 import ph.cdo.backend.service.AuthenticationService;
 
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/auth")
@@ -100,7 +92,7 @@ public class AuthenticationController {
                 .toList();
 
         return fieldErrorDTOMapper.apply(
-                CustomFieldError.builder()
+                CustomFieldErrorException.builder()
                         .specificFieldErrorList(specificFieldErrorList)
                         .httpStatus(HttpStatus.UNPROCESSABLE_ENTITY)
                         .exception(InvalidValueException.class)

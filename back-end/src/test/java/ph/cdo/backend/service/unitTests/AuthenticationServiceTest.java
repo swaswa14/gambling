@@ -10,11 +10,11 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import ph.cdo.backend.dto.ClientDTO;
-import ph.cdo.backend.dto.mapper.ClientDTOMapper;
+import ph.cdo.backend.dto.records.ClientDTOEntity;
+import ph.cdo.backend.dto.mapper.impl.ClientDTOMapper;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
-import ph.cdo.backend.errors.DuplicateEmailException;
+import ph.cdo.backend.exceptions.DuplicateEmailException;
 import ph.cdo.backend.repository.AdminRepository;
 import ph.cdo.backend.repository.AgentRepository;
 import ph.cdo.backend.repository.ClientRepository;
@@ -25,7 +25,7 @@ import ph.cdo.backend.response.ClientRegistrationResponse;
 import ph.cdo.backend.service.AdminService;
 import ph.cdo.backend.service.AgentService;
 import ph.cdo.backend.service.ClientService;
-import ph.cdo.backend.service.JwtService;
+import ph.cdo.backend.service.impl.JwtService;
 import ph.cdo.backend.service.impl.AuthenticationServiceImpl;
 
 import java.math.BigDecimal;
@@ -103,7 +103,7 @@ public class AuthenticationServiceTest {
         client.setInvitationCode(request.getInvitationCode());
         client.setMobilePhone(request.getMobilePhone());
         when(clientService.isEmailTaken(any())).thenReturn(false);
-        when(clientService.save(any())).thenReturn(new ClientDTO(1L, Role.Client, "test@example.com", "123456789", BigDecimal.valueOf(1000.0)));
+        when(clientService.save(any())).thenReturn(new ClientDTOEntity(1L, Role.Client, "test@example.com", "123456789", BigDecimal.valueOf(1000.0)));
         when(clientRepository.findById(any())).thenReturn(Optional.of(client));
         when(jwtService.generateToken(any())).thenReturn("testToken");
 

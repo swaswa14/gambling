@@ -6,28 +6,20 @@ import static org.mockito.Mockito.*;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
-import ph.cdo.backend.dto.AdminDTO;
-import ph.cdo.backend.dto.mapper.AdminDTOMapper;
+import ph.cdo.backend.dto.records.AdminDTOEntity;
+import ph.cdo.backend.dto.mapper.impl.AdminDTOMapper;
 import ph.cdo.backend.entity.user.Admin;
-import ph.cdo.backend.entity.user.Agent;
 import ph.cdo.backend.enums.Role;
-import ph.cdo.backend.errors.EntityDoesNotExistsException;
-import ph.cdo.backend.errors.NullEntityException;
+import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
+import ph.cdo.backend.exceptions.NullEntityException;
 import ph.cdo.backend.repository.AdminRepository;
-import ph.cdo.backend.repository.UserRepository;
 import ph.cdo.backend.service.AdminService;
-import ph.cdo.backend.service.IUserService;
-import ph.cdo.backend.service.impl.AdminServiceImpl;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -64,7 +56,7 @@ public class IUserAdminServiceTest {
     public void testSave() {
         when(userRepository.save(any())).thenReturn(testUser);
 
-        AdminDTO savedUser = userService.save(testUser);
+        AdminDTOEntity savedUser = userService.save(testUser);
 
         assertEquals(adminDTOMapper.apply(testUser), savedUser);
         verify(userRepository, times(1)).save(testUser);
@@ -80,7 +72,7 @@ public class IUserAdminServiceTest {
         when(userRepository.save(any())).thenReturn(testUser);
         when(userRepository.findById(anyLong())).thenReturn(Optional.of(testUser));
 
-        AdminDTO retrievedUser = userService.retrieve(testUser.getId());
+        AdminDTOEntity retrievedUser = userService.retrieve(testUser.getId());
 
         assertEquals(adminDTOMapper.apply(testUser), retrievedUser);
         verify(userRepository, times(1)).findById(testUser.getId());
@@ -97,7 +89,7 @@ public class IUserAdminServiceTest {
     public void testRetrieveAll() {
         when(userRepository.findAll()).thenReturn(Collections.singletonList(testUser));
 
-        List<AdminDTO> users = userService.retrieve();
+        List<AdminDTOEntity> users = userService.retrieve();
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(testUser), users.get(0));
@@ -108,7 +100,7 @@ public class IUserAdminServiceTest {
     public void testUpdate() {
         when(userRepository.findById(any())).thenReturn(Optional.of(testUser));
         when(userRepository.save(testUser)).thenReturn(testUser);
-        AdminDTO mockAdminDTO = new AdminDTO(
+        AdminDTOEntity mockAdminDTO = new AdminDTOEntity(
                 1L, // id
                 Role.Client, // role
                 "swaswa@gmail.com", // email
@@ -121,7 +113,7 @@ public class IUserAdminServiceTest {
 
         testUser.setEmail("swaswa@gmail.com");
         assertEquals("swaswa@gmail.com", testUser.getEmail());
-        AdminDTO updatedUser = userService.update(testUser.getId(), testUser);
+        AdminDTOEntity updatedUser = userService.update(testUser.getId(), testUser);
 
         when(adminDTOMapper.apply(any(Admin.class))).thenReturn(updatedUser);
 
@@ -143,7 +135,7 @@ public class IUserAdminServiceTest {
         enabledUser.setEnabled(true);
         when(userRepository.findByIsEnabledTrue()).thenReturn(Collections.singletonList(enabledUser));
 
-        List<AdminDTO> users = userService.findAllEnabled();
+        List<AdminDTOEntity> users = userService.findAllEnabled();
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(enabledUser), users.get(0));
@@ -156,7 +148,7 @@ public class IUserAdminServiceTest {
         disabledUser.setEnabled(false);
         when(userRepository.findByIsEnabledFalse()).thenReturn(Collections.singletonList(disabledUser));
 
-        List<AdminDTO> users = userService.findAllDisabled();
+        List<AdminDTOEntity> users = userService.findAllDisabled();
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(disabledUser), users.get(0));
@@ -169,7 +161,7 @@ public class IUserAdminServiceTest {
         lockedUser.setLocked(true);
         when(userRepository.findByIsLockedTrue()).thenReturn(Collections.singletonList(lockedUser));
 
-        List<AdminDTO> users = userService.findAllLocked();
+        List<AdminDTOEntity> users = userService.findAllLocked();
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(lockedUser), users.get(0));
@@ -182,7 +174,7 @@ public class IUserAdminServiceTest {
         unlockedUser.setLocked(false);
         when(userRepository.findByIsLockedFalse()).thenReturn(Collections.singletonList(unlockedUser));
 
-        List<AdminDTO> users = userService.findAllUnlocked();
+        List<AdminDTOEntity> users = userService.findAllUnlocked();
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(unlockedUser), users.get(0));
@@ -196,7 +188,7 @@ public class IUserAdminServiceTest {
         clientUser.setRole(testRole);
         when(userRepository.findByRole(testRole)).thenReturn(Collections.singletonList(clientUser));
 
-        List<AdminDTO> users = userService.findAllByRole(testRole);
+        List<AdminDTOEntity> users = userService.findAllByRole(testRole);
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(clientUser), users.get(0));
