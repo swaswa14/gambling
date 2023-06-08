@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/public/next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/public/vercel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/src/pages/_app.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/src/pages/_document.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/src/pages/api/hello.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/src/pages/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/src/styles/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2QSwTlO3ZcMLFqGK56w9HDegDwC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_directory_selection": "C:/Users/admin/Documents/GitHub/gambling/back-end/src/test/java",
+    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/gambling/back-end",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "a115a25065b29adfe4c0b73391cd5b3a",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ph.cdo.backend.service" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ph.cdo.backend.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BackEndApplication">
+    <configuration name="AuthenticationControllerTest.testingAValidClientRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.service.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.controller" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.controller.AuthenticationControllerTest" />
+      <option name="METHOD_NAME" value="testingAValidClientRegistration" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.AuthenticationServiceTest" />
+      <option name="METHOD_NAME" value="registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TokenRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.service.data_jpa_test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.data_jpa_test" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TokenServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.TokenServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in back-end" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="test" />
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="back-end" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ph.cdo.backend.BackEndApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.AuthenticationControllerTest.testingAValidClientRegistration" />
+      <item itemvalue="JUnit.AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" />
+      <item itemvalue="JUnit.TokenRepositoryTest" />
+      <item itemvalue="JUnit.TokenServiceTest" />
+      <item itemvalue="JUnit.java in back-end" />
+      <item itemvalue="Spring Boot.BackEndApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.java in back-end" />
+        <item itemvalue="JUnit.AuthenticationControllerTest.testingAValidClientRegistration" />
+        <item itemvalue="JUnit.AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" />
+        <item itemvalue="JUnit.TokenServiceTest" />
+        <item itemvalue="JUnit.TokenRepositoryTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="" />
+      <created>1685360305061</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685360305061</updated>
+      <workItem from="1685360307951" duration="812000" />
+      <workItem from="1685361391074" duration="814000" />
+      <workItem from="1685362512240" duration="1393000" />
+      <workItem from="1685364150200" duration="2435000" />
+      <workItem from="1685444561457" duration="223000" />
+      <workItem from="1685444889613" duration="3494000" />
+      <workItem from="1685461062884" duration="8340000" />
+      <workItem from="1685629365335" duration="775000" />
+      <workItem from="1685678333472" duration="907000" />
+      <workItem from="1685683483328" duration="2538000" />
+      <workItem from="1685707416332" duration="601000" />
+      <workItem from="1685726710616" duration="36867000" />
+      <workItem from="1685895667875" duration="51011000" />
+      <workItem from="1685970221800" duration="26072000" />
+      <workItem from="1686010041356" duration="3682000" />
+      <workItem from="1686070058151" duration="19418000" />
+      <workItem from="1686226487023" duration="19329000" />
+      <workItem from="1686246737155" duration="1140000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ClientServiceImpl.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TransactionTest.java</url>
+          <line>304</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/data_jpa_test/TransactionRepositoryTest.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/ApplicationConfig.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TokenServiceTest.java</url>
+          <line>148</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java</url>
+          <line>264</line>
+          <properties class="ph.cdo.backend.service.unitTests.IUserClientServiceTest" method="testAddTransactionWithInvalidId">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java</url>
+          <line>53</line>
+          <properties class="ph.cdo.backend.service.controller.CustomExceptionTest" method="testHandleEntityDoesNotExistsException">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java</url>
+          <line>66</line>
+          <properties class="ph.cdo.backend.service.controller.CustomExceptionTest" method="testHandleInvalidValueException">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TokenServiceTest.java</url>
+          <line>149</line>
+          <properties class="ph.cdo.backend.service.unitTests.TokenServiceTest" method="testUpdateEntity">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TokenServiceTest.java</url>
+          <line>262</line>
+          <properties class="ph.cdo.backend.service.unitTests.TokenServiceTest" method="testCreate">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TokenServiceTest.java</url>
+          <line>219</line>
+          <properties class="ph.cdo.backend.service.unitTests.TokenServiceTest" method="testDeleteToken">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/AuthenticationControllerTest.java</url>
+          <line>99</line>
+          <properties class="ph.cdo.backend.service.controller.AuthenticationControllerTest" method="testingAValidClientRegistration">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
