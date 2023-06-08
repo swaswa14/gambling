@@ -6,6 +6,7 @@ import ph.cdo.backend.entity.base.User;
 import ph.cdo.backend.enums.Role;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @NoRepositoryBean
@@ -19,5 +20,7 @@ public interface UserRepository<T extends User> extends JpaRepository<T, Long> {
     List<T> findByRole(Role role);
 
     List<T> findAllByEmail(String email);
+
+    Optional<T> findByEmail(String email);
 
 }

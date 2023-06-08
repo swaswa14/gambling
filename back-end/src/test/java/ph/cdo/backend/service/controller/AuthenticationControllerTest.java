@@ -40,7 +40,8 @@ public class AuthenticationControllerTest {
     @Autowired
     private AuthenticationController controller;
 
-    @Autowired AuthenticationService authenticationService;
+    @Autowired
+    private AuthenticationService authenticationService;
 
     @Autowired private  ClientService clientService;
 
@@ -69,7 +70,7 @@ public class AuthenticationControllerTest {
                 .builder()
                 .invitationCode("123456")
                 .mobilePhone("123456789")
-                .email("sample@gmail.com")
+                .email("joshuagarrysalcedo@gmail.com")
                 .password("ValidPassword123!!")
                 .build();
 

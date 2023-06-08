@@ -16,5 +16,9 @@ public interface BaseEntityService<T extends BaseEntity, R extends DTOEntity> {
 
     boolean deleteEntity(Long id) throws EntityDoesNotExistsException;
 
+    R create (T t);
+
+    T findEntityByDTO(R r);
+
 
 }

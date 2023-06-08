@@ -1,5 +1,6 @@
 package ph.cdo.backend.service.unitTests;
 
+import jakarta.mail.MessagingException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,6 +16,7 @@ import ph.cdo.backend.dto.mapper.impl.ClientDTOMapper;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.exceptions.DuplicateEmailException;
+import ph.cdo.backend.exceptions.EmailErrorException;
 import ph.cdo.backend.repository.AdminRepository;
 import ph.cdo.backend.repository.AgentRepository;
 import ph.cdo.backend.repository.ClientRepository;
@@ -25,6 +27,7 @@ import ph.cdo.backend.response.ClientRegistrationResponse;
 import ph.cdo.backend.service.AdminService;
 import ph.cdo.backend.service.AgentService;
 import ph.cdo.backend.service.ClientService;
+import ph.cdo.backend.service.EmailService;
 import ph.cdo.backend.service.impl.JwtService;
 import ph.cdo.backend.service.impl.AuthenticationServiceImpl;
 
@@ -36,8 +39,7 @@ import java.util.Optional;
 import static org.hibernate.validator.internal.util.Contracts.assertNotNull;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class AuthenticationServiceTest {
@@ -63,6 +65,9 @@ public class AuthenticationServiceTest {
     private PasswordEncoder passwordEncoder;
     @Mock
     private AuthenticationManager authenticationManager;
+
+    @Mock
+    private EmailService emailService;
     @InjectMocks
     private AuthenticationServiceImpl authenticationService;
 
@@ -89,10 +94,10 @@ public class AuthenticationServiceTest {
     }
 
     @Test
-    public void registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful() {
+    public void registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful() throws MessagingException {
         // Arrange
         ClientRegistrationRequest request = ClientRegistrationRequest.builder()
-                .email("test@example.com")
+                .email("joshuagarrysalcedo@gmail.com")
                 .password("Password!234")
                 .mobilePhone("123456789")
                 .invitationCode("123456")
@@ -103,9 +108,11 @@ public class AuthenticationServiceTest {
         client.setInvitationCode(request.getInvitationCode());
         client.setMobilePhone(request.getMobilePhone());
         when(clientService.isEmailTaken(any())).thenReturn(false);
-        when(clientService.save(any())).thenReturn(new ClientDTOEntity(1L, Role.Client, "test@example.com", "123456789", BigDecimal.valueOf(1000.0)));
+        when(clientService.save(any())).thenReturn(new ClientDTOEntity(1L, Role.Client, "joshuagarrysalcedo@gmail.com", "123456789", BigDecimal.valueOf(1000.0)));
         when(clientRepository.findById(any())).thenReturn(Optional.of(client));
         when(jwtService.generateToken(any())).thenReturn("testToken");
+
+
 
         // Act
         ClientRegistrationResponse response = authenticationService.registerClient(request);

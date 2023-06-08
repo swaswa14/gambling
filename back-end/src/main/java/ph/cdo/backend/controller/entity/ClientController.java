@@ -3,13 +3,14 @@ package ph.cdo.backend.controller.entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ph.cdo.backend.dto.records.ClientDTOEntity;
+import ph.cdo.backend.entity.Token;
+import ph.cdo.backend.entity.base.User;
 import ph.cdo.backend.entity.user.Client;
+import ph.cdo.backend.response.ResponseObject;
 import ph.cdo.backend.service.ClientService;
+import ph.cdo.backend.service.TokenService;
 
 import java.util.List;
 
@@ -18,11 +19,17 @@ import java.util.List;
 public class ClientController extends UserController<Client, ClientDTOEntity> {
 
     @Autowired
-    protected ClientController(ClientService clientService) {
-        super(clientService);
+    protected ClientController(ClientService clientService, TokenService tokenService) {
+        super(clientService, tokenService);
+
     }
 
 
+    @Override
+    @GetMapping("/confirm/{token}")
+    public ResponseEntity<ResponseObject> confirmEmail(@PathVariable String token) {
+        return super.confirmEmail(token);
+    }
 
     @Override
     @GetMapping("clients") // s so that it calls clients. Being consistent to plural forms
@@ -30,6 +37,8 @@ public class ClientController extends UserController<Client, ClientDTOEntity> {
     public ResponseEntity<List<ClientDTOEntity>> getAllUsers() {
         return super.getAllUsers();
     }
+
+
 
     @Override
     @GetMapping("clients/enabled")

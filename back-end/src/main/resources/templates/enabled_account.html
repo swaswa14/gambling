@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <style>
+        /* Add your basic CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #bbdefb;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .banner {
+            background-color: #42a5f5;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color: #000000;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Email Confirmation</title>
+</head>
+<body>
+<div class="container">
+    <div class="banner">
+        Email Confirmation <br>
+        <span style="font-size: 16px; font-weight: normal;"> Please click the link below to enable your account!</span>
+    </div>
+    <div class="message">
+
+    </div>
+    <div class="footer">
+        <p>For more information, please visit our Facebook page:</p>
+        <p><a th:href="${confirmationLink}">Confirmation link</a></p>
+        <br/>
+        <p>Expires at : <span th:text="${#dates.format(expirationDate, 'MM/dd/yyyy HH:mm:ss')}"></span></p>
+    </div>
+</div>
+</body>
+</html>

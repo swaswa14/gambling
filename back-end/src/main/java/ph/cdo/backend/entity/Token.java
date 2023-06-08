@@ -36,7 +36,7 @@ public class Token extends BaseEntity {
     @Column(updatable = false)
     private TokenType tokenType;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date expiryDate;
 
 }

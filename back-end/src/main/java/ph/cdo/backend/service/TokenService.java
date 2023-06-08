@@ -15,4 +15,9 @@ public interface TokenService extends BaseEntityService<Token, TokenDTO>{
     List<TokenDTO> findByTokenType(TokenType tokenType);
 
     Token findByUser(User user);
+
+    void sendEnableAccount(User user);
+    public TokenDTO tokenBuilder(User user,TokenType tokenType, int days, int month, int years);
+
+    Token findByToken(String token);
 }

@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 
 public abstract class BaseEntityServiceImpl<T extends BaseEntity, R extends DTOEntity, S extends BaseEntityDTOMapper<T, R>> implements BaseEntityService<T, R> {
 
-    private final BaseEntityRepository<T> repository;
-    private final S mapper;
+    protected final BaseEntityRepository<T> repository;
+    protected final S mapper;
 
     public BaseEntityServiceImpl(BaseEntityRepository<T> repository, S mapper) {
         this.repository = repository;
@@ -53,5 +53,15 @@ public abstract class BaseEntityServiceImpl<T extends BaseEntity, R extends DTOE
 
         //If it does not exists then the delete is successful!
         return repository.findById(id).isEmpty();
+    }
+
+    @Override
+    public R create(T t) {
+       return mapper.apply(repository.save(t));
+    }
+
+    @Override
+    public T findEntityByDTO(R r) {
+        return repository.findById(r.getID()).orElseThrow(()-> new EntityDoesNotExistsException(r.getID()));
     }
 }

@@ -11,19 +11,23 @@ import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
 import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.service.ClientService;
+import ph.cdo.backend.service.EmailService;
+import ph.cdo.backend.service.impl.base_entity.IUserServiceImpl;
 
 @Service("ClientService")
 
 
 public class ClientServiceImpl extends IUserServiceImpl<Client, ClientDTOEntity, ClientDTOMapper> implements ClientService {
 
+    private final EmailService emailService;
 
     public ClientServiceImpl(
             @Autowired @Qualifier("ClientRepository") ClientRepository clientRepository,
-            @Autowired @Qualifier("ClientDTOMapper") ClientDTOMapper userDTOMapper
-    ) {
-        super(userDTOMapper, clientRepository);
+            @Autowired @Qualifier("ClientDTOMapper") ClientDTOMapper userDTOMapper,
+            EmailService emailService) {
+        super(userDTOMapper, clientRepository, emailService);
 
+        this.emailService = emailService;
     }
 
 

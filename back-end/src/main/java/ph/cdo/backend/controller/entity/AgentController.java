@@ -1,14 +1,15 @@
 package ph.cdo.backend.controller.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ph.cdo.backend.dto.records.AgentDTOEntity;
 import ph.cdo.backend.entity.user.Agent;
+import ph.cdo.backend.response.ResponseObject;
 import ph.cdo.backend.service.AgentService;
+import ph.cdo.backend.service.TokenService;
 
 import java.util.List;
 
@@ -17,8 +18,10 @@ import java.util.List;
 public class AgentController extends UserController<Agent, AgentDTOEntity> {
 
 
-    protected AgentController(AgentService agentService) {
-        super(agentService);
+    protected AgentController(
+            @Autowired @Qualifier("AgentService") AgentService agentService,
+            @Autowired TokenService tokenService) {
+        super(agentService,tokenService);
     }
 
     @Override
@@ -26,6 +29,12 @@ public class AgentController extends UserController<Agent, AgentDTOEntity> {
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<List<AgentDTOEntity>> getAllUsers() {
         return super.getAllUsers();
+    }
+
+    @Override
+    @GetMapping("/confirm/{token}")
+    public ResponseEntity<ResponseObject> confirmEmail(@PathVariable String token) {
+        return super.confirmEmail(token);
     }
 
     @Override

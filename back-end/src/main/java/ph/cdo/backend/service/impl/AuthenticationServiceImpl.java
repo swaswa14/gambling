@@ -2,6 +2,7 @@ package ph.cdo.backend.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,6 +20,7 @@ import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.entity.base.User;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.exceptions.DuplicateEmailException;
+import ph.cdo.backend.exceptions.EmailErrorException;
 import ph.cdo.backend.exceptions.UserRegistrationErrorException;
 import ph.cdo.backend.repository.AdminRepository;
 import ph.cdo.backend.repository.AgentRepository;
@@ -62,14 +64,14 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     private final UserDetailsService userDetailsService;
 
 
-
+    private final EmailService emailService;
 
     private final PasswordEncoder passwordEncoder;
 
     private final AuthenticationManager authenticationManager;
 
     @Autowired
-    public AuthenticationServiceImpl(ClientRepository clientRepository, AdminRepository adminRepository, AgentRepository agentRepository, ClientService clientService, AdminService adminService, AgentService agentService, JwtService jwtService, UserDetailsService userDetailsService, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager) {
+    public AuthenticationServiceImpl(ClientRepository clientRepository, AdminRepository adminRepository, AgentRepository agentRepository, ClientService clientService, AdminService adminService, AgentService agentService, JwtService jwtService, UserDetailsService userDetailsService, EmailService emailService, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager) {
         this.clientRepository = clientRepository;
         this.adminRepository = adminRepository;
         this.agentRepository = agentRepository;
@@ -78,6 +80,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         this.agentService = agentService;
         this.jwtService = jwtService;
         this.userDetailsService = userDetailsService;
+        this.emailService = emailService;
 
         this.passwordEncoder = passwordEncoder;
         this.authenticationManager = authenticationManager;
@@ -100,7 +103,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .invitationCode(request.getInvitationCode())
                 .mobilePhone(request.getMobilePhone())
-                .isEnabled(true)
+                .isEnabled(false)
                 .isLocked(false)
                 .role(Role.Client)
                 .balance(BigDecimal.valueOf(0.0))
@@ -115,6 +118,13 @@ public class AuthenticationServiceImpl implements AuthenticationService {
             Client authenticatedClient = optionalClient.get();
 
             String jwtToken = jwtService.generateToken(authenticatedClient);
+
+            try {
+                emailService.sendEmailEnableAccount(authenticatedClient);
+            }catch (MessagingException e){
+                throw new EmailErrorException(authenticatedClient.getEmail());
+            }
+
 
             return ClientRegistrationResponse.builder()
                     .header("Registration Successful")

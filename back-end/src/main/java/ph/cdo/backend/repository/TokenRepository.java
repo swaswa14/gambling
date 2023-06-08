@@ -14,4 +14,6 @@ import java.util.Optional;
 public interface TokenRepository extends BaseEntityRepository<Token> {
     List<Token> findAllByTokenType(TokenType tokenType);
     Optional<Token> findFirstByUser(User user);
+
+    Optional<Token> findFirstByToken(String token);
 }

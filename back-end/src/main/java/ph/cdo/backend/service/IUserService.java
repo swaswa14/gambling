@@ -1,9 +1,12 @@
 package ph.cdo.backend.service;
 
 import ph.cdo.backend.dto.DTOEntity;
+import ph.cdo.backend.entity.Token;
 import ph.cdo.backend.entity.base.User;
 import ph.cdo.backend.enums.Role;
+import ph.cdo.backend.exceptions.EmailErrorException;
 import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
+import ph.cdo.backend.response.ResponseObject;
 
 import java.util.List;
 
@@ -19,6 +22,7 @@ public interface IUserService<T extends User, R extends DTOEntity> {
     R update(Long id, T t);
 
     boolean deleteById(Long id);
+    ResponseObject deleteEntity(Long id);
     boolean deleteUser(T t);
 
 
@@ -36,4 +40,6 @@ public interface IUserService<T extends User, R extends DTOEntity> {
     void forgotPassword(Long id);
 
     R changePassword(Long id, String newPassword);
+
+    ResponseObject confirmUser(Token token);
 }

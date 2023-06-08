@@ -8,16 +8,21 @@ import ph.cdo.backend.dto.mapper.impl.AdminDTOMapper;
 import ph.cdo.backend.entity.user.Admin;
 import ph.cdo.backend.repository.AdminRepository;
 import ph.cdo.backend.service.AdminService;
+import ph.cdo.backend.service.EmailService;
+import ph.cdo.backend.service.impl.base_entity.IUserServiceImpl;
 
 @Service("AdminService")
 public class AdminServiceImpl extends IUserServiceImpl<Admin, AdminDTOEntity, AdminDTOMapper> implements AdminService {
 
+    private final EmailService emailService;
 
 
     public AdminServiceImpl(
             @Autowired @Qualifier("AdminRepository") AdminRepository adminRepository,
-            @Autowired @Qualifier("AdminDTOMapper") AdminDTOMapper userDTOMapper)
+            @Autowired @Qualifier("AdminDTOMapper") AdminDTOMapper userDTOMapper,
+            @Autowired EmailService emailService)
     {
-        super(userDTOMapper, adminRepository);
+        super(userDTOMapper, adminRepository, emailService);
+        this.emailService = emailService;
     }
 }
