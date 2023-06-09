@@ -1,31 +1,11 @@
 name: Docker Compose Actions Workflow
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
+on: push
 jobs:
-  docker-up:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run Docker Compose
-        run: |
-          docker-compose up -d
-
-      - name: Show running Docker containers
-        run: docker ps
-
-      - name: Run tests
-        run: |
-          # Add any commands to test your application here
-
-      - name: Bring Docker Compose down
-        run: docker-compose down
+      - uses: actions/checkout@v2
+      - name: Build the stack
+        run: docker-compose up -d
+      - name: Test
+        run: docker run -e SPRING_PROFILES_ACTIVE=dev spring-backend
