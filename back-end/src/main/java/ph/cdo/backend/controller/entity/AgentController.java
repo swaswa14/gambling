@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/agent")
+@CrossOrigin
 public class AgentController extends UserController<Agent, AgentDTOEntity> {
 
 

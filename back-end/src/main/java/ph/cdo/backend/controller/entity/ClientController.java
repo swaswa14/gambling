@@ -19,6 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/client")
+@CrossOrigin
 public class ClientController extends UserController<Client, ClientDTOEntity> {
     private final ClientService clientService;
     private final TransactionService transactionService;

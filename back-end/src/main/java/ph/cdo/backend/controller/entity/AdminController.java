@@ -3,10 +3,7 @@ package ph.cdo.backend.controller.entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ph.cdo.backend.dto.records.AdminDTOEntity;
 import ph.cdo.backend.entity.user.Admin;
 import ph.cdo.backend.response.ResponseObject;
@@ -17,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/admin")
+@CrossOrigin
 public class AdminController extends UserController<Admin, AdminDTOEntity> {
     @Autowired
     protected AdminController(

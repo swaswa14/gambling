@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="10.204" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="11.341" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk17.0.6_10\bin"/>
-    <property name="sun.java.command" value="C:\Users\admin\AppData\Local\Temp\surefire11020326871126066566\surefirebooter-20230609121908375_3.jar C:\Users\admin\AppData\Local\Temp\surefire11020326871126066566 2023-06-09T12-19-08_020-jvmRun1 surefire-20230609121908375_1tmp surefire_0-20230609121908375_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\admin\AppData\Local\Temp\surefire1900420224022405819\surefirebooter-20230609141457893_3.jar C:\Users\admin\AppData\Local\Temp\surefire1900420224022405819 2023-06-09T14-14-57_674-jvmRun1 surefire-20230609141457893_1tmp surefire_0-20230609141457893_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\admin\Documents\GitHub\gambling\back-end\target\test-classes;C:\Users\admin\Documents\GitHub\gambling\back-end\target\classes;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.1.0\spring-boot-starter-data-jpa-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.1.0\spring-boot-starter-aop-3.1.0.jar;C:\Users\admin\.m2\repository\org\aspectj\aspectjweaver\1.9.19\aspectjweaver-1.9.19.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.1.0\spring-boot-starter-jdbc-3.1.0.jar;C:\Users\admin\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\admin\.m2\repository\org\springframework\spring-jdbc\6.0.9\spring-jdbc-6.0.9.jar;C:\Users\admin\.m2\repository\org\hibernate\orm\hibernate-core\6.2.2.Final\hibernate-core-6.2.2.Final.jar;C:\Users\admin\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\admin\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\admin\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\admin\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\admin\.m2\repository\io\smallrye\jandex\3.0.5\jandex-3.0.5.jar;C:\Users\admin\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\admin\.m2\repository\net\bytebuddy\byte-buddy\1.14.4\byte-buddy-1.14.4.jar;C:\Users\admin\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\admin\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\admin\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\admin\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\admin\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\admin\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\admin\.m2\repository\org\springframework\data\spring-data-jpa\3.1.0\spring-data-jpa-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\data\spring-data-commons\3.1.0\spring-data-commons-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\spring-orm\6.0.9\spring-orm-6.0.9.jar;C:\Users\admin\.m2\repository\org\springframework\spring-tx\6.0.9\spring-tx-6.0.9.jar;C:\Users\admin\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\admin\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\admin\.m2\repository\org\springframework\spring-aspects\6.0.9\spring-aspects-6.0.9.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-mail\3.1.0\spring-boot-starter-mail-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter\3.1.0\spring-boot-starter-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.1.0\spring-boot-starter-logging-3.1.0.jar;C:\Users\admin\.m2\repository\ch\qos\logback\logback-classic\1.4.7\logback-classic-1.4.7.jar;C:\Users\admin\.m2\repository\ch\qos\logback\logback-core\1.4.7\logback-core-1.4.7.jar;C:\Users\admin\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.20.0\log4j-to-slf4j-2.20.0.jar;C:\Users\admin\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\admin\.m2\repository\org\slf4j\jul-to-slf4j\2.0.7\jul-to-slf4j-2.0.7.jar;C:\Users\admin\.m2\repository\org\yaml\snakeyaml\1.33\snakeyaml-1.33.jar;C:\Users\admin\.m2\repository\org\springframework\spring-context-support\6.0.9\spring-context-support-6.0.9.jar;C:\Users\admin\.m2\repository\org\eclipse\angus\jakarta.mail\1.1.0\jakarta.mail-1.1.0.jar;C:\Users\admin\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\admin\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\3.1.0\spring-boot-starter-thymeleaf-3.1.0.jar;C:\Users\admin\.m2\repository\org\thymeleaf\thymeleaf-spring6\3.1.1.RELEASE\thymeleaf-spring6-3.1.1.RELEASE.jar;C:\Users\admin\.m2\repository\org\thymeleaf\thymeleaf\3.1.1.RELEASE\thymeleaf-3.1.1.RELEASE.jar;C:\Users\admin\.m2\repository\org\attoparser\attoparser\2.0.6.RELEASE\attoparser-2.0.6.RELEASE.jar;C:\Users\admin\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.1.0\spring-boot-starter-validation-3.1.0.jar;C:\Users\admin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.8\tomcat-embed-el-10.1.8.jar;C:\Users\admin\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.0.Final\hibernate-validator-8.0.0.Final.jar;C:\Users\admin\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.1.0\spring-boot-starter-web-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.1.0\spring-boot-starter-json-3.1.0.jar;C:\Users\admin\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.0\jackson-datatype-jdk8-2.15.0.jar;C:\Users\admin\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.0\jackson-datatype-jsr310-2.15.0.jar;C:\Users\admin\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.0\jackson-module-parameter-names-2.15.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.1.0\spring-boot-starter-tomcat-3.1.0.jar;C:\Users\admin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.8\tomcat-embed-core-10.1.8.jar;C:\Users\admin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.8\tomcat-embed-websocket-10.1.8.jar;C:\Users\admin\.m2\repository\org\springframework\spring-web\6.0.9\spring-web-6.0.9.jar;C:\Users\admin\.m2\repository\org\springframework\spring-webmvc\6.0.9\spring-webmvc-6.0.9.jar;C:\Users\admin\.m2\repository\org\postgresql\postgresql\42.6.0\postgresql-42.6.0.jar;C:\Users\admin\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\admin\.m2\repository\com\h2database\h2\2.1.214\h2-2.1.214.jar;C:\Users\admin\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.1.0\spring-boot-starter-test-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-test\3.1.0\spring-boot-test-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.1.0\spring-boot-test-autoconfigure-3.1.0.jar;C:\Users\admin\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\admin\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\admin\.m2\repository\net\minidev\json-smart\2.4.10\json-smart-2.4.10.jar;C:\Users\admin\.m2\repository\net\minidev\accessors-smart\2.4.9\accessors-smart-2.4.9.jar;C:\Users\admin\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\admin\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\admin\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\admin\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\Users\admin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\admin\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\admin\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\admin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\admin\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\Users\admin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\admin\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\admin\.m2\repository\org\mockito\mockito-core\5.3.1\mockito-core-5.3.1.jar;C:\Users\admin\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.4\byte-buddy-agent-1.14.4.jar;C:\Users\admin\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\admin\.m2\repository\org\mockito\mockito-junit-jupiter\5.3.1\mockito-junit-jupiter-5.3.1.jar;C:\Users\admin\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\admin\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\admin\.m2\repository\org\springframework\spring-core\6.0.9\spring-core-6.0.9.jar;C:\Users\admin\.m2\repository\org\springframework\spring-jcl\6.0.9\spring-jcl-6.0.9.jar;C:\Users\admin\.m2\repository\org\springframework\spring-test\6.0.9\spring-test-6.0.9.jar;C:\Users\admin\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-devtools\3.1.0\spring-boot-devtools-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot\3.1.0\spring-boot-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.1.0\spring-boot-autoconfigure-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\security\spring-security-core\6.1.0\spring-security-core-6.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\security\spring-security-crypto\6.1.0\spring-security-crypto-6.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\spring-aop\6.0.9\spring-aop-6.0.9.jar;C:\Users\admin\.m2\repository\org\springframework\spring-beans\6.0.9\spring-beans-6.0.9.jar;C:\Users\admin\.m2\repository\org\springframework\spring-context\6.0.9\spring-context-6.0.9.jar;C:\Users\admin\.m2\repository\org\springframework\spring-expression\6.0.9\spring-expression-6.0.9.jar;C:\Users\admin\.m2\repository\io\micrometer\micrometer-observation\1.11.0\micrometer-observation-1.11.0.jar;C:\Users\admin\.m2\repository\io\micrometer\micrometer-commons\1.11.0\micrometer-commons-1.11.0.jar;C:\Users\admin\.m2\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;C:\Users\admin\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\admin\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.1.0\springdoc-openapi-starter-webmvc-ui-2.1.0.jar;C:\Users\admin\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.1.0\springdoc-openapi-starter-webmvc-api-2.1.0.jar;C:\Users\admin\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.1.0\springdoc-openapi-starter-common-2.1.0.jar;C:\Users\admin\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.9\swagger-core-jakarta-2.2.9.jar;C:\Users\admin\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.9\swagger-annotations-jakarta-2.2.9.jar;C:\Users\admin\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.9\swagger-models-jakarta-2.2.9.jar;C:\Users\admin\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.0\jackson-dataformat-yaml-2.15.0.jar;C:\Users\admin\.m2\repository\org\webjars\swagger-ui\4.18.2\swagger-ui-4.18.2.jar;C:\Users\admin\.m2\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;C:\Users\admin\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;C:\Users\admin\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.0\jackson-databind-2.15.0.jar;C:\Users\admin\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.0\jackson-annotations-2.15.0.jar;C:\Users\admin\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.0\jackson-core-2.15.0.jar;C:\Users\admin\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\admin\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\admin\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\admin\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\admin\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\admin\.m2\repository\org\springframework\security\spring-security-web\6.1.0\spring-security-web-6.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.1.0\spring-boot-starter-security-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\security\spring-security-config\6.1.0\spring-security-config-6.1.0.jar;C:\Users\admin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\admin\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.1.0\spring-boot-starter-actuator-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.1.0\spring-boot-actuator-autoconfigure-3.1.0.jar;C:\Users\admin\.m2\repository\org\springframework\boot\spring-boot-actuator\3.1.0\spring-boot-actuator-3.1.0.jar;C:\Users\admin\.m2\repository\io\micrometer\micrometer-core\1.11.0\micrometer-core-1.11.0.jar;C:\Users\admin\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;C:\Users\admin\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="windows-1252"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\admin\AppData\Local\Temp\surefire11020326871126066566\surefirebooter-20230609121908375_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\admin\AppData\Local\Temp\surefire1900420224022405819\surefirebooter-20230609141457893_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.6+10-LTS"/>
@@ -49,26 +49,26 @@
     <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/"/>
     <property name="java.io.tmpdir" value="C:\Users\admin\AppData\Local\Temp\"/>
     <property name="com.zaxxer.hikari.pool_number" value="2"/>
-    <property name="catalina.home" value="C:\Users\admin\AppData\Local\Temp\tomcat.0.7542796254525118003"/>
+    <property name="catalina.home" value="C:\Users\admin\AppData\Local\Temp\tomcat.0.11147502545816159667"/>
     <property name="java.version" value="17.0.6"/>
     <property name="user.dir" value="C:\Users\admin\Documents\GitHub\gambling\back-end"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="15372"/>
+    <property name="PID" value="11452"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="windows-1252"/>
-    <property name="catalina.base" value="C:\Users\admin\AppData\Local\Temp\tomcat.0.7542796254525118003"/>
+    <property name="catalina.base" value="C:\Users\admin\AppData\Local\Temp\tomcat.0.11147502545816159667"/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Amazon Corretto\jdk17.0.6_10\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Amazon Corretto\jdk17.0.6_10\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files\apache-maven-3.9.2\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Users\admin\AppData\Roaming\npm;C:\Users\admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.2\bin;;C:\Program Files\Amazon Corretto\jdk17.0.6_10\bin;C:\Users\admin\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86)\Nmap;."/>
+    <property name="java.library.path" value="C:\Program Files\Amazon Corretto\jdk17.0.6_10\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Amazon Corretto\jdk17.0.6_10\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files\apache-maven-3.9.2\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Users\admin\AppData\Roaming\npm;C:\Users\admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.2\bin;;C:\Program Files\Amazon Corretto\jdk17.0.6_10\bin;C:\Users\admin\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86)\Nmap;C:\Program Files\JetBrains\WebStorm 2023.1.2\bin;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vendor" value="Amazon.com Inc."/>
     <property name="java.vm.version" value="17.0.6+10-LTS"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="multipleInvalidFieldsClientRegistrationTest" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="0.425">
-    <system-out><![CDATA[2023-06-09T12:19:18.912+08:00  INFO 15372 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ph.cdo.backend.service.controller.AuthenticationControllerTest]: AuthenticationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-06-09T12:19:18.936+08:00  INFO 15372 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ph.cdo.backend.BackEndApplication for test class ph.cdo.backend.service.controller.AuthenticationControllerTest
+  <testcase name="multipleInvalidFieldsClientRegistrationTest" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="0.441">
+    <system-out><![CDATA[2023-06-09T14:15:08.885+08:00  INFO 11452 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ph.cdo.backend.service.controller.AuthenticationControllerTest]: AuthenticationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-09T14:15:08.914+08:00  INFO 11452 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ph.cdo.backend.BackEndApplication for test class ph.cdo.backend.service.controller.AuthenticationControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -78,44 +78,44 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2023-06-09T12:19:18.993+08:00  INFO 15372 --- [           main] p.c.b.s.c.AuthenticationControllerTest   : Starting AuthenticationControllerTest using Java 17.0.6 with PID 15372 (started by admin in C:\Users\admin\Documents\GitHub\gambling\back-end)
-2023-06-09T12:19:18.994+08:00  INFO 15372 --- [           main] p.c.b.s.c.AuthenticationControllerTest   : The following 1 profile is active: "test"
-2023-06-09T12:19:19.551+08:00  INFO 15372 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-09T12:19:19.601+08:00  INFO 15372 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 5 JPA repository interfaces.
-2023-06-09T12:19:19.884+08:00  INFO 15372 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-06-09T12:19:19.898+08:00  INFO 15372 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-09T12:19:19.899+08:00  INFO 15372 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
-2023-06-09T12:19:20.022+08:00  INFO 15372 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-09T12:19:20.022+08:00  INFO 15372 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1026 ms
-2023-06-09T12:19:20.132+08:00  INFO 15372 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-09T12:19:20.145+08:00  INFO 15372 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-09T12:19:20.146+08:00  INFO 15372 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-06-09T12:19:20.147+08:00  INFO 15372 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-06-09T12:19:20.148+08:00  INFO 15372 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:unscathed user=SA
-2023-06-09T12:19:20.149+08:00  INFO 15372 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-06-09T12:19:20.150+08:00  INFO 15372 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
-2023-06-09T12:19:20.167+08:00  WARN 15372 --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name entity_sequence
-2023-06-09T12:19:20.187+08:00  INFO 15372 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-06-09T12:19:20.313+08:00  INFO 15372 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-09T12:19:20.334+08:00  INFO 15372 --- [           main] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
-2023-06-09T12:19:20.335+08:00  INFO 15372 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-09T12:19:20.621+08:00  WARN 15372 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-09T12:19:20.635+08:00  INFO 15372 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30f454f4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f5faa89, org.springframework.security.web.context.SecurityContextHolderFilter@18ab9b9e, org.springframework.security.web.header.HeaderWriterFilter@44d83a12, org.springframework.security.web.authentication.logout.LogoutFilter@2ba0948f, ph.cdo.backend.config.JwtAuthFilter@62b903ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6820ab53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d2d04ef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67d44ae9, org.springframework.security.web.session.SessionManagementFilter@7fbfb062, org.springframework.security.web.access.ExceptionTranslationFilter@2abb4810, org.springframework.security.web.access.intercept.AuthorizationFilter@43b8a6de]
-2023-06-09T12:19:20.835+08:00  INFO 15372 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-06-09T12:19:20.909+08:00  INFO 15372 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 27887 (http) with context path ''
-2023-06-09T12:19:20.916+08:00  INFO 15372 --- [           main] p.c.b.s.c.AuthenticationControllerTest   : Started AuthenticationControllerTest in 1.972 seconds (process running for 12.335)
-2023-06-09T12:19:21.110+08:00  INFO 15372 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-09T12:19:21.110+08:00  INFO 15372 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-06-09T12:19:21.112+08:00  INFO 15372 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-<422 UNPROCESSABLE_ENTITY Unprocessable Entity,{numberOfErrors=2, errorMaps={SIZE ERROR={fieldName=password, rejectedValue=1234, errorMessage=Password length should be between 6 and 255 characters, exceptionName=ViolationFieldError, statusCode=Size}, EMAIL ERROR={fieldName=email, rejectedValue=invalidEmail, errorMessage=Must be a valid email, exceptionName=ViolationFieldError, statusCode=Email}}, status=UNPROCESSABLE_ENTITY, exception=InvalidValueException},[X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 04:19:21 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+2023-06-09T14:15:08.976+08:00  INFO 11452 --- [           main] p.c.b.s.c.AuthenticationControllerTest   : Starting AuthenticationControllerTest using Java 17.0.6 with PID 11452 (started by admin in C:\Users\admin\Documents\GitHub\gambling\back-end)
+2023-06-09T14:15:08.976+08:00  INFO 11452 --- [           main] p.c.b.s.c.AuthenticationControllerTest   : The following 1 profile is active: "test"
+2023-06-09T14:15:09.598+08:00  INFO 11452 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-09T14:15:09.643+08:00  INFO 11452 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 5 JPA repository interfaces.
+2023-06-09T14:15:09.955+08:00  INFO 11452 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-09T14:15:09.971+08:00  INFO 11452 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-09T14:15:09.972+08:00  INFO 11452 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-09T14:15:10.126+08:00  INFO 11452 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-09T14:15:10.127+08:00  INFO 11452 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1148 ms
+2023-06-09T14:15:10.232+08:00  INFO 11452 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-09T14:15:10.248+08:00  INFO 11452 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-09T14:15:10.248+08:00  INFO 11452 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-09T14:15:10.252+08:00  INFO 11452 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-06-09T14:15:10.253+08:00  INFO 11452 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:unscathed user=SA
+2023-06-09T14:15:10.254+08:00  INFO 11452 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-06-09T14:15:10.254+08:00  INFO 11452 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
+2023-06-09T14:15:10.263+08:00  WARN 11452 --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name entity_sequence
+2023-06-09T14:15:10.287+08:00  INFO 11452 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-06-09T14:15:10.444+08:00  INFO 11452 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-09T14:15:10.468+08:00  INFO 11452 --- [           main] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-09T14:15:10.468+08:00  INFO 11452 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-09T14:15:10.815+08:00  WARN 11452 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-09T14:15:10.829+08:00  INFO 11452 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@517e381b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6178b3bf, org.springframework.security.web.context.SecurityContextHolderFilter@17f83573, org.springframework.security.web.header.HeaderWriterFilter@27868127, org.springframework.security.web.authentication.logout.LogoutFilter@6a8b47ac, ph.cdo.backend.config.JwtAuthFilter@52f0b3d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fd2716f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c4e440b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77e467d9, org.springframework.security.web.session.SessionManagementFilter@4a2f4bfa, org.springframework.security.web.access.ExceptionTranslationFilter@1ac24c17, org.springframework.security.web.access.intercept.AuthorizationFilter@184e7447]
+2023-06-09T14:15:11.058+08:00  INFO 11452 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-09T14:15:11.151+08:00  INFO 11452 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5298 (http) with context path ''
+2023-06-09T14:15:11.158+08:00  INFO 11452 --- [           main] p.c.b.s.c.AuthenticationControllerTest   : Started AuthenticationControllerTest in 2.234 seconds (process running for 13.079)
+2023-06-09T14:15:11.369+08:00  INFO 11452 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-09T14:15:11.370+08:00  INFO 11452 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-09T14:15:11.372+08:00  INFO 11452 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+<422 UNPROCESSABLE_ENTITY Unprocessable Entity,{numberOfErrors=2, errorMaps={SIZE ERROR={fieldName=password, rejectedValue=1234, errorMessage=Password length should be between 6 and 255 characters, exceptionName=ViolationFieldError, statusCode=Size}, EMAIL ERROR={fieldName=email, rejectedValue=invalidEmail, errorMessage=Must be a valid email, exceptionName=ViolationFieldError, statusCode=Email}}, status=UNPROCESSABLE_ENTITY, exception=InvalidValueException},[Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 06:15:11 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
 {numberOfErrors=2, errorMaps={SIZE ERROR={fieldName=password, rejectedValue=1234, errorMessage=Password length should be between 6 and 255 characters, exceptionName=ViolationFieldError, statusCode=Size}, EMAIL ERROR={fieldName=email, rejectedValue=invalidEmail, errorMessage=Must be a valid email, exceptionName=ViolationFieldError, statusCode=Email}}, status=UNPROCESSABLE_ENTITY, exception=InvalidValueException}
 ]]></system-out>
   </testcase>
-  <testcase name="invalidEmailClientRegistrationTest" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="0.022">
-    <system-out><![CDATA[<422 UNPROCESSABLE_ENTITY Unprocessable Entity,{numberOfErrors=1, errorMaps={EMAIL ERROR={fieldName=email, rejectedValue=invalidEmail, errorMessage=Must be a valid email, exceptionName=ViolationFieldError, statusCode=Email}}, status=UNPROCESSABLE_ENTITY, exception=InvalidValueException},[X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 04:19:21 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+  <testcase name="invalidEmailClientRegistrationTest" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="0.027">
+    <system-out><![CDATA[<422 UNPROCESSABLE_ENTITY Unprocessable Entity,{numberOfErrors=1, errorMaps={EMAIL ERROR={fieldName=email, rejectedValue=invalidEmail, errorMessage=Must be a valid email, exceptionName=ViolationFieldError, statusCode=Email}}, status=UNPROCESSABLE_ENTITY, exception=InvalidValueException},[Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 06:15:11 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
 ]]></system-out>
   </testcase>
-  <testcase name="testingAValidClientRegistration" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="4.127">
+  <testcase name="testingAValidClientRegistration" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="4.847">
     <system-out><![CDATA[DEBUG: Jakarta Mail version 2.1.1
 DEBUG: URL jar:file:/C:/Users/admin/.m2/repository/org/eclipse/angus/jakarta.mail/1.1.0/jakarta.mail-1.1.0.jar!/META-INF/javamail.providers
 DEBUG: successfully loaded resource: jar:file:/C:/Users/admin/.m2/repository/org/eclipse/angus/jakarta.mail/1.1.0/jakarta.mail-1.1.0.jar!/META-INF/javamail.providers
@@ -129,7 +129,7 @@ DEBUG: successfully loaded resource: jar:file:/C:/Users/admin/.m2/repository/org
 DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle]
 DEBUG SMTP: useEhlo true, useAuth true
 DEBUG SMTP: trying to connect to host "smtp.gmail.com", port 587, isSSL false
-220 smtp.gmail.com ESMTP 21-20020a170902c11500b001ae365072ccsm2168965pli.122 - gsmtp
+220 smtp.gmail.com ESMTP c4-20020a17090ab28400b00252b3328ad8sm2162264pjr.0 - gsmtp
 DEBUG SMTP: connected to host "smtp.gmail.com", port: 587
 EHLO host.docker.internal
 250-smtp.gmail.com at your service, [180.191.84.177]
@@ -172,26 +172,26 @@ DEBUG SMTP: AUTH LOGIN command trace suppressed
 DEBUG SMTP: AUTH LOGIN succeeded
 DEBUG SMTP: use8bit false
 MAIL FROM:<admin@host.docker.internal>
-250 2.1.0 OK 21-20020a170902c11500b001ae365072ccsm2168965pli.122 - gsmtp
+250 2.1.0 OK c4-20020a17090ab28400b00252b3328ad8sm2162264pjr.0 - gsmtp
 RCPT TO:<joshuagarrysalcedo@gmail.com>
-250 2.1.5 OK 21-20020a170902c11500b001ae365072ccsm2168965pli.122 - gsmtp
+250 2.1.5 OK c4-20020a17090ab28400b00252b3328ad8sm2162264pjr.0 - gsmtp
 DEBUG SMTP: Verified Addresses
 DEBUG SMTP:   joshuagarrysalcedo@gmail.com
 DATA
-354  Go ahead 21-20020a170902c11500b001ae365072ccsm2168965pli.122 - gsmtp
-Date: Fri, 9 Jun 2023 12:19:24 +0800 (SGT)
+354  Go ahead c4-20020a17090ab28400b00252b3328ad8sm2162264pjr.0 - gsmtp
+Date: Fri, 9 Jun 2023 14:15:14 +0800 (SGT)
 To: joshuagarrysalcedo@gmail.com
-Message-ID: <749114250.2.1686284364048@host.docker.internal>
+Message-ID: <1366753560.2.1686291314586@host.docker.internal>
 Subject: Email Confirmation
 MIME-Version: 1.0
 Content-Type: multipart/mixed; 
-	boundary="----=_Part_0_366007597.1686284362172"
+	boundary="----=_Part_0_1281377071.1686291312502"
 
-------=_Part_0_366007597.1686284362172
+------=_Part_0_1281377071.1686291312502
 Content-Type: multipart/related; 
-	boundary="----=_Part_1_608596294.1686284362177"
+	boundary="----=_Part_1_239534718.1686291312507"
 
-------=_Part_1_608596294.1686284362177
+------=_Part_1_239534718.1686291312507
 Content-Type: text/html; charset=us-ascii
 Content-Transfer-Encoding: 7bit
 
@@ -254,35 +254,35 @@ Content-Transfer-Encoding: 7bit
     </div>
     <div class="footer">
         <p>For more information, please visit our Facebook page:</p>
-        <p><a href="https://localhost:8080/api/v1/client/confirm/1744b594-6c2a-40a5-855d-229776adf045">Confirmation link</a></p>
+        <p><a href="https://localhost:8080/api/v1/client/confirm/f9e2fcaa-8cbf-49e1-87fa-09b1e0236fb1">Confirmation link</a></p>
         <br/>
-        <p>Expires at : <span>06/10/2023 12:19:21</span></p>
+        <p>Expires at : <span>06/10/2023 14:15:12</span></p>
     </div>
 </div>
 </body>
 </html>
 
-------=_Part_1_608596294.1686284362177--
+------=_Part_1_239534718.1686291312507--
 
-------=_Part_0_366007597.1686284362172--
+------=_Part_0_1281377071.1686291312502--
 .
-250 2.0.0 OK  1686284364 21-20020a170902c11500b001ae365072ccsm2168965pli.122 - gsmtp
+250 2.0.0 OK  1686291315 c4-20020a17090ab28400b00252b3328ad8sm2162264pjr.0 - gsmtp
 DEBUG SMTP: message successfully delivered to mail server
 QUIT
-221 2.0.0 closing connection 21-20020a170902c11500b001ae365072ccsm2168965pli.122 - gsmtp
-<201 CREATED Created,{header=Registration Successful, body=Please confirm your email to activate your account!, email=joshuagarrysalcedo@gmail.com, footer=Email will expired in 24 hours, token=eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb3NodWFnYXJyeXNhbGNlZG9AZ21haWwuY29tIiwiaWF0IjoxNjg2Mjg0MzYxLCJleHAiOjE2ODYzMjc1NjF9.NATRC9v6qUPrNSRhMjbRBij-GAKQ2mqTmriPWSlXGo0, response={mappedBody={footer=Email will expired in 24 hours, header=Registration Successful, body=Please confirm your email to activate your account!, email=joshuagarrysalcedo@gmail.com}}},[X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 04:19:25 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+221 2.0.0 closing connection c4-20020a17090ab28400b00252b3328ad8sm2162264pjr.0 - gsmtp
+<201 CREATED Created,{header=Registration Successful, body=Please confirm your email to activate your account!, email=joshuagarrysalcedo@gmail.com, footer=Email will expired in 24 hours, token=eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJqb3NodWFnYXJyeXNhbGNlZG9AZ21haWwuY29tIiwiaWF0IjoxNjg2MjkxMzEyLCJleHAiOjE2ODYzMzQ1MTJ9.WiM0JgUtRCMa1huSP8Ihz5GzdL4jwvYL8LqBitE1W2Y, response={mappedBody={footer=Email will expired in 24 hours, header=Registration Successful, body=Please confirm your email to activate your account!, email=joshuagarrysalcedo@gmail.com}}},[Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 06:15:16 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
 ]]></system-out>
   </testcase>
-  <testcase name="testingIfNotNull" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="0.019"/>
-  <testcase name="invalidPasswordClientRegistrationTest" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="0.019">
-    <system-out><![CDATA[<422 UNPROCESSABLE_ENTITY Unprocessable Entity,{numberOfErrors=1, errorMaps={SIZE ERROR={fieldName=password, rejectedValue=1234, errorMessage=Password length should be between 6 and 255 characters, exceptionName=ViolationFieldError, statusCode=Size}}, status=UNPROCESSABLE_ENTITY, exception=InvalidValueException},[X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 04:19:25 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+  <testcase name="testingIfNotNull" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="0.016"/>
+  <testcase name="invalidPasswordClientRegistrationTest" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="0.017">
+    <system-out><![CDATA[<422 UNPROCESSABLE_ENTITY Unprocessable Entity,{numberOfErrors=1, errorMaps={SIZE ERROR={fieldName=password, rejectedValue=1234, errorMessage=Password length should be between 6 and 255 characters, exceptionName=ViolationFieldError, statusCode=Size}}, status=UNPROCESSABLE_ENTITY, exception=InvalidValueException},[Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 06:15:16 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
 ]]></system-out>
   </testcase>
-  <testcase name="testingDuplicateEmail" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="3.267">
+  <testcase name="testingDuplicateEmail" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="3.42">
     <system-out><![CDATA[DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Oracle]
 DEBUG SMTP: useEhlo true, useAuth true
 DEBUG SMTP: trying to connect to host "smtp.gmail.com", port 587, isSSL false
-220 smtp.gmail.com ESMTP i21-20020aa78b55000000b0064fc715b380sm1815680pfd.176 - gsmtp
+220 smtp.gmail.com ESMTP a17-20020aa78651000000b0063d670ad850sm2025568pfo.92 - gsmtp
 DEBUG SMTP: connected to host "smtp.gmail.com", port: 587
 EHLO host.docker.internal
 250-smtp.gmail.com at your service, [180.191.84.177]
@@ -325,26 +325,26 @@ DEBUG SMTP: AUTH LOGIN command trace suppressed
 DEBUG SMTP: AUTH LOGIN succeeded
 DEBUG SMTP: use8bit false
 MAIL FROM:<admin@host.docker.internal>
-250 2.1.0 OK i21-20020aa78b55000000b0064fc715b380sm1815680pfd.176 - gsmtp
+250 2.1.0 OK a17-20020aa78651000000b0063d670ad850sm2025568pfo.92 - gsmtp
 RCPT TO:<swaswaemail@gmail.com>
-250 2.1.5 OK i21-20020aa78b55000000b0064fc715b380sm1815680pfd.176 - gsmtp
+250 2.1.5 OK a17-20020aa78651000000b0063d670ad850sm2025568pfo.92 - gsmtp
 DEBUG SMTP: Verified Addresses
 DEBUG SMTP:   swaswaemail@gmail.com
 DATA
-354  Go ahead i21-20020aa78b55000000b0064fc715b380sm1815680pfd.176 - gsmtp
-Date: Fri, 9 Jun 2023 12:19:27 +0800 (SGT)
+354  Go ahead a17-20020aa78651000000b0063d670ad850sm2025568pfo.92 - gsmtp
+Date: Fri, 9 Jun 2023 14:15:18 +0800 (SGT)
 To: swaswaemail@gmail.com
-Message-ID: <93651416.5.1686284367341@host.docker.internal>
+Message-ID: <1972171276.5.1686291318447@host.docker.internal>
 Subject: Email Confirmation
 MIME-Version: 1.0
 Content-Type: multipart/mixed; 
-	boundary="----=_Part_3_706093353.1686284365655"
+	boundary="----=_Part_3_1580772540.1686291316633"
 
-------=_Part_3_706093353.1686284365655
+------=_Part_3_1580772540.1686291316633
 Content-Type: multipart/related; 
-	boundary="----=_Part_4_297161624.1686284365656"
+	boundary="----=_Part_4_1742382220.1686291316634"
 
-------=_Part_4_297161624.1686284365656
+------=_Part_4_1742382220.1686291316634
 Content-Type: text/html; charset=us-ascii
 Content-Transfer-Encoding: 7bit
 
@@ -407,30 +407,30 @@ Content-Transfer-Encoding: 7bit
     </div>
     <div class="footer">
         <p>For more information, please visit our Facebook page:</p>
-        <p><a href="https://localhost:8080/api/v1/client/confirm/18c2b61a-5439-4075-9d85-5dedf3a5fe72">Confirmation link</a></p>
+        <p><a href="https://localhost:8080/api/v1/client/confirm/26c97887-ce3e-406b-9b68-e869b9d1a80a">Confirmation link</a></p>
         <br/>
-        <p>Expires at : <span>06/10/2023 12:19:25</span></p>
+        <p>Expires at : <span>06/10/2023 14:15:16</span></p>
     </div>
 </div>
 </body>
 </html>
 
-------=_Part_4_297161624.1686284365656--
+------=_Part_4_1742382220.1686291316634--
 
-------=_Part_3_706093353.1686284365655--
+------=_Part_3_1580772540.1686291316633--
 .
-250 2.0.0 OK  1686284368 i21-20020aa78b55000000b0064fc715b380sm1815680pfd.176 - gsmtp
+250 2.0.0 OK  1686291319 a17-20020aa78651000000b0063d670ad850sm2025568pfo.92 - gsmtp
 DEBUG SMTP: message successfully delivered to mail server
 QUIT
-221 2.0.0 closing connection i21-20020aa78b55000000b0064fc715b380sm1815680pfd.176 - gsmtp
-<201 CREATED Created,{header=Registration Successful, body=Please confirm your email to activate your account!, email=swaswaemail@gmail.com, footer=Email will expired in 24 hours, token=eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJzd2Fzd2FlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE2ODYyODQzNjUsImV4cCI6MTY4NjMyNzU2NX0.NL3hpfMjVaCofUEHLWRA0U1A8SEVfJxqKP_-Gpf41mg, response={mappedBody={footer=Email will expired in 24 hours, header=Registration Successful, body=Please confirm your email to activate your account!, email=swaswaemail@gmail.com}}},[X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 04:19:28 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
-<409 CONFLICT Conflict,{status=CONFLICT, errorMessage=email with swaswaemail@gmail.com already exists!, exception=DuplicateEmailException, timeStamp=04:19:28 6/9/2023, statusCode=409},[X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 04:19:28 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+221 2.0.0 closing connection a17-20020aa78651000000b0063d670ad850sm2025568pfo.92 - gsmtp
+<201 CREATED Created,{header=Registration Successful, body=Please confirm your email to activate your account!, email=swaswaemail@gmail.com, footer=Email will expired in 24 hours, token=eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJzd2Fzd2FlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE2ODYyOTEzMTYsImV4cCI6MTY4NjMzNDUxNn0.2BHaHj03Mg0UZVC0IRx5opAWt8E1xebPR1uUw1uQKI4, response={mappedBody={footer=Email will expired in 24 hours, header=Registration Successful, body=Please confirm your email to activate your account!, email=swaswaemail@gmail.com}}},[Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 06:15:19 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
+<409 CONFLICT Conflict,{status=CONFLICT, errorMessage=email with swaswaemail@gmail.com already exists!, exception=DuplicateEmailException, timeStamp=06:15:19 6/9/2023, statusCode=409},[Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Content-Type:"application/json", Transfer-Encoding:"chunked", Date:"Fri, 09 Jun 2023 06:15:19 GMT", Keep-Alive:"timeout=60", Connection:"keep-alive"]>
 ]]></system-out>
   </testcase>
-  <testcase name="testingAValidAuthentication" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="0.295">
-    <system-out><![CDATA[Pass $2a$10$0WVMxApzr0PbI2Io7rEaFeeIFLKSfo4UxXAIKL6Yv2WbN83JKxdMC
+  <testcase name="testingAValidAuthentication" classname="ph.cdo.backend.service.controller.AuthenticationControllerTest" time="0.275">
+    <system-out><![CDATA[Pass $2a$10$Pf20DP4AvquSCszsVEGw3uUjds5wiLUkX80XGxqTtl6HsliknRB42
 swaswa14@gmail.com
-{token=eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJzd2Fzd2ExNEBnbWFpbC5jb20iLCJpYXQiOjE2ODYyODQzNjksImV4cCI6MTY4NjMyNzU2OX0.TWMGJpwGDKx-mutG6GlYIuc57Pj3Ku878spkAUirbOE, role=Client}
+{token=eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiJzd2Fzd2ExNEBnbWFpbC5jb20iLCJpYXQiOjE2ODYyOTEzMjAsImV4cCI6MTY4NjMzNDUyMH0.Yn-EOULyEna4mW4uYgSiRBYS3UpF7EX3mmkyt0-B0B0, role=Client}
 ]]></system-out>
   </testcase>
 </testsuite>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad3df2a3-acd8-4ecc-8c7f-7d9933df4456" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/ApiTest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/api/api-client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/api/api-interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/entity/forms.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/entity/interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/src/main/java/ph/cdo/backend/controller/entity/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/main/java/ph/cdo/backend/controller/entity/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/src/main/java/ph/cdo/backend/controller/entity/AgentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/main/java/ph/cdo/backend/controller/entity/AgentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/src/main/java/ph/cdo/backend/controller/entity/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/main/java/ph/cdo/backend/controller/entity/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/back-end-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/back-end-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/back-end-1.0.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/back-end-1.0.0.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/classes/ph/cdo/backend/controller/entity/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/classes/ph/cdo/backend/controller/entity/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/classes/ph/cdo/backend/controller/entity/AgentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/classes/ph/cdo/backend/controller/entity/AgentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/classes/ph/cdo/backend/controller/entity/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/classes/ph/cdo/backend/controller/entity/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.BackEndApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.BackEndApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.controller.AuthenticationControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.controller.AuthenticationControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.controller.CustomExceptionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.controller.CustomExceptionTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.spring_boot_test.ClientTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.spring_boot_test.ClientTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.AuthenticationServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.AuthenticationServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAdminServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAdminServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAgentServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAgentServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserClientServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserClientServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TokenServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TokenServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TransactionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TransactionTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientDepositTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientDepositTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.BackEndApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.BackEndApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.controller.AuthenticationControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.controller.AuthenticationControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.controller.CustomExceptionTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.controller.CustomExceptionTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.spring_boot_test.ClientTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.spring_boot_test.ClientTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.AuthenticationServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.AuthenticationServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAdminServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAdminServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAgentServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAgentServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserClientServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserClientServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.TokenServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.TokenServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.TransactionTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.unitTests.TransactionTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientDepositTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientDepositTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QxBP0MEntGWUANopfOQuYkUDi3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "frontEndEntity",
+    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/Landing-Page",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "C:/Users/admin/Documents/GitHub/gambling/front-end/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\admin\\Documents\\GitHub\\gambling\\front-end\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Documents\GitHub\gambling\front-end\src\utils" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="getAllClients" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/test/ApiTest.ts" />
+      <test-names>
+        <test-name value="getAllClients" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.getAllClients" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad3df2a3-acd8-4ecc-8c7f-7d9933df4456" name="Changes" comment="" />
+      <created>1686285325609</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686285325609</updated>
+      <workItem from="1686285327974" duration="8589000" />
+      <workItem from="1686323449378" duration="4731000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
