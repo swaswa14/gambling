@@ -5,137 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/dcoker.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/next.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/public/next.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/public/vercel.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/src/pages/_app.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/src/pages/_document.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/src/pages/api/hello.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/src/pages/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/src/styles/globals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/vite.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9/storage_v2/_src_/database/gambling-db.5rK5Zw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9/storage_v2/_src_/database/gambling-db.5rK5Zw/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9/storage_v2/_src_/database/gambling-db.5rK5Zw/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/dataSources/58431ec1-c941-4db3-94a8-adb4e13035a9/storage_v2/_src_/database/gambling-db.5rK5Zw/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/back-end.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/src/main/resources/templates/enabled_account.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/back-end-back-end-0.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/back-end-back-end-0.1.0.jar.original" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/classes/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/classes/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/classes/templates/enabled_account.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.BackEndApplicationTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.controller.AuthenticationControllerTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.controller.CustomExceptionTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.spring_boot_test.ClientTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.AuthenticationServiceTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAdminServiceTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAgentServiceTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserClientServiceTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TokenServiceTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TransactionTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.BackEndApplicationTests.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.controller.AuthenticationControllerTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.controller.CustomExceptionTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.spring_boot_test.ClientTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.unitTests.AuthenticationServiceTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAdminServiceTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAgentServiceTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserClientServiceTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.unitTests.TokenServiceTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.unitTests.TransactionTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/gambling/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/back-end-back-end-0.1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/back-end-back-end-0.1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/back-end-back-end-0.1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/back-end-back-end-0.1.0.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.BackEndApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.BackEndApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.controller.AuthenticationControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.controller.AuthenticationControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.controller.CustomExceptionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.controller.CustomExceptionTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.spring_boot_test.ClientTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.spring_boot_test.ClientTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.AuthenticationServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.AuthenticationServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAdminServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAdminServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAgentServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAgentServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserClientServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserClientServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TokenServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TokenServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TransactionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TransactionTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.BackEndApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.BackEndApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.controller.AuthenticationControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.controller.AuthenticationControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.controller.CustomExceptionTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.controller.CustomExceptionTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.spring_boot_test.ClientTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.spring_boot_test.ClientTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.AuthenticationServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.AuthenticationServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAdminServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAdminServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAgentServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAgentServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserClientServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserClientServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.TokenServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.TokenServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.TransactionTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.TransactionTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,7 +224,7 @@
       <workItem from="1686070058151" duration="19418000" />
       <workItem from="1686226487023" duration="19329000" />
       <workItem from="1686246737155" duration="7770000" />
-      <workItem from="1686267593341" duration="810000" />
+      <workItem from="1686267593341" duration="2254000" />
     </task>
     <servers />
   </component>

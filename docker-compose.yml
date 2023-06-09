@@ -1,4 +1,4 @@
-version : "3"
+
 services:
   postgres:
     image: postgres:14.0-alpine3.14
@@ -19,11 +19,11 @@ services:
       - SPRING_PROFILES_ACTIVE = dev
     ports:
       - "8080:8080"
-  frontend:
-    image: react-frontend:latest
-    container_name: react-frontend
-    ports:
-      - "3000:3000"
+#  frontend:
+#    image: react-frontend:latest
+#    container_name: react-frontend
+#    ports:
+#      - "3000:3000"
 
   h2:
        container_name: h2_db
