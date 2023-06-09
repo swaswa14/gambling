@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +102,7 @@
       <recent name="ph.cdo.backend.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="Spring Boot.BackEndApplication">
     <configuration name="AuthenticationControllerTest.testingAValidClientRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
@@ -131,17 +135,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TokenServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="backend in back-end" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.TokenServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/ph/cdo/backend" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -182,19 +179,19 @@
     </configuration>
     <list>
       <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="JUnit.backend in back-end" />
       <item itemvalue="JUnit.AuthenticationControllerTest.testingAValidClientRegistration" />
       <item itemvalue="JUnit.AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" />
-      <item itemvalue="JUnit.TokenServiceTest" />
       <item itemvalue="JUnit.java in back-end" />
       <item itemvalue="Spring Boot.BackEndApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.backend in back-end" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="JUnit.java in back-end" />
         <item itemvalue="JUnit.AuthenticationControllerTest.testingAValidClientRegistration" />
         <item itemvalue="JUnit.AuthenticationServiceTest.registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful" />
-        <item itemvalue="JUnit.TokenServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +221,7 @@
       <workItem from="1686070058151" duration="19418000" />
       <workItem from="1686226487023" duration="19329000" />
       <workItem from="1686246737155" duration="7770000" />
-      <workItem from="1686267593341" duration="2254000" />
+      <workItem from="1686267593341" duration="3421000" />
     </task>
     <servers />
   </component>

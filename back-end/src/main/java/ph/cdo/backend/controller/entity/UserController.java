@@ -33,7 +33,9 @@ public abstract class UserController<T extends User, R extends DTOEntity> {
     }
 
 
-
+    public ResponseEntity<R> updateUser(Long id, T user){
+        return ResponseEntity.status(HttpStatus.OK).body(userService.update(id, user));
+    }
 
 
     public ResponseEntity<R> getUser(Long id){

@@ -10,6 +10,7 @@ import ph.cdo.backend.entity.base.User;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.response.ResponseObject;
 import ph.cdo.backend.service.ClientService;
+import ph.cdo.backend.service.IUserService;
 import ph.cdo.backend.service.TokenService;
 
 import java.util.List;
@@ -66,5 +67,28 @@ public class ClientController extends UserController<Client, ClientDTOEntity> {
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<List<ClientDTOEntity>> getAllUnlocked() {
         return super.getAllUnlocked();
+    }
+
+
+
+
+    @Override
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<ClientDTOEntity> getUser(@PathVariable Long id) {
+        return super.getUser(id);
+    }
+
+    @Override
+    @DeleteMapping("/delete/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<ResponseObject> deleteUser(@PathVariable Long id) {
+        return super.deleteUser(id);
+    }
+
+    @Override
+    @DeleteMapping("/update/{id}")
+    public ResponseEntity<ClientDTOEntity> updateUser(@PathVariable Long id, @RequestBody Client user) {
+        return super.updateUser(id, user);
     }
 }
