@@ -10,8 +10,8 @@
 	</parent>
 	<groupId>ph.cdo</groupId>
 	<artifactId>back-end</artifactId>
-	<version>back-end-0.1.0</version>
-	<name>back-end</name>
+	<version>1.0.0</version>
+	<name>spring-backend</name>
 	<description>back-end</description>
 	<properties>
 		<maven.compiler.source>17</maven.compiler.source>

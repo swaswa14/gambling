@@ -47,6 +47,7 @@ public class TransactionServiceImpl implements TransactionService {
                 .stream()
                 .filter(t -> Objects.equals(t.id(), client.getId()))
                 .toList();
+
         if(list.size() == 0)
             throw new EmptyListException("List of Transactions by Client");
         return list;
@@ -55,9 +56,12 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public List<TransactionDTO> findAll() {
-        return transactionRepository.findAll().stream()
+        var list = new ArrayList<>(transactionRepository.findAll()); // Creates a new, modifiable list
+        list.sort(new TransactionDTOComparator());
+        return list.stream()
                 .map(transactionDTOMapper)
                 .collect(Collectors.toList());
+
     }
 
     @Override
@@ -85,7 +89,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public List<TransactionDTO> findByRangeAmount(double min, double max) throws InvalidValueException, EmptyListException{
-        if(min > max || min <= 0 || max <= 0 )
+        if(min > max || min < 0 || max < 0 )
             throw new InvalidValueException(min, max);
         var list = findAll().stream()
                 .filter(t-> (t.value().doubleValue() >= min && t.value().doubleValue() <= max))
@@ -105,16 +109,17 @@ public class TransactionServiceImpl implements TransactionService {
                 .filter(t-> {
                     return
                             (t.createDate().after(startDate) || t.createDate().compareTo(startDate) == 0)
-                            &&
+                                    &&
                                     (t.createDate().before(endDate) || t.createDate().compareTo(endDate) == 0);
                 })
-                .toList();
+                .collect(Collectors.toList());
 
         if(list.size() == 0)
             throw new EmptyListException("List of Transactions by a range of Date");
 
         return list;
     }
+
 
     @Override
     public TransactionDTO findByID(Long id) throws EntityDoesNotExistsException{
@@ -156,6 +161,19 @@ public class TransactionServiceImpl implements TransactionService {
         // Verify if the transaction is removed from the DB
         return transactionRepository.findById(transaction.getId()).isEmpty();
 
+    }
+
+
+    private static final class TransactionDTOComparator implements  Comparator<Transaction>{
+
+
+
+        @Override
+        public int compare(Transaction o1, Transaction o2) {
+            if(o1.getId() == null || o2.getId() == null)
+                return 0;
+            return (int) (o2.getId() - o1.getId());
+        }
     }
 
 

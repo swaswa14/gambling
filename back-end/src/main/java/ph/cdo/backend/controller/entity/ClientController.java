@@ -6,12 +6,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ph.cdo.backend.dto.records.ClientDTOEntity;
+import ph.cdo.backend.dto.records.TransactionDTO;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.request.ClientDepositRequest;
 import ph.cdo.backend.request.ClientWithdrawalRequest;
 import ph.cdo.backend.response.ResponseObject;
 import ph.cdo.backend.service.ClientService;
 import ph.cdo.backend.service.TokenService;
+import ph.cdo.backend.service.TransactionService;
 
 import java.util.List;
 
@@ -19,12 +21,14 @@ import java.util.List;
 @RequestMapping("/api/v1/client")
 public class ClientController extends UserController<Client, ClientDTOEntity> {
     private final ClientService clientService;
+    private final TransactionService transactionService;
 
     @Autowired
-    protected ClientController(@Qualifier("ClientService")ClientService clientService, TokenService tokenService) {
+    protected ClientController(@Qualifier("ClientService")ClientService clientService, TokenService tokenService, TransactionService transactionService) {
         super(clientService, tokenService);
         this.clientService =clientService;
 
+        this.transactionService = transactionService;
     }
 
 
@@ -107,4 +111,12 @@ public class ClientController extends UserController<Client, ClientDTOEntity> {
     public ResponseEntity<ClientDTOEntity> withdraw(@PathVariable Long id, @RequestBody ClientWithdrawalRequest request){
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(clientService.withdraw(id, request));
     }
+
+    @GetMapping("/transactions/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<List<TransactionDTO>> findAllTransaction(@PathVariable Long id){
+        return ResponseEntity.status(HttpStatus.OK).body(transactionService.findAllByClientID(id));
+    }
+
+
 }

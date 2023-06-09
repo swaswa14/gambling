@@ -17,7 +17,9 @@ C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\c
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\controller\entity\AgentController.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\entity\Transaction.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\exceptions\FailedToDeleteException.java
+C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\exceptions\InsufficientFundsException.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\response\IResponseBody.java
+C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\request\ClientWithdrawalRequest.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\dto\records\ClientDTOEntity.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\exceptions\validtion_group\Group3.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\service\impl\base_entity\BaseEntityServiceImpl.java
@@ -62,6 +64,7 @@ C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\r
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\entity\base\User.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\service\AgentService.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\service\AuthenticationService.java
+C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\request\ClientDepositRequest.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\exceptions\EntityDoesNotExistsException.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\service\impl\AgentServiceImpl.java
 C:\Users\admin\Documents\GitHub\gambling\back-end\src\main\java\ph\cdo\backend\request\ClientRegistrationRequest.java

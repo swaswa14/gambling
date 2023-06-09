@@ -1,10 +1,13 @@
 package ph.cdo.backend.service;
 
 import ph.cdo.backend.dto.records.ClientDTOEntity;
+import ph.cdo.backend.dto.records.TransactionDTO;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.request.ClientDepositRequest;
 import ph.cdo.backend.request.ClientWithdrawalRequest;
+
+import java.util.List;
 
 public interface ClientService  extends IUserService<Client, ClientDTOEntity>{
 
@@ -15,5 +18,8 @@ public interface ClientService  extends IUserService<Client, ClientDTOEntity>{
     ClientDTOEntity deposit(Long id, ClientDepositRequest request);
 
     ClientDTOEntity withdraw(Long id, ClientWithdrawalRequest request);
+
+
+
 
 }
