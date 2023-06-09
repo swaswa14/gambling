@@ -8,8 +8,12 @@ import ph.cdo.backend.dto.records.ClientDTOEntity;
 import ph.cdo.backend.dto.mapper.impl.ClientDTOMapper;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.entity.user.Client;
+import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
+import ph.cdo.backend.exceptions.InsufficientFundsException;
 import ph.cdo.backend.repository.ClientRepository;
+import ph.cdo.backend.request.ClientDepositRequest;
+import ph.cdo.backend.request.ClientWithdrawalRequest;
 import ph.cdo.backend.service.ClientService;
 import ph.cdo.backend.service.EmailService;
 import ph.cdo.backend.service.impl.base_entity.IUserServiceImpl;
@@ -45,6 +49,38 @@ public class ClientServiceImpl extends IUserServiceImpl<Client, ClientDTOEntity,
     public void addTransaction(Client client, Transaction transaction) {
         client.addToChildren(transaction);
         super.userRepository.save(client);
+    }
+
+    @Override
+    public ClientDTOEntity deposit(Long id, ClientDepositRequest request) {
+        Client client = userRepository.findById(id).orElseThrow(()-> new EntityDoesNotExistsException(id));
+        Transaction transaction = Transaction
+                .builder()
+                .value(request.getAmount())
+                .transactionType(TransactionType.DEBIT)
+                .build();
+        addTransaction(client, transaction);
+
+        return this.retrieve(client.getId());
+
+
+    }
+
+    @Override
+    public ClientDTOEntity withdraw(Long id, ClientWithdrawalRequest request) {
+        Client client = userRepository.findById(id).orElseThrow(()-> new EntityDoesNotExistsException(id));
+
+        if(client.getBalance().doubleValue() < request.getAmount().doubleValue())
+            throw new InsufficientFundsException("Insufficient funds!");
+
+        Transaction transaction = Transaction
+                .builder()
+                .value(request.getAmount())
+                .transactionType(TransactionType.CREDIT)
+                .build();
+        addTransaction(client, transaction);
+
+        return this.retrieve(client.getId());
     }
 
 

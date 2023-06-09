@@ -121,4 +121,11 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
         ApiError error = apiErrorBuilder(ex, HttpStatus.BAD_REQUEST);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
+
+    @ExceptionHandler(InsufficientFundsException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<ApiError> handleFailedToDeleteException(InsufficientFundsException ex){
+        ApiError error = apiErrorBuilder(ex, HttpStatus.BAD_REQUEST);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+    }
 }
