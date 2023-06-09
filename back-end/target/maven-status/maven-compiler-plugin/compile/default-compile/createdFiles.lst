@@ -1,5 +1,6 @@
 ph\cdo\backend\response\ClientRegistrationResponse.class
 ph\cdo\backend\response\ClientRegistrationResponse$ClientRegistrationResponseBuilder.class
+ph\cdo\backend\exceptions\InsufficientFundsException.class
 ph\cdo\backend\service\TransactionService.class
 ph\cdo\backend\entity\user\Admin$AdminBuilder.class
 ph\cdo\backend\dto\records\ErrorDTO.class
@@ -7,6 +8,8 @@ ph\cdo\backend\exceptions\EmailErrorException.class
 ph\cdo\backend\entity\user\Client$ClientBuilder.class
 ph\cdo\backend\dto\records\AgentDTOEntity.class
 ph\cdo\backend\repository\TokenRepository.class
+ph\cdo\backend\service\impl\TransactionServiceImpl$TransactionDTOComparator.class
+ph\cdo\backend\request\ClientWithdrawalRequest.class
 ph\cdo\backend\config\ApplicationConfig.class
 ph\cdo\backend\service\EmailService.class
 ph\cdo\backend\service\impl\JwtService.class
@@ -45,6 +48,7 @@ ph\cdo\backend\dto\mapper\BaseEntityDTOMapper.class
 ph\cdo\backend\entity\Transaction$TransactionBuilder.class
 ph\cdo\backend\BackEndApplication.class
 ph\cdo\backend\repository\AdminRepository.class
+ph\cdo\backend\request\ClientDepositRequest.class
 ph\cdo\backend\enums\TransactionType.class
 ph\cdo\backend\exceptions\InvalidValueException.class
 ph\cdo\backend\exceptions\EmptyListException.class
@@ -63,6 +67,7 @@ ph\cdo\backend\enums\TokenType.class
 ph\cdo\backend\response\AuthenticationResponse$AuthenticationResponseBuilder.class
 ph\cdo\backend\dto\records\ClientDTOEntity.class
 ph\cdo\backend\request\AuthenticationRequest.class
+ph\cdo\backend\request\ClientDepositRequest$ClientDepositRequestBuilder.class
 ph\cdo\backend\controller\entity\UserController$UserDTPComparator.class
 ph\cdo\backend\dto\mapper\impl\FieldErrorDTOMapper.class
 ph\cdo\backend\exceptions\validtion_group\Group3.class
@@ -78,6 +83,7 @@ ph\cdo\backend\dto\records\FieldErrorDTO.class
 ph\cdo\backend\controller\entity\ClientController.class
 ph\cdo\backend\service\TokenService.class
 ph\cdo\backend\dto\mapper\TransactionDTOMapper.class
+ph\cdo\backend\request\ClientWithdrawalRequest$ClientWithdrawalRequestBuilder.class
 ph\cdo\backend\config\SecurityConfig.class
 ph\cdo\backend\dto\mapper\impl\TokenDTOMapper.class
 ph\cdo\backend\dto\records\TokenDTO.class

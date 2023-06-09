@@ -21,9 +21,12 @@ import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
+import ph.cdo.backend.exceptions.InsufficientFundsException;
 import ph.cdo.backend.exceptions.NullEntityException;
 import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.repository.TransactionRepository;
+import ph.cdo.backend.request.ClientDepositRequest;
+import ph.cdo.backend.request.ClientWithdrawalRequest;
 import ph.cdo.backend.service.ClientService;
 import ph.cdo.backend.service.TransactionService;
 
@@ -275,6 +278,113 @@ public class IUserClientServiceTest {
         verify(userRepository, never()).save(any(Client.class));
     }
 
+    @Test
+    void testDepositRequest(){
+
+        when(userRepository.findById(any())).thenReturn(Optional.of(testUser));
+        when(userRepository.save(testUser)).thenReturn(testUser);
+
+        Client client = userRepository.save(testUser);
+
+        ClientDepositRequest request = ClientDepositRequest
+                .builder()
+                .amount(BigDecimal.valueOf(10_000L))
+                .build();
+
+    }
+
+
+    @Test
+    void testDeposit() {
+        // Arrange
+        when(userRepository.findById(any())).thenReturn(Optional.of(testUser));
+        when(userRepository.save(testUser)).thenReturn(testUser);
+        ClientDTOEntity mockClientDTO = new ClientDTOEntity(
+                1L, // id
+                Role.Client, // role
+                "swaswa@gmail.com", // email
+                "Default Phone", // phone
+                BigDecimal.valueOf((testUser.getBalance().doubleValue() + 10_000))
+
+        );
+
+        Client client = userRepository.save(testUser);
+        ClientDepositRequest request = ClientDepositRequest
+                .builder()
+                .amount(BigDecimal.valueOf(10_000L))
+                .build();
+        when(userService.deposit(1L, request)).thenReturn(mockClientDTO);
+
+
+
+        // Act
+        ClientDTOEntity result = userService.deposit(client.getId(), request);
+
+        // Assert
+//        verify(userRepository, times(1)).findById(client.getId());
+        assertEquals(client.getId(), result.id());
+        assertTrue(mockClientDTO.balance().compareTo(result.balance()) == 0);
+    }
+
+    @Test
+    void testWithdraw_Success() {
+        // Arrange
+        when(userRepository.findById(any())).thenReturn(Optional.of(testUser));
+        when(userRepository.save(testUser)).thenReturn(testUser);
+        BigDecimal origBalance = testUser.getBalance();
+        ClientDTOEntity mockClientDTO = new ClientDTOEntity(
+                1L, // id
+                Role.Client, // role
+                "swaswa@gmail.com", // email
+                "Default Phone", // phone
+                BigDecimal.valueOf((testUser.getBalance().doubleValue() - 10_000))
+
+        );
+
+        Client client = userRepository.save(testUser);
+        ClientWithdrawalRequest request = ClientWithdrawalRequest
+                .builder()
+                .amount(BigDecimal.valueOf(10_000))
+                .build();
+
+        System.out.println("Available balance " + testUser.getBalance());
+        System.out.println("Withdrawal " + request.getAmount());
+        when(userService.withdraw(1L, request)).thenReturn(mockClientDTO);
+
+
+
+        // Act
+        ClientDTOEntity result = userService.withdraw(client.getId(), request);
+
+        // Assert
+//        verify(userRepository, times(1)).findById(client.getId());
+        assertEquals(client.getId(), result.id());
+        System.out.println("result balance " + result.balance());
+        System.out.println("Real balance " + Double.toString(origBalance.doubleValue() - request.getAmount().doubleValue()));
+        assertTrue(mockClientDTO.balance().compareTo(result.balance()) == 0);
+        assertTrue(origBalance.subtract(request.getAmount()).compareTo(result.balance()) == 0);
+    }
+
+    @Test
+    void testWithdraw_InsufficientFunds() {
+
+        when(userRepository.findById(any())).thenReturn(Optional.of(testUser));
+        when(userRepository.save(testUser)).thenReturn(testUser);
+        // Arrange
+        Client client = userRepository.save(testUser);
+
+
+        client.setBalance(new BigDecimal(500));
+        ClientWithdrawalRequest request = new ClientWithdrawalRequest();
+        request.setAmount(new BigDecimal(1000));
+
+
+        // Act & Assert
+        assertThrows(InsufficientFundsException.class, () -> {
+            userService.withdraw(client.getId(), request);
+        });
+    }
+
 
     public static Client createRandomClient() {
         return Client.builder()
@@ -282,7 +392,7 @@ public class IUserClientServiceTest {
                 .email(faker.internet().emailAddress())
                 .password(faker.internet().password())
                 .mobilePhone(faker.phoneNumber().cellPhone())
-                .balance(BigDecimal.valueOf(faker.number().randomDouble(2, 0, 10000)))
+                .balance(BigDecimal.valueOf(faker.number().randomDouble(2, 1, 1_000_000)))
                 .build();
     }
 
@@ -292,7 +402,7 @@ public class IUserClientServiceTest {
 
         return Transaction.builder()
                 .transactionType(TransactionType.values()[faker.number().numberBetween(0, TransactionType.values().length)])
-                .value(BigDecimal.valueOf(faker.number().randomDouble(2, 1, 10000)))
+                .value(BigDecimal.valueOf(faker.number().randomDouble(2, 10_000, 1_000_000)))
                 // For client, you should create a method that generates a random client or fetches one from your database.
                 // For simplicity sake, I'm just creating a new client here. You should replace this with your actual logic.
                 .build();

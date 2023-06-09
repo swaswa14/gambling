@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 s - in ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 s - in ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest

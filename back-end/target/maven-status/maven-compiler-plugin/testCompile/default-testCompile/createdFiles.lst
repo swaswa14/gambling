@@ -6,6 +6,7 @@ ph\cdo\backend\service\controller\CustomExceptionTest.class
 ph\cdo\backend\service\data_jpa_test\AgentRepositoryTest.class
 ph\cdo\backend\service\spring_boot_test\ClientTest.class
 ph\cdo\backend\service\data_jpa_test\ClientRepositoryTest.class
+ph\cdo\backend\service\validation_test\ClientDepositTest.class
 ph\cdo\backend\service\data_jpa_test\TransactionRepositoryTest.class
 ph\cdo\backend\service\data_jpa_test\AdminRepositoryTest.class
 ph\cdo\backend\service\unitTests\IUserAdminServiceTest.class

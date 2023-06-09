@@ -8,6 +8,7 @@ import lombok.experimental.SuperBuilder;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.entity.base.User;
+import ph.cdo.backend.enums.TransactionType;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -49,6 +50,14 @@ public class Client extends User {
     public void addToChildren(Transaction transaction){
         transaction.setClient(this);
         this.transactions.add(transaction);
+        double currentBalance = this.balance.doubleValue();
+        double transactionAmount = transaction.getValue().doubleValue();
+        this.setBalance(
+                BigDecimal.valueOf(
+                        transaction.getTransactionType() == TransactionType.DEBIT ? currentBalance + transactionAmount:
+                                currentBalance - transactionAmount
+                )
+        );
     }
 
     @Override
