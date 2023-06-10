@@ -16,7 +16,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({children} : any) {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -36,6 +36,7 @@ function ResponsiveAppBar() {
     };
 
     return (
+        <>
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
@@ -156,7 +157,11 @@ function ResponsiveAppBar() {
                     </Box>
                 </Toolbar>
             </Container>
+
+
         </AppBar>
+    {children}
+            </>
     );
 }
 export default ResponsiveAppBar;

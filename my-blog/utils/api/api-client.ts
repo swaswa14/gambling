@@ -1,14 +1,6 @@
-import {
-    axiosDelete,
-    axiosGet,
-    axiosPost,
-    axiosPut,
-    IAxiosDelete,
-    IAxiosGet,
-    IAxiosPostPut
-} from "@modules/utils/api/api-interface";
-import {Client, Transaction} from "@modules/utils/entity/interface";
-import {AuthenticationForm, ClientRegistrationForm} from "@modules/utils/entity/forms";
+import {axiosDelete, axiosGet, axiosPost, axiosPut, IAxiosDelete, IAxiosGet, IAxiosPostPut} from "./api-interface";
+import {Client} from "../entity/interface";
+import {AuthenticationForm, ClientRegistrationForm} from "../entity/forms";
 
 
 
@@ -111,7 +103,8 @@ export async function registerClient(form : ClientRegistrationForm){
 
 export async function authenticate(form : AuthenticationForm){
 
-    const link = String(process.env.postAuthenticateUser);
+    const link = String(process.env.NEXT_PUBLIC_postAuthenticateUser);
+    console.log("link here " + link)
     const formattedLink = link.replace("{user}", "client");
     const options : IAxiosPostPut = {
         url: formattedLink,
@@ -126,6 +119,7 @@ export async function authenticate(form : AuthenticationForm){
 export async function getUserByID(id : number){
 
     const link = String(process.env.getUserById);
+    console.log(link)
     const formattedLink = link.replace("{user}", "client").replace("{id}", String(id));
     const options : IAxiosGet = {
         url: formattedLink,

@@ -65,6 +65,21 @@ module.exports = () => {
     eslint: {
       dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
     },
+    // env: {
+    //   getUserById: process.env.getUserById,
+    //   getAllUserTransactions: process.env.getAllUserTransactions,
+    //   getAllUsers: process.env.getAllUsers,
+    //   getAllUnlockedUsers: process.env.getAllUnlockedUsers,
+    //   getAllLockedUsers: process.env.getAllLockedUsers,
+    //   getAllEnabledUsers: process.env.getAllEnabledUsers,
+    //   getAllDisabledUsers: process.env.getAllDisabledUsers,
+    //   updateUser: process.env.updateUser,
+    //   deleteUser: process.env.deleteUser,
+    //   postRegisterUser: process.env.postRegisterUser,
+    //   postAuthenticateUser: process.env.postAuthenticateUser,
+    // },
+
+
     async headers() {
       return [
         {

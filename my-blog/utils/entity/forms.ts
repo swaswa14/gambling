@@ -3,6 +3,8 @@ export interface ClientRegistrationForm{
     password: string;
     invitationCode: string;
     mobilePhone: string;
+    firstName: string;
+    lastName: string;
 }
 
 export interface AuthenticationForm{

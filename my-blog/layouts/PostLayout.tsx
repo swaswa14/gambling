@@ -54,7 +54,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                 </div>
               </dl>
               <div>
-                <PageTitle>{title}</PageTitle>
+                {/*<PageTitle>{title}</PageTitle>*/}
               </div>
             </div>
           </header>
