@@ -41,6 +41,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onForgotPassword, onSignUp }) => 
 
 
 
+    // @ts-ignore
     return (
         <form className="space-y-6 w-4/12">
             <div>
@@ -69,6 +70,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onForgotPassword, onSignUp }) => 
                     />
                 </div>
             </div>
+            { /* @ts-ignore */}
             {signInMutate.isError ? (<div className={"block text-sm font-medium text-red-700"}> <span>  {signInMutate.error?.response.data.errorMessage.replace('{"error"', "").replace("}","") || 'An error occurred'}</span></div>) : null}
 
 
