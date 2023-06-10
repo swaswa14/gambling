@@ -14,10 +14,10 @@ import java.math.BigDecimal;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@GroupSequence({Group1.class, Group2.class, Group3.class,  ClientDepositRequest.class})
+@GroupSequence({Group4.class, Group3.class, Group1.class,  ClientDepositRequest.class})
 public class ClientDepositRequest {
-    @NotNull(message = "Must not be blank", groups = Group2.class)
-    @Min(value = 1, message = "Minimum deposit amount is 1$", groups = Group1.class)
+    @NotNull(message = "Must not be blank", groups = Group3.class)
+    @Min(value = 1, message = "Minimum deposit amount is 1$", groups = Group4.class)
     private BigDecimal amount;
 
 

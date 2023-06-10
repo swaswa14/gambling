@@ -5,66 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../front-end/jest.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/src/test/ApiTest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/src/utils/api/api-client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/src/utils/api/api-interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/src/utils/entity/forms.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/src/utils/entity/interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/AccountNotEnabledException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/AccountNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/CustomBadCredentialsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/ErrorEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/validtion_group/Group6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/validtion_group/Group7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/validtion_group/Group8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/ApiErrorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ApiErrorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/AgentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/AgentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/back-end-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/back-end-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/back-end-1.0.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/back-end-1.0.0.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/FieldErrorDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/FieldErrorDTOMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/CustomExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/DuplicateEmailException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/DuplicateEmailException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/EmptyListException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/EmptyListException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/EntityDoesNotExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/EntityDoesNotExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/FailedToDeleteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/FailedToDeleteException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/InsufficientFundsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/InsufficientFundsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/InvalidRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/InvalidRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/InvalidValueException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/InvalidValueException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/NullEntityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/NullEntityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/SpecificFieldError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/SpecificFieldError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/TokenExpiredException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/TokenExpiredException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/ValidationFieldException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/ValidationFieldException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/validtion_group/Group1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/validtion_group/Group1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/validtion_group/Group4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/exceptions/validtion_group/Group4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientDepositRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientDepositRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientRegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientRegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientWithdrawalRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientWithdrawalRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AuthenticationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/AuthenticationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/AuthenticationControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/config/SecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/AgentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/AgentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.BackEndApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.BackEndApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.controller.AuthenticationControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.controller.AuthenticationControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.controller.CustomExceptionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.controller.CustomExceptionTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.spring_boot_test.ClientTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.spring_boot_test.ClientTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.AuthenticationServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.AuthenticationServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAdminServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAdminServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAgentServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserAgentServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserClientServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.IUserClientServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TokenServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TokenServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TransactionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.unitTests.TransactionTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientDepositTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientDepositTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.BackEndApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.BackEndApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.controller.AuthenticationControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.controller.AuthenticationControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.controller.CustomExceptionTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.controller.CustomExceptionTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.AgentRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.ClientRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TokenRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.data_jpa_test.TransactionRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.spring_boot_test.ClientTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.spring_boot_test.ClientTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.AuthenticationServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.AuthenticationServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAdminServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAdminServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAgentServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserAgentServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserClientServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.IUserClientServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.TokenServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.TokenServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.TransactionTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.unitTests.TransactionTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientDepositTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientDepositTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/mapper/impl/FieldErrorDTOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/mapper/impl/FieldErrorDTOMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/CustomExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/DuplicateEmailException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/DuplicateEmailException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/EmptyListException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/EmptyListException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/EntityDoesNotExistsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/EntityDoesNotExistsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/FailedToDeleteException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/FailedToDeleteException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/InsufficientFundsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/InsufficientFundsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/InvalidRequestException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/InvalidRequestException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/InvalidValueException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/InvalidValueException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/NullEntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/NullEntityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/SpecificFieldError$SpecificFieldErrorBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/SpecificFieldError$SpecificFieldErrorBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/SpecificFieldError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/SpecificFieldError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/TokenExpiredException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/TokenExpiredException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/ValidationFieldException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/exceptions/ValidationFieldException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientDepositRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientDepositRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientRegistrationRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientRegistrationRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientWithdrawalRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientWithdrawalRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AuthenticationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AuthenticationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/controller/AuthenticationControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/controller/AuthenticationControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/controller/CustomExceptionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/controller/CustomExceptionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-blog/components/forms/forgot-password-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../my-blog/components/forms/forgot-password-form.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,10 +76,10 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Record" />
-        <option value="Interface" />
         <option value="HTML File" />
         <option value="Dockerfile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -87,6 +87,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/6.1.0/spring-security-core-6.1.0.jar!/org/springframework/security/authentication/AccountStatusException.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/6.1.0/spring-security-core-6.1.0.jar!/org/springframework/security/authentication/DisabledException.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/6.1.0/spring-security-core-6.1.0.jar!/org/springframework/security/core/AuthenticationException.class" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/UserController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/AuthenticationRequest.java" root0="SKIP_INSPECTION" />
   </component>
@@ -128,7 +131,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;frontEndEntity&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;backend&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/admin/Documents/GitHub/gambling/back-end/src/test/java&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Documents/GitHub/groupD/front-end&quot;,
@@ -140,6 +143,7 @@
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;a115a25065b29adfe4c0b73391cd5b3a&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -160,80 +164,88 @@
       <recent name="ph.cdo.backend.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in back-end">
-    <configuration name="IUserClientServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.BackEndApplication">
+    <configuration name="ClientRegistrationRequestValidationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
+          <option name="PATTERN" value="ph.cdo.backend.service.validation_test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.IUserClientServiceTest" />
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.validation_test" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IUserClientServiceTest.testWithdraw_InsufficientFunds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientRegistrationRequestValidationTest.whenEmailIsBlank_thenOneConstraintViolation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
+          <option name="PATTERN" value="ph.cdo.backend.service.validation_test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.IUserClientServiceTest" />
-      <option name="METHOD_NAME" value="testWithdraw_InsufficientFunds" />
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.validation_test" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest" />
+      <option name="METHOD_NAME" value="whenEmailIsBlank_thenOneConstraintViolation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IUserClientServiceTest.testWithdraw_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientRegistrationRequestValidationTest.whenEmailIsNullAndInvalid_thenOneConstraintViolation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
+          <option name="PATTERN" value="ph.cdo.backend.service.validation_test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.IUserClientServiceTest" />
-      <option name="METHOD_NAME" value="testWithdraw_Success" />
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.validation_test" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest" />
+      <option name="METHOD_NAME" value="whenEmailIsNullAndInvalid_thenOneConstraintViolation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransactionTest.testFindByRangeDateWithEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientRegistrationRequestValidationTest.whenPasswordIsBlank_thenOneConstraintViolation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.unitTests.*" />
+          <option name="PATTERN" value="ph.cdo.backend.service.validation_test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.unitTests" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.unitTests.TransactionTest" />
-      <option name="METHOD_NAME" value="testFindByRangeDateWithEmptyList" />
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.validation_test" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest" />
+      <option name="METHOD_NAME" value="whenPasswordIsBlank_thenOneConstraintViolation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in back-end" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientRegistrationRequestValidationTest.whenPasswordIsEmpty_thenOneConstraintViolation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.service.validation_test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.validation_test" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest" />
+      <option name="METHOD_NAME" value="whenPasswordIsEmpty_thenOneConstraintViolation" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="BackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="ACTIVE_PROFILES" value="test" />
+      <option name="ACTIVE_PROFILES" value="dev" />
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="back-end" />
@@ -249,20 +261,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.IUserClientServiceTest" />
-      <item itemvalue="JUnit.IUserClientServiceTest.testWithdraw_InsufficientFunds" />
-      <item itemvalue="JUnit.IUserClientServiceTest.testWithdraw_Success" />
-      <item itemvalue="JUnit.TransactionTest.testFindByRangeDateWithEmptyList" />
-      <item itemvalue="JUnit.java in back-end" />
+      <item itemvalue="JUnit.ClientRegistrationRequestValidationTest" />
+      <item itemvalue="JUnit.ClientRegistrationRequestValidationTest.whenEmailIsBlank_thenOneConstraintViolation" />
+      <item itemvalue="JUnit.ClientRegistrationRequestValidationTest.whenEmailIsNullAndInvalid_thenOneConstraintViolation" />
+      <item itemvalue="JUnit.ClientRegistrationRequestValidationTest.whenPasswordIsBlank_thenOneConstraintViolation" />
+      <item itemvalue="JUnit.ClientRegistrationRequestValidationTest.whenPasswordIsEmpty_thenOneConstraintViolation" />
       <item itemvalue="Spring Boot.BackEndApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.java in back-end" />
-        <item itemvalue="JUnit.TransactionTest.testFindByRangeDateWithEmptyList" />
-        <item itemvalue="JUnit.IUserClientServiceTest" />
-        <item itemvalue="JUnit.IUserClientServiceTest.testWithdraw_InsufficientFunds" />
-        <item itemvalue="JUnit.IUserClientServiceTest.testWithdraw_Success" />
+        <item itemvalue="JUnit.ClientRegistrationRequestValidationTest" />
+        <item itemvalue="JUnit.ClientRegistrationRequestValidationTest.whenPasswordIsEmpty_thenOneConstraintViolation" />
+        <item itemvalue="JUnit.ClientRegistrationRequestValidationTest.whenEmailIsNullAndInvalid_thenOneConstraintViolation" />
+        <item itemvalue="JUnit.ClientRegistrationRequestValidationTest.whenEmailIsBlank_thenOneConstraintViolation" />
+        <item itemvalue="JUnit.ClientRegistrationRequestValidationTest.whenPasswordIsBlank_thenOneConstraintViolation" />
       </list>
     </recent_temporary>
   </component>
@@ -295,6 +307,9 @@
       <workItem from="1686267593341" duration="12429000" />
       <workItem from="1686285676894" duration="3920000" />
       <workItem from="1686323363090" duration="1862000" />
+      <workItem from="1686405282865" duration="5152000" />
+      <workItem from="1686411816201" duration="8968000" />
+      <workItem from="1686420810724" duration="2191000" />
     </task>
     <servers />
   </component>
@@ -345,7 +360,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -363,6 +378,11 @@
           <line>15</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java</url>
           <line>267</line>
@@ -374,7 +394,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java</url>
-          <line>53</line>
+          <line>57</line>
           <properties class="ph.cdo.backend.service.controller.CustomExceptionTest" method="testHandleEntityDoesNotExistsException">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -383,7 +403,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/CustomExceptionTest.java</url>
-          <line>66</line>
+          <line>70</line>
           <properties class="ph.cdo.backend.service.controller.CustomExceptionTest" method="testHandleInvalidValueException">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -443,6 +463,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.java</url>
+          <line>83</line>
+          <properties class="ph.cdo.backend.service.validation_test.ClientRegistrationRequestValidationTest" method="whenPasswordIsBlank_thenOneConstraintViolation">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

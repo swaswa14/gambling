@@ -28,8 +28,6 @@ const ForgotPasswordForm: React.FC<ForgotPasswordProps> = () => {
         <head>
             <title>Forgot password</title>
         </head>
-
-
                 <div className="space-y-6 w-full sm:w-4/12 h-full" >
                     <h4 className={"font-mono font-extrabold  uppercase text-gray-900 dark:text-gray-100   tracking-wide "}>Reset Password</h4>
                     <Divider/>

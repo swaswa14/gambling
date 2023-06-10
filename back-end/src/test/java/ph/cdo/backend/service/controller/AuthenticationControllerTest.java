@@ -62,7 +62,7 @@ public class AuthenticationControllerTest {
     public void setUp() {
 //        this.mockMvc = MockMvcBuilders
 //                .standaloneSetup(controller)     // instantiate controller.
-//                .setControllerAdvice(new CustomExceptionHandler())   // bind with controller advice.
+//                .setControllerAdvice(new GlobalExceptionHandler())   // bind with controller advice.
 //                .build();
 
         //setting up request
@@ -171,9 +171,9 @@ public class AuthenticationControllerTest {
 
         // Assuming your response body is a map of field to error message
         var responseBody=  response.getBody();
-
-        Assertions.assertNotNull(responseBody);
         System.out.println(responseBody.toString());
+        Assertions.assertNotNull(responseBody);
+
 
 
     }

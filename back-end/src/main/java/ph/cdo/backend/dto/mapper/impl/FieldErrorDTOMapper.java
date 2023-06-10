@@ -18,7 +18,7 @@ public class FieldErrorDTOMapper implements Function<CustomFieldErrorException, 
 
         Map<String, SpecificFieldError> objectMap = new HashMap<>();
         for(SpecificFieldError field : customFieldErrorException.getSpecificFieldErrorList()){
-            objectMap.put(field.getStatusCode().toUpperCase() + " ERROR", field);
+            objectMap.put(field.getFieldName(), field);
         }
 
         return new FieldErrorDTO(

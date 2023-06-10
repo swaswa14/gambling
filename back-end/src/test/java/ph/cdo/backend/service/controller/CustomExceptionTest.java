@@ -17,6 +17,7 @@ import ph.cdo.backend.config.SecurityConfig;
 import ph.cdo.backend.controller.test.ExceptionThrowingController;
 
 import ph.cdo.backend.exceptions.*;
+import ph.cdo.backend.service.ApiErrorService;
 import ph.cdo.backend.service.impl.JwtService;
 
 import java.util.Objects;
@@ -32,6 +33,9 @@ public class CustomExceptionTest {
     @Autowired
     private MockMvc mockMvc;
 
+    @MockBean
+    private ApiErrorService apiErrorService;
+
 
     @MockBean
     private JwtService jwtService;
@@ -43,7 +47,7 @@ public class CustomExceptionTest {
     public void setup() {
         this.mockMvc = MockMvcBuilders
                 .standaloneSetup(exceptionThrowingController)     // instantiate controller.
-                .setControllerAdvice(new CustomExceptionHandler())   // bind with controller advice.
+                .setControllerAdvice(new GlobalExceptionHandler(apiErrorService))   // bind with controller advice.
                 .build();
     }
 

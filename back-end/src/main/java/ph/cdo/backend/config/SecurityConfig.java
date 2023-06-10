@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import ph.cdo.backend.exceptions.CustomExceptionHandler;
+import ph.cdo.backend.exceptions.GlobalExceptionHandler;
 
 @Configuration
 @EnableWebSecurity
@@ -17,7 +17,7 @@ import ph.cdo.backend.exceptions.CustomExceptionHandler;
 public class SecurityConfig {
     private final JwtAuthFilter jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
-    private final CustomExceptionHandler customExceptionHandler;
+    private final GlobalExceptionHandler globalExceptionHandler;
     private final String[] publicEndPoint = {"/tests/exception/**"};
     private final String[] superAdminEndPoint = {
 

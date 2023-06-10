@@ -13,5 +13,5 @@ public class SpecificFieldError {
     private Object rejectedValue;
     private String errorMessage;
     private String exceptionName;
-    private String statusCode;
+    private String constraint;
 }

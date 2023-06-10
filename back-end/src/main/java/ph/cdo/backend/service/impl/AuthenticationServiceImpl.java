@@ -1,8 +1,8 @@
 package ph.cdo.backend.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.mail.MessagingException;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -12,16 +12,16 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.BindingResult;
 import ph.cdo.backend.dto.records.ClientDTOEntity;
+import ph.cdo.backend.dto.records.FieldErrorDTO;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.entity.user.Admin;
 import ph.cdo.backend.entity.user.Agent;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.entity.base.User;
 import ph.cdo.backend.enums.Role;
-import ph.cdo.backend.exceptions.DuplicateEmailException;
-import ph.cdo.backend.exceptions.EmailErrorException;
-import ph.cdo.backend.exceptions.UserRegistrationErrorException;
+import ph.cdo.backend.exceptions.*;
 import ph.cdo.backend.repository.AdminRepository;
 import ph.cdo.backend.repository.AgentRepository;
 import ph.cdo.backend.repository.ClientRepository;
@@ -33,8 +33,6 @@ import ph.cdo.backend.service.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -70,6 +68,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     private final AuthenticationManager authenticationManager;
 
+
+
     @Autowired
     public AuthenticationServiceImpl(ClientRepository clientRepository, AdminRepository adminRepository, AgentRepository agentRepository, ClientService clientService, AdminService adminService, AgentService agentService, JwtService jwtService, UserDetailsService userDetailsService, EmailService emailService, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager) {
         this.clientRepository = clientRepository;
@@ -84,19 +84,17 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
         this.passwordEncoder = passwordEncoder;
         this.authenticationManager = authenticationManager;
+
     }
 
     @Override
-    public ClientRegistrationResponse registerClient(ClientRegistrationRequest request) {
-
+    public ClientRegistrationResponse registerClient(@Valid ClientRegistrationRequest request) {
         if(clientService.isEmailTaken(request.getEmail())||
             adminService.isEmailTaken(request.getEmail())||
                 agentService.isEmailTaken(request.getEmail())
         ){
             throw new DuplicateEmailException(request.getEmail());
         }
-
-
 
         Client client = Client.builder()
                 .email(request.getEmail().toLowerCase())
@@ -141,7 +139,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
 
 
-    public AuthenticationResponse authenticate(AuthenticationRequest request) throws JsonProcessingException {
+    public AuthenticationResponse authenticate(AuthenticationRequest request){
 
         try{
             authenticationManager.authenticate(
@@ -166,7 +164,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
             }else if(optionalAgent.isPresent()) {
                 user = optionalAgent.get();
             } else{
-                throw new BadCredentialsException("Incorrect username/password"); //todo  handle error
+                throw new AccountNotFoundException(); //todo  handle error
             }
 
 
@@ -179,16 +177,11 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                     .role(user.getRole().name())
                     .build();
         }catch (DisabledException e){
-            throw new DisabledException("USER_DISABLED"); //todo  handle error
+            throw new AccountNotEnabledException("Account not enabled- Check the email for confirmation"); //todo  handle error
         }catch (BadCredentialsException e){
             // Create a map to hold your error details
-            Map<String, String> errorDetails = new HashMap<>();
-            errorDetails.put("error", "Incorrect username/password");
 
-            // Convert the map to a JSON string
-            ObjectMapper mapper = new ObjectMapper();
-            String jsonErrorDetails = mapper.writeValueAsString(errorDetails);
-            throw new BadCredentialsException(jsonErrorDetails); //todo handle error
+            throw new CustomBadCredentialsException(); //todo handle error
         }
 
 
