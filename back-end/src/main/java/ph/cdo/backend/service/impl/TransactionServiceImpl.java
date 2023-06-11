@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import ph.cdo.backend.dto.records.TransactionDTO;
-import ph.cdo.backend.dto.mapper.TransactionDTOMapper;
+import ph.cdo.backend.dto.mapper.base.TransactionDTOMapper;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.entity.user.Client;
@@ -43,10 +43,10 @@ public class TransactionServiceImpl implements TransactionService {
         Client client = clientRepository.findById(id)
                 .orElseThrow(()-> new EntityDoesNotExistsException(id));
 
-        var list =  findAll()
+        List<TransactionDTO> list = client.getTransactions()
                 .stream()
-                .filter(t -> Objects.equals(t.id(), client.getId()))
-                .toList();
+                .map(transactionDTOMapper)
+                .collect(Collectors.toList());
 
         if(list.size() == 0)
             throw new EmptyListException("List of Transactions by Client");

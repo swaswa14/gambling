@@ -11,7 +11,7 @@ import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.request.ClientDepositRequest;
 import ph.cdo.backend.request.ClientWithdrawalRequest;
 import ph.cdo.backend.response.ResponseObject;
-import ph.cdo.backend.service.ClientService;
+import ph.cdo.backend.service.impl.user.ClientService;
 import ph.cdo.backend.service.TokenService;
 import ph.cdo.backend.service.TransactionService;
 
@@ -35,6 +35,7 @@ public class ClientController extends UserController<Client, ClientDTOEntity> {
 
     @Override
     @GetMapping("/confirm/{token}")
+    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<ResponseObject> confirmEmail(@PathVariable String token) {
         return super.confirmEmail(token);
     }
@@ -42,8 +43,11 @@ public class ClientController extends UserController<Client, ClientDTOEntity> {
     @Override
     @GetMapping("clients") // s so that it calls clients. Being consistent to plural forms
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<ClientDTOEntity>> getAllUsers() {
-        return super.getAllUsers();
+    public ResponseEntity<List<ClientDTOEntity>> getAllUsers(
+            @RequestParam int page,
+            @RequestParam int size,
+            @RequestParam String field) {
+        return super.getAllUsers(page, size, field);
     }
 
 
@@ -51,29 +55,45 @@ public class ClientController extends UserController<Client, ClientDTOEntity> {
     @Override
     @GetMapping("clients/enabled")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<ClientDTOEntity>> getAlLEnabled() {
-        return super.getAlLEnabled();
+    public ResponseEntity<List<ClientDTOEntity>> getAlLEnabled(
+            @RequestParam int page,
+            @RequestParam int size,
+            @RequestParam String field
+    ) {
+        return super.getAlLEnabled(page, size, field);
     }
 
     @Override
     @GetMapping("clients/disabled")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<ClientDTOEntity>> getAllDisabled() {
-        return super.getAllDisabled();
+    public ResponseEntity<List<ClientDTOEntity>> getAllDisabled(
+            @RequestParam int page,
+            @RequestParam int size,
+            @RequestParam String field
+    ) {
+        return super.getAllDisabled(page, size, field);
     }
 
     @Override
     @GetMapping("clients/locked")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<ClientDTOEntity>> getAllLocked() {
-        return super.getAllLocked();
+    public ResponseEntity<List<ClientDTOEntity>> getAllLocked(
+            @RequestParam int page,
+            @RequestParam int size,
+            @RequestParam String field
+    ) {
+        return super.getAllLocked(page, size, field);
     }
 
     @Override
     @GetMapping("clients/unlocked")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<ClientDTOEntity>> getAllUnlocked() {
-        return super.getAllUnlocked();
+    public ResponseEntity<List<ClientDTOEntity>> getAllUnlocked(
+            @RequestParam int page,
+            @RequestParam int size,
+            @RequestParam String field
+    ) {
+        return super.getAllUnlocked(page, size, field);
     }
 
 
@@ -102,7 +122,7 @@ public class ClientController extends UserController<Client, ClientDTOEntity> {
 
 
     @PutMapping("/deposit/{id}")
-    @ResponseStatus(HttpStatus.ACCEPTED) //todo test
+    @ResponseStatus(HttpStatus.CREATED) //todo test
     public ResponseEntity<ClientDTOEntity> depositUser(@PathVariable Long id, @RequestBody ClientDepositRequest request){
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(clientService.deposit(id, request));
     }
@@ -118,6 +138,8 @@ public class ClientController extends UserController<Client, ClientDTOEntity> {
     public ResponseEntity<List<TransactionDTO>> findAllTransaction(@PathVariable Long id){
         return ResponseEntity.status(HttpStatus.OK).body(transactionService.findAllByClientID(id));
     }
+
+
 
 
 }

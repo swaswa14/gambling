@@ -10,9 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.ActiveProfiles;
 import ph.cdo.backend.dto.records.AdminDTOEntity;
-import ph.cdo.backend.dto.mapper.impl.AdminDTOMapper;
+import ph.cdo.backend.dto.mapper.impl.user.AdminDTOMapper;
+import ph.cdo.backend.entity.base.Name;
 import ph.cdo.backend.entity.user.Admin;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
@@ -89,7 +93,7 @@ public class IUserAdminServiceTest {
     public void testRetrieveAll() {
         when(userRepository.findAll()).thenReturn(Collections.singletonList(testUser));
 
-        List<AdminDTOEntity> users = userService.retrieve();
+        List<AdminDTOEntity> users = userService.retrieve(1,1,"id");
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(testUser), users.get(0));
@@ -100,14 +104,16 @@ public class IUserAdminServiceTest {
     public void testUpdate() {
         when(userRepository.findById(any())).thenReturn(Optional.of(testUser));
         when(userRepository.save(testUser)).thenReturn(testUser);
+        Name name = mock(Name.class);
         AdminDTOEntity mockAdminDTO = new AdminDTOEntity(
                 1L, // id
                 Role.Client, // role
                 "swaswa@gmail.com", // email
-                "Default Name", // name
-                "Default Address", // address
-                "Default Phone" // phone
+                "Default Phone", // phone
+               "12345",
+                name
         );
+
 
         when(adminDTOMapper.apply(any(Admin.class))).thenReturn(mockAdminDTO);
 
@@ -133,75 +139,93 @@ public class IUserAdminServiceTest {
     public void testFindAllEnabled() {
         Admin enabledUser = createRandomAdmin();
         enabledUser.setEnabled(true);
-        when(userRepository.findByIsEnabledTrue()).thenReturn(Collections.singletonList(enabledUser));
+        when(userRepository.findAllByIsEnabledTrue(any(Pageable.class))).thenReturn(Collections.singletonList(enabledUser));
 
-        List<AdminDTOEntity> users = userService.findAllEnabled();
+        List<AdminDTOEntity> users = userService.findAllEnabled(1,10,"id");
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(enabledUser), users.get(0));
-        verify(userRepository, times(1)).findByIsEnabledTrue();
+        verify(userRepository, times(1)).findAllByIsEnabledTrue(any(Pageable.class));
     }
 
     @Test
     public void testFindAllDisabled() {
         Admin disabledUser = createRandomAdmin();
         disabledUser.setEnabled(false);
-        when(userRepository.findByIsEnabledFalse()).thenReturn(Collections.singletonList(disabledUser));
+        when(userRepository.findAllByIsEnabledFalse(any(Pageable.class))).thenReturn(Collections.singletonList(disabledUser));
 
-        List<AdminDTOEntity> users = userService.findAllDisabled();
+        List<AdminDTOEntity> users = userService.findAllDisabled(1,10,"id");
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(disabledUser), users.get(0));
-        verify(userRepository, times(1)).findByIsEnabledFalse();
+        verify(userRepository, times(1)).findAllByIsEnabledFalse(any(Pageable.class));
     }
 
     @Test
     public void testFindAllLocked() {
         Admin lockedUser = createRandomAdmin();
         lockedUser.setLocked(true);
-        when(userRepository.findByIsLockedTrue()).thenReturn(Collections.singletonList(lockedUser));
+        when(userRepository.findAllByIsLockedTrue(any(Pageable.class))).thenReturn(Collections.singletonList(lockedUser));
 
-        List<AdminDTOEntity> users = userService.findAllLocked();
+        List<AdminDTOEntity> users = userService.findAllLocked(1,10,"id");
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(lockedUser), users.get(0));
-        verify(userRepository, times(1)).findByIsLockedTrue();
+        verify(userRepository, times(1)).findAllByIsLockedTrue(any(Pageable.class));
     }
 
     @Test
     public void testFindAllUnlocked() {
         Admin unlockedUser = createRandomAdmin();
         unlockedUser.setLocked(false);
-        when(userRepository.findByIsLockedFalse()).thenReturn(Collections.singletonList(unlockedUser));
+        when(userRepository.findAllByIsLockedFalse(any(Pageable.class))).thenReturn(Collections.singletonList(unlockedUser));
 
-        List<AdminDTOEntity> users = userService.findAllUnlocked();
+        List<AdminDTOEntity> users = userService.findAllUnlocked(1,10,"id");
 
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(unlockedUser), users.get(0));
-        verify(userRepository, times(1)).findByIsLockedFalse();
+        verify(userRepository, times(1)).findAllByIsLockedFalse(any(Pageable.class));
     }
 
     @Test
     public void testFindAllByRole() {
+        // Setup
         Role testRole = Role.Client;
         Admin clientUser = createRandomAdmin();
         clientUser.setRole(testRole);
-        when(userRepository.findByRole(testRole)).thenReturn(Collections.singletonList(clientUser));
 
-        List<AdminDTOEntity> users = userService.findAllByRole(testRole);
+        int page = 1;
+        int size = 10;
+        String field = "id";
 
+        Pageable pageable = createPageable(page, size, field);
+        when(userRepository.findAllByRole(eq(testRole), any(Pageable.class))).thenAnswer(invocation -> {
+            Pageable receivedPageable = invocation.getArgument(1, Pageable.class);
+            if (receivedPageable.equals(pageable)) {
+                return Collections.singletonList(clientUser);
+            } else {
+                return Collections.emptyList();
+            }
+        });
+
+        // Execute
+        List<AdminDTOEntity> users = userService.findAllByRole(testRole, page, size, field);
+
+        // Verify
         assertEquals(1, users.size());
         assertEquals(adminDTOMapper.apply(clientUser), users.get(0));
-        verify(userRepository, times(1)).findByRole(testRole);
+        verify(userRepository, times(1)).findAllByRole(testRole, pageable);
     }
 
+    private static Pageable createPageable(int page, int size, String field){
+        return PageRequest.of(page, size, Sort.by(field).and(Sort.by("id").descending()));
+    }
 
 
     public static Admin createRandomAdmin(){
         return Admin.builder()
                 .role(Role.Admin)
-                .name(faker.company().profession())
-                .name(faker.name().firstName())
+                .name(Name.builder().firstName(faker.name().firstName()).lastName(faker.name().lastName()).build())
                 .email(faker.internet().emailAddress())
                 .password(faker.internet().password())
                 .mobilePhone(faker.phoneNumber().cellPhone())

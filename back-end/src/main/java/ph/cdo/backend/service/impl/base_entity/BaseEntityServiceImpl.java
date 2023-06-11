@@ -1,8 +1,7 @@
 package ph.cdo.backend.service.impl.base_entity;
 
-import org.springframework.stereotype.Service;
 import ph.cdo.backend.dto.DTOEntity;
-import ph.cdo.backend.dto.mapper.BaseEntityDTOMapper;
+import ph.cdo.backend.dto.mapper.base.BaseEntityDTOMapper;
 import ph.cdo.backend.entity.base.BaseEntity;
 import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
 import ph.cdo.backend.repository.noBean.BaseEntityRepository;

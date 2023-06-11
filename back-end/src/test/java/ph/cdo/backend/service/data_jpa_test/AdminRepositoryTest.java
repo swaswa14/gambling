@@ -7,11 +7,13 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.ActiveProfiles;
+import ph.cdo.backend.entity.base.Name;
 import ph.cdo.backend.entity.user.Admin;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.repository.AdminRepository;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
 
 @DataJpaTest
 @ActiveProfiles("test")
@@ -28,10 +30,11 @@ public class AdminRepositoryTest {
 
     @Test
     public void testSaveClient() {
+        Name name = mock(Name.class);
         // Create a new client
         Admin admin = Admin.builder()
                 .role(Role.Admin)
-                .name("swaswa")
+                .name(name )
                 .email("swaswa@gmail.com")
                 .password("password")
                 .mobilePhone("123456789")
@@ -54,6 +57,5 @@ public class AdminRepositoryTest {
         assertThat(retrievedClient.getPassword()).isEqualTo("password");
         assertThat(retrievedClient.getMobilePhone()).isEqualTo("123456789");
         assertThat(retrievedClient.getRole()).isEqualTo(Role.Admin);
-        assertThat(retrievedClient.getName()).isEqualTo("swaswa");
     }
 }

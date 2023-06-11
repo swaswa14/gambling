@@ -14,7 +14,7 @@ import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.repository.ClientRepository;
-import ph.cdo.backend.service.ClientService;
+import ph.cdo.backend.service.impl.user.ClientService;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

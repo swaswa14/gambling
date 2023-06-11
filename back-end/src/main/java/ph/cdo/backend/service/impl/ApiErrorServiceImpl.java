@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import ph.cdo.backend.dto.mapper.impl.FieldErrorDTOMapper;
+import ph.cdo.backend.dto.mapper.impl.user.FieldErrorDTOMapper;
 import ph.cdo.backend.dto.records.FieldErrorDTO;
 import ph.cdo.backend.exceptions.ApiError;
 import ph.cdo.backend.exceptions.CustomFieldErrorException;

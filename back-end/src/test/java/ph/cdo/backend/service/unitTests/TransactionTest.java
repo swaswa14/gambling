@@ -7,7 +7,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import ph.cdo.backend.dto.records.TransactionDTO;
-import ph.cdo.backend.dto.mapper.TransactionDTOMapper;
+import ph.cdo.backend.dto.mapper.base.TransactionDTOMapper;
 import ph.cdo.backend.entity.Transaction;
 import ph.cdo.backend.enums.TransactionType;
 import ph.cdo.backend.entity.user.Client;
@@ -17,7 +17,7 @@ import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
 import ph.cdo.backend.exceptions.InvalidValueException;
 import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.repository.TransactionRepository;
-import ph.cdo.backend.service.impl.ClientServiceImpl;
+import ph.cdo.backend.service.impl.user.ClientServiceImpl;
 import ph.cdo.backend.service.impl.TransactionServiceImpl;
 
 import java.math.BigDecimal;

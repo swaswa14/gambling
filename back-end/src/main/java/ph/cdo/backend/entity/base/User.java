@@ -8,6 +8,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import ph.cdo.backend.enums.Role;
 
+
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
@@ -16,11 +17,12 @@ import java.util.Objects;
 @Getter
 @Setter
 @SuperBuilder
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public  abstract class User implements UserDetails {
+@NoArgsConstructor
+@AllArgsConstructor
+public class User implements UserDetails {
     @Id
     @SequenceGenerator(
             name = "user_sequence",
@@ -36,6 +38,9 @@ public  abstract class User implements UserDetails {
     private String password;
     private String mobilePhone;
 
+    @Embedded
+    private Name name;
+
     @Enumerated(EnumType.STRING)
     private Role role;
 
@@ -44,6 +49,8 @@ public  abstract class User implements UserDetails {
 
     @Builder.Default
     private boolean isLocked = false;
+
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));
@@ -91,6 +98,7 @@ public  abstract class User implements UserDetails {
     public boolean isEnabled() {
         return isEnabled;
     }
+
 
 
 

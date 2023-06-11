@@ -3,6 +3,7 @@ package ph.cdo.backend.dto.records;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import ph.cdo.backend.dto.DTOEntity;
+import ph.cdo.backend.entity.base.Name;
 import ph.cdo.backend.enums.Role;
 
 import java.math.BigDecimal;
@@ -13,20 +14,15 @@ public record ClientDTOEntity(
         Role role,
         String email,
         String mobilePhone,
-        BigDecimal balance
+        BigDecimal balance,
+        Name name
 
 ) implements DTOEntity {
 
 
 
 
-    public ClientDTOEntity(Long id, Role role, String email, String mobilePhone, BigDecimal balance) {
-        this.id = id;
-        this.role = role;
-        this.email = email;
-        this.mobilePhone = mobilePhone;
-        this.balance = balance;
-    }
+
 
 
     @Override

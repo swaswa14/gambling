@@ -12,9 +12,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.ActiveProfiles;
 import ph.cdo.backend.dto.records.AgentDTOEntity;
-import ph.cdo.backend.dto.mapper.impl.AgentDTOMapper;
+import ph.cdo.backend.dto.mapper.impl.user.AgentDTOMapper;
+import ph.cdo.backend.entity.base.Name;
 import ph.cdo.backend.entity.user.Agent;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.exceptions.EntityDoesNotExistsException;
@@ -92,7 +96,7 @@ public class IUserAgentServiceTest {
     public void testRetrieveAll() {
         when(userRepository.findAll()).thenReturn(Collections.singletonList(testUser));
 
-        List<AgentDTOEntity> users = userService.retrieve();
+        List<AgentDTOEntity> users = userService.retrieve(1,1 ,"id");
 
         assertEquals(1, users.size());
         assertEquals(agentDTOMapper.apply(testUser), users.get(0));
@@ -103,12 +107,14 @@ public class IUserAgentServiceTest {
     public void testUpdate() {
         when(userRepository.findById(any())).thenReturn(Optional.of(testUser));
         when(userRepository.save(testUser)).thenReturn(testUser);
+        Name name = mock(Name.class);
         AgentDTOEntity mockAgentDTO = new AgentDTOEntity(
                 1L, // id
                 Role.Client, // role
                 "swaswa@gmail.com", // email
                 "Default Phone", // phone
-                "Default Agent Code"
+                "Default Agent Code",
+                name
 
         );
 
@@ -141,66 +147,86 @@ public class IUserAgentServiceTest {
     public void testFindAllEnabled() {
         Agent enabledUser = createRandomAgent();
         enabledUser.setEnabled(true);
-        when(userRepository.findByIsEnabledTrue()).thenReturn(Collections.singletonList(enabledUser));
+        when(userRepository.findAllByIsEnabledTrue(any(Pageable.class))).thenReturn(Collections.singletonList(enabledUser));
 
-        List<AgentDTOEntity> users = userService.findAllEnabled();
+        List<AgentDTOEntity> users = userService.findAllEnabled(1,10,"id");
 
         assertEquals(1, users.size());
         assertEquals(agentDTOMapper.apply(enabledUser), users.get(0));
-        verify(userRepository, times(1)).findByIsEnabledTrue();
+        verify(userRepository, times(1)).findAllByIsEnabledTrue(any(Pageable.class));
     }
 
     @Test
     public void testFindAllDisabled() {
         Agent disabledUser = createRandomAgent();
         disabledUser.setEnabled(false);
-        when(userRepository.findByIsEnabledFalse()).thenReturn(Collections.singletonList(disabledUser));
+        when(userRepository.findAllByIsEnabledFalse(any(Pageable.class))).thenReturn(Collections.singletonList(disabledUser));
 
-        List<AgentDTOEntity> users = userService.findAllDisabled();
+        List<AgentDTOEntity> users = userService.findAllDisabled(1,10,"id");
 
         assertEquals(1, users.size());
         assertEquals(agentDTOMapper.apply(disabledUser), users.get(0));
-        verify(userRepository, times(1)).findByIsEnabledFalse();
+        verify(userRepository, times(1)).findAllByIsEnabledFalse(any(Pageable.class));
     }
 
     @Test
     public void testFindAllLocked() {
         Agent lockedUser = createRandomAgent();
         lockedUser.setLocked(true);
-        when(userRepository.findByIsLockedTrue()).thenReturn(Collections.singletonList(lockedUser));
+        when(userRepository.findAllByIsLockedTrue(any(Pageable.class))).thenReturn(Collections.singletonList(lockedUser));
 
-        List<AgentDTOEntity> users = userService.findAllLocked();
+        List<AgentDTOEntity> users = userService.findAllLocked(1,10,"id");
 
         assertEquals(1, users.size());
         assertEquals(agentDTOMapper.apply(lockedUser), users.get(0));
-        verify(userRepository, times(1)).findByIsLockedTrue();
+        verify(userRepository, times(1)).findAllByIsLockedTrue(any(Pageable.class));
     }
 
     @Test
     public void testFindAllUnlocked() {
         Agent unlockedUser = createRandomAgent();
         unlockedUser.setLocked(false);
-        when(userRepository.findByIsLockedFalse()).thenReturn(Collections.singletonList(unlockedUser));
+        when(userRepository.findAllByIsLockedFalse(any(Pageable.class))).thenReturn(Collections.singletonList(unlockedUser));
 
-        List<AgentDTOEntity> users = userService.findAllUnlocked();
+        List<AgentDTOEntity> users = userService.findAllUnlocked(1,10,"id");
 
         assertEquals(1, users.size());
         assertEquals(agentDTOMapper.apply(unlockedUser), users.get(0));
-        verify(userRepository, times(1)).findByIsLockedFalse();
+        verify(userRepository, times(1)).findAllByIsLockedFalse(any(Pageable.class));
     }
 
     @Test
     public void testFindAllByRole() {
+        // Setup
         Role testRole = Role.Client;
         Agent clientUser = createRandomAgent();
         clientUser.setRole(testRole);
-        when(userRepository.findByRole(testRole)).thenReturn(Collections.singletonList(clientUser));
 
-        List<AgentDTOEntity> users = userService.findAllByRole(testRole);
+        int page = 1;
+        int size = 10;
+        String field = "id";
 
+        Pageable pageable = createPageable(page, size, field);
+        when(userRepository.findAllByRole(eq(testRole), any(Pageable.class))).thenAnswer(invocation -> {
+            Pageable receivedPageable = invocation.getArgument(1, Pageable.class);
+            if (receivedPageable.equals(pageable)) {
+                return Collections.singletonList(clientUser);
+            } else {
+                return Collections.emptyList();
+            }
+        });
+
+        // Execute
+        List<AgentDTOEntity> users = userService.findAllByRole(testRole, page, size, field);
+
+        // Verify
         assertEquals(1, users.size());
         assertEquals(agentDTOMapper.apply(clientUser), users.get(0));
-        verify(userRepository, times(1)).findByRole(testRole);
+        verify(userRepository, times(1)).findAllByRole(testRole, pageable);
+    }
+
+    private static Pageable createPageable(int page, int size, String field){
+        return PageRequest.of(page, size, Sort.by(field).and(Sort.by("id").descending()));
     }
 
 

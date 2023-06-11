@@ -11,9 +11,8 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import ph.cdo.backend.dto.mapper.impl.ClientDTOMapper;
-import ph.cdo.backend.dto.mapper.impl.TokenDTOMapper;
+import ph.cdo.backend.dto.mapper.impl.user.ClientDTOMapper;
+import ph.cdo.backend.dto.mapper.impl.user.TokenDTOMapper;
 import ph.cdo.backend.dto.records.ClientDTOEntity;
 import ph.cdo.backend.dto.records.TokenDTO;
 import ph.cdo.backend.entity.Token;
@@ -22,13 +21,10 @@ import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.enums.TokenType;
 import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.repository.TokenRepository;
-import ph.cdo.backend.service.ClientService;
-import ph.cdo.backend.service.impl.ClientServiceImpl;
+import ph.cdo.backend.service.impl.user.ClientServiceImpl;
 import ph.cdo.backend.service.impl.TokenServiceImpl;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 

@@ -12,26 +12,24 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import ph.cdo.backend.dto.records.ClientDTOEntity;
-import ph.cdo.backend.dto.mapper.impl.ClientDTOMapper;
+import ph.cdo.backend.dto.mapper.impl.user.ClientDTOMapper;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.exceptions.DuplicateEmailException;
-import ph.cdo.backend.exceptions.EmailErrorException;
 import ph.cdo.backend.repository.AdminRepository;
 import ph.cdo.backend.repository.AgentRepository;
 import ph.cdo.backend.repository.ClientRepository;
 import ph.cdo.backend.request.AuthenticationRequest;
-import ph.cdo.backend.request.ClientRegistrationRequest;
+import ph.cdo.backend.request.registration.ClientBasicRegistrationForm;
 import ph.cdo.backend.response.AuthenticationResponse;
-import ph.cdo.backend.response.ClientRegistrationResponse;
+import ph.cdo.backend.response.UserRegistrationResponse;
 import ph.cdo.backend.service.AdminService;
 import ph.cdo.backend.service.AgentService;
-import ph.cdo.backend.service.ClientService;
+import ph.cdo.backend.service.impl.user.ClientService;
 import ph.cdo.backend.service.EmailService;
 import ph.cdo.backend.service.impl.JwtService;
-import ph.cdo.backend.service.impl.AuthenticationServiceImpl;
+import ph.cdo.backend.service.impl.authentication.AuthenticationServiceImpl;
 
-import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -80,10 +78,11 @@ public class AuthenticationServiceTest {
     public void registerClient_ShouldThrowException_WhenEmailIsTaken() {
 
         // Arrange
-        ClientRegistrationRequest request = ClientRegistrationRequest.builder()
-                .email("test@example.com")
-                .password("Password!234")
-                .mobilePhone("123456789")
+        ClientBasicRegistrationForm request = ClientBasicRegistrationForm.builder()
+
+                        .email("test@example.com")
+                        .password("Password!234")
+                        .mobilePhone("123456789")
                 .invitationCode("123456")
                 .build();
 
@@ -96,10 +95,10 @@ public class AuthenticationServiceTest {
     @Test
     public void registerClient_ShouldReturnClientRegistrationResponse_WhenRegistrationIsSuccessful() throws MessagingException {
         // Arrange
-        ClientRegistrationRequest request = ClientRegistrationRequest.builder()
-                .email("joshuagarrysalcedo@gmail.com")
-                .password("Password!234")
-                .mobilePhone("123456789")
+        ClientBasicRegistrationForm request = ClientBasicRegistrationForm.builder()
+                                .email("joshuagarrysalcedo@gmail.com")
+                                .password("Password!234")
+                                .mobilePhone("123456789")
                 .invitationCode("123456")
                 .build();
         Client client = new Client();
@@ -108,14 +107,14 @@ public class AuthenticationServiceTest {
         client.setInvitationCode(request.getInvitationCode());
         client.setMobilePhone(request.getMobilePhone());
         when(clientService.isEmailTaken(any())).thenReturn(false);
-        when(clientService.save(any())).thenReturn(new ClientDTOEntity(1L, Role.Client, "joshuagarrysalcedo@gmail.com", "123456789", BigDecimal.valueOf(1000.0)));
+        when(clientService.save(any())).thenReturn(mock(ClientDTOEntity.class));
         when(clientRepository.findById(any())).thenReturn(Optional.of(client));
         when(jwtService.generateToken(any())).thenReturn("testToken");
 
 
 
         // Act
-        ClientRegistrationResponse response = authenticationService.registerClient(request);
+        UserRegistrationResponse response = authenticationService.registerClient(request);
 
         // Assert
         assertNotNull(response);

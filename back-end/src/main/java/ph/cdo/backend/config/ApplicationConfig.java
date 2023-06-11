@@ -2,8 +2,10 @@ package ph.cdo.backend.config;
 
 import com.github.javafaker.Faker;
 import com.google.gson.Gson;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -16,9 +18,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.thymeleaf.templatemode.TemplateMode;
-import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
-import org.thymeleaf.templateresolver.ITemplateResolver;
+
 import ph.cdo.backend.entity.user.Admin;
 import ph.cdo.backend.entity.user.Agent;
 import ph.cdo.backend.entity.user.Client;
@@ -29,8 +29,10 @@ import ph.cdo.backend.repository.ClientRepository;
 import java.util.Optional;
 import java.util.Properties;
 
-@Configuration
 
+
+@Configuration
+@Slf4j
 public class ApplicationConfig {
 
     @Qualifier("ClientRepository")
@@ -123,6 +125,15 @@ public class ApplicationConfig {
         return mailSender;
     }
 
+
+
+
+    @Bean
+    public CommandLineRunner commandLineRunner(){
+        return args -> {
+            log.info("APPLICATION HAS STARTED");
+        };
+    }
 
 
 }

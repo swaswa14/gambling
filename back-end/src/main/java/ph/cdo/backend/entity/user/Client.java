@@ -21,9 +21,8 @@ import java.util.Objects;
 @NoArgsConstructor
 @SuperBuilder
 @EnableJpaAuditing
-@Data
-
-
+@Getter
+@Setter
 public class Client extends User {
 
 

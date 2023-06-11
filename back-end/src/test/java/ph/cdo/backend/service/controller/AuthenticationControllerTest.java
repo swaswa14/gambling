@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
@@ -17,9 +18,10 @@ import ph.cdo.backend.dto.records.ClientDTOEntity;
 import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.enums.Role;
 import ph.cdo.backend.request.AuthenticationRequest;
-import ph.cdo.backend.request.ClientRegistrationRequest;
-import ph.cdo.backend.service.AuthenticationService;
-import ph.cdo.backend.service.ClientService;
+import ph.cdo.backend.request.registration.ClientBasicRegistrationForm;
+import ph.cdo.backend.service.impl.authentication.AuthenticationService;
+import ph.cdo.backend.service.impl.authentication.ClientAuthenticationService;
+import ph.cdo.backend.service.impl.user.ClientService;
 
 import java.math.BigDecimal;
 import java.net.URI;
@@ -41,13 +43,14 @@ public class AuthenticationControllerTest {
     private AuthenticationController controller;
 
     @Autowired
-    private AuthenticationService authenticationService;
+    @Qualifier("ClientAuthenticationService")
+    private ClientAuthenticationService authenticationService;
 
     @Autowired private  ClientService clientService;
 
 
     private TestRestTemplate testRestTemplate;
-    private ClientRegistrationRequest request;
+    private ClientBasicRegistrationForm request;
 
 
     @Autowired private PasswordEncoder passwordEncoder;
@@ -66,12 +69,14 @@ public class AuthenticationControllerTest {
 //                .build();
 
         //setting up request
-        request = ClientRegistrationRequest
+        request = ClientBasicRegistrationForm
                 .builder()
                 .invitationCode("123456")
                 .mobilePhone("123456789")
-                .email("joshuagarrysalcedo@gmail.com")
+                .email("joshuagarrysalcedo@yopmail.com")
                 .password("ValidPassword123!!")
+                .firstName("Joshua")
+                .lastName("Salcedo")
                 .build();
 
         this.gson = new Gson();
@@ -107,7 +112,7 @@ public class AuthenticationControllerTest {
         URI uri = new URI(baseUrl);
 
 
-        HttpEntity<ClientRegistrationRequest> myRequest = new HttpEntity<>(request, headers);
+        HttpEntity<ClientBasicRegistrationForm> myRequest = new HttpEntity<>(request, headers);
 
         ResponseEntity<Object> response = this.testRestTemplate.postForEntity(uri, myRequest, Object.class);
 
@@ -128,7 +133,7 @@ public class AuthenticationControllerTest {
         // Making email invalid
         request.setEmail("invalidEmail");
 
-        HttpEntity<ClientRegistrationRequest> myRequest = new HttpEntity<>(request, headers);
+        HttpEntity<ClientBasicRegistrationForm> myRequest = new HttpEntity<>(request, headers);
         ResponseEntity<Object> response = this.testRestTemplate.postForEntity(uri, myRequest, Object.class);
 
         System.out.println(response);
@@ -145,7 +150,7 @@ public class AuthenticationControllerTest {
         // Making password invalid
         request.setPassword("1234");
 
-        HttpEntity<ClientRegistrationRequest> myRequest = new HttpEntity<>(request, headers);
+        HttpEntity<ClientBasicRegistrationForm> myRequest = new HttpEntity<>(request, headers);
         ResponseEntity<Object> response = this.testRestTemplate.postForEntity(uri, myRequest, Object.class);
 
         System.out.println(response);
@@ -163,7 +168,7 @@ public class AuthenticationControllerTest {
         request.setEmail("invalidEmail");
         request.setPassword("1234");
 
-        HttpEntity<ClientRegistrationRequest> myRequest = new HttpEntity<>(request, headers);
+        HttpEntity<ClientBasicRegistrationForm> myRequest = new HttpEntity<>(request, headers);
         ResponseEntity<Object> response = this.testRestTemplate.postForEntity(uri, myRequest, Object.class);
 
         System.out.println(response);
@@ -186,7 +191,7 @@ public class AuthenticationControllerTest {
         URI uri = new URI(baseUrl);
         request.setEmail("swaswaEmail@gmail.com");
 
-        HttpEntity<ClientRegistrationRequest> myRequest = new HttpEntity<>(request, headers);
+        HttpEntity<ClientBasicRegistrationForm> myRequest = new HttpEntity<>(request, headers);
 
         ResponseEntity<Object> response = this.testRestTemplate.postForEntity(uri, myRequest, Object.class);
 

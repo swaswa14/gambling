@@ -1,8 +1,14 @@
 package ph.cdo.backend.service.impl.base_entity;
 
-import jakarta.mail.MessagingException;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import ph.cdo.backend.dto.DTOEntity;
-import ph.cdo.backend.dto.mapper.impl.UserDTOMapper;
+import ph.cdo.backend.dto.mapper.impl.user.UserDTOMapper;
 import ph.cdo.backend.entity.Token;
 import ph.cdo.backend.entity.base.User;
 import ph.cdo.backend.enums.Role;
@@ -10,21 +16,27 @@ import ph.cdo.backend.exceptions.*;
 import ph.cdo.backend.repository.noBean.UserRepository;
 import ph.cdo.backend.response.ResponseObject;
 import ph.cdo.backend.service.EmailService;
-import ph.cdo.backend.service.IUserService;
+import ph.cdo.backend.service.impl.user.IUserService;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 
 //todo ADD error handling !!!!
+@Slf4j
 
 public abstract class IUserServiceImpl<T extends User, R extends DTOEntity, S extends UserDTOMapper<T, R>> implements IUserService<T, R> {
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return userRepository.findByEmail(username).orElseThrow(()-> new EntityDoesNotExistsException(username));
+    }
 
     protected final S userDTOMapper;
 
     protected final UserRepository<T> userRepository; //TODO FIX Just name a bean!!
 
     protected final EmailService emailService;
+
 
     public IUserServiceImpl(S userDTOMapper, UserRepository<T> userRepository, EmailService emailService) {
         this.userDTOMapper = userDTOMapper;
@@ -49,13 +61,15 @@ public abstract class IUserServiceImpl<T extends User, R extends DTOEntity, S ex
     }
 
     @Override
-    public List<R> retrieve() {
-        return userRepository.findAll()
+    public List<R> retrieve(int page, int size, String field) {
+        return userRepository.findAll(createPageable(page,size,field))
                 .stream()
                 .map(userDTOMapper)
                 .collect(Collectors.toList());
 
     }
+
+
 
     @Override
     public R update(Long id, T t) {
@@ -121,9 +135,11 @@ public abstract class IUserServiceImpl<T extends User, R extends DTOEntity, S ex
     }
 
     @Override
-    public List<R> findAllEnabled() {
+    public List<R> findAllEnabled(int page, int size, String field) {
+
+
         return userRepository
-                .findByIsEnabledTrue()
+                .findAllByIsEnabledTrue(createPageable(page,size,field))
                 .stream()
                 .map(userDTOMapper)
                 .collect(Collectors.toList());
@@ -131,36 +147,37 @@ public abstract class IUserServiceImpl<T extends User, R extends DTOEntity, S ex
     }
 
     @Override
-    public List<R> findAllDisabled() {
+    public List<R> findAllDisabled(int page, int size, String field) {
         return userRepository
-                .findByIsEnabledFalse()
+                .findAllByIsEnabledFalse(createPageable(page,size,field))
                 .stream()
                 .map(userDTOMapper)
                 .collect(Collectors.toList());
     }
 
     @Override
-    public List<R> findAllLocked() {
+    public List<R> findAllLocked(int page, int size, String field) {
+
         return userRepository
-                .findByIsLockedTrue()
+                .findAllByIsLockedTrue(createPageable(page,size,field))
                 .stream()
                 .map(userDTOMapper)
                 .collect(Collectors.toList());
     }
 
     @Override
-    public List<R> findAllUnlocked() {
+    public List<R> findAllUnlocked(int page, int size, String field) {
         return userRepository
-                .findByIsLockedFalse()
+                .findAllByIsLockedFalse(createPageable(page,size,field))
                 .stream()
                 .map(userDTOMapper)
                 .collect(Collectors.toList());
     }
 
     @Override
-    public List<R> findAllByRole(Role role) {
+    public List<R> findAllByRole(Role role, int page, int size, String field) {
         return userRepository
-                .findByRole(role)
+                .findAllByRole(role, createPageable(page,size,field))
                 .stream()
                 .map(userDTOMapper)
                 .collect(Collectors.toList());
@@ -193,4 +210,11 @@ public abstract class IUserServiceImpl<T extends User, R extends DTOEntity, S ex
                 .mappedBody(objectMap)
                 .build();
     }
+
+
+    private static Pageable createPageable(int page, int size, String field){
+        return PageRequest.of(page, size, Sort.by(field).and(Sort.by("id").descending()));
+    }
+
+
 }
