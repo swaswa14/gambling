@@ -9,7 +9,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ph.cdo.backend.entity.user.Client;
 import ph.cdo.backend.request.AuthenticationRequest;
 import ph.cdo.backend.request.registration.AdminBasicRegistrationForm;
 import ph.cdo.backend.request.registration.AgentBasicRegistrationForm;

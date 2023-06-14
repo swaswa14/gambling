@@ -5,128 +5,107 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/registration/AdminRegistrationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/registration/AgentRegistrationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/registration/ClientRegistrationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/registration/UserRegistrationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/base/Name.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/registration/AdminBasicRegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/registration/AgentBasicRegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/registration/BasicRegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/registration/ClientBasicRegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/authentication/AdminAuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/authentication/AgentAuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/authentication/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/authentication/AuthenticationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/authentication/ClientAuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/validation_test/ClientBasicRegistrationFormValidationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/BackEndV2Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/config/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/BaseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/TransactionDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/details/AbstractUserDetailsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/details/AdminDetailsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/details/AgentDetailsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/details/ClientDetailsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/details/AbstractUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/details/AdminDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/details/AgentDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/details/ClientDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/AccountNotEnabledException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/AccountNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/ApiError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/CustomBadCredentialsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/CustomFieldErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/DuplicateEmailException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/EmailErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/EmptyListException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/EntityDoesNotExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/ErrorEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/FailedToDeleteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/InsufficientFundsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/InvalidDepositAmountException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/InvalidRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/InvalidValueException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/InvalidWithdrawalAmountException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/NullEntityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/SpecificFieldError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/TokenExpiredException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/UserRegistrationErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/ValidationFieldException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/EntityToDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/userdetails/AbstractUserDetailsEntityToDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/userdetails/AdminEntityDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/userdetails/AgentEntityDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/userdetails/ClientEntityDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/userdetails/TransactionDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/model/BasicInformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/model/Name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/model/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/model/TransactionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/AbstractUserDetailsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/AdminDetailsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/AgentDetailsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/BaseEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/ClientDetailsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/request/AdminRegistrationForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/request/AgentRegistrationForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/request/BasicRegistrationForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/request/ClientRegistrationForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/request/ClientTransactionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/AbstractUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/AgentDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/BaseEntityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/ClientDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/BaseEntityServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/user/AbstractUserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/user/AgentDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/user/ClientDetailsDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/utility/EntityUtilityBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/BackEndV2ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/repository/AdminDetailsRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/repository/AgentDetailsRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/repository/ClientDetailsRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/repository/UserJPARepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/service/AbstractDetailsServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/service/BaseEntityServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/service/ClientDetailsServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/service/TransactionServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/BackEndApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/BackEndApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/config/ApplicationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/AgentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/AgentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/entity/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/test/ExceptionThrowingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/test/ExceptionThrowingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/BaseEntityDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/base/BaseEntityDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/TransactionDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/base/TransactionDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/AdminDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/user/AdminDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/AgentDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/user/AgentDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/ClientDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/user/ClientDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/FieldErrorDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/user/FieldErrorDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/TokenDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/user/TokenDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/UserDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/mapper/impl/user/UserDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/records/AdminDTOEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/records/AdminDTOEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/records/AgentDTOEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/records/AgentDTOEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/records/ClientDTOEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/dto/records/ClientDTOEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/base/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/base/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/user/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/noBean/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/repository/noBean/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/ClientRegistrationRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/ClientRegistrationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/response/UserRegistrationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/AgentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/AgentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/AuthenticationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/user/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/user/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/user/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AgentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/user/AgentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ApiErrorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ApiErrorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/AuthenticationServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/user/ClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/TokenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/TransactionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/base_entity/BaseEntityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/base_entity/BaseEntityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/base_entity/IUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/service/impl/base_entity/IUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/AuthenticationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/controller/AuthenticationControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/data_jpa_test/AdminRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/data_jpa_test/AdminRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/spring_boot_test/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/spring_boot_test/ClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/AuthenticationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/AuthenticationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserAdminServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserAdminServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserAgentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserAgentServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TokenServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TokenServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TransactionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/TransactionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/BackEndApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/BackEndApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/config/ApplicationConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/AgentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/AgentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/UserController$UserDTPComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/entity/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/test/ExceptionThrowingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/test/ExceptionThrowingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/mapper/BaseEntityDTOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/mapper/TransactionDTOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/mapper/impl/AdminDTOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/mapper/impl/AgentDTOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/mapper/impl/ClientDTOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/mapper/impl/FieldErrorDTOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/mapper/impl/TokenDTOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/mapper/impl/UserDTOMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/records/AdminDTOEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/records/AdminDTOEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/records/AgentDTOEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/records/AgentDTOEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/records/ClientDTOEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/dto/records/ClientDTOEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/base/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/base/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/base/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/base/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin$AdminBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin$AdminBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin$AdminBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin$AdminBuilderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/entity/user/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/noBean/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/repository/noBean/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientRegistrationRequest$ClientRegistrationRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/request/ClientRegistrationRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/response/ClientRegistrationResponse$ClientRegistrationResponseBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/response/ClientRegistrationResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/AuthenticationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/ApiErrorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/ApiErrorServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/AuthenticationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/TransactionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/TransactionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/base_entity/BaseEntityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/base_entity/BaseEntityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/base_entity/IUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/service/impl/base_entity/IUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/controller/AuthenticationControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/controller/AuthenticationControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/data_jpa_test/AdminRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/data_jpa_test/AdminRepositoryTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/AuthenticationServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/AuthenticationServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserAdminServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserAdminServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserAgentServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserAgentServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserClientServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/IUserClientServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/TokenServiceTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/TokenServiceTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/TokenServiceTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/TokenServiceTest$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/TokenServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/TokenServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/TransactionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/unitTests/TransactionTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ph/cdo/backend/service/validation_test/ClientRegistrationRequestValidationTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +175,7 @@
     "git-widget-placeholder": "backend",
     "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/Users/admin/Documents/GitHub/gambling/back-end/src/test/java",
-    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/groupD/back-end",
+    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/gambling/back-end",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -363,6 +342,8 @@
       <workItem from="1686405282865" duration="5152000" />
       <workItem from="1686411816201" duration="8968000" />
       <workItem from="1686420810724" duration="37614000" />
+      <workItem from="1686641712853" duration="18372000" />
+      <workItem from="1686686232900" duration="8126000" />
     </task>
     <servers />
   </component>
@@ -430,11 +411,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/validation_test/ClientBasicRegistrationFormValidationTest.java</url>
           <line>18</line>
           <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ph/cdo/backend/entity/base/User.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ph/cdo/backend/service/unitTests/IUserClientServiceTest.java</url>
