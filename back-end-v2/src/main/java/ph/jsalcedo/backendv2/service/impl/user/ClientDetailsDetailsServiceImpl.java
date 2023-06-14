@@ -104,6 +104,15 @@ public  class ClientDetailsDetailsServiceImpl extends AbstractUserDetailsService
         return this.findById(id);
     }
 
+    @Override
+    public List<ClientDetailsDto> findClientsByAgentCode(String agentCode) {
+        return repository
+                .findAllByInvitationCode(agentCode)
+                .stream()
+                .map(mapper)
+                .collect(Collectors.toList());
+    }
+
 //    @Override
 //    public List<TransactionDto> getAllTransactions(Long id) {
 //        ClientDetails client = repository.findById(id).orElseThrow(()-> new EntityDoesNotExistsException(id));

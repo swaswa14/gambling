@@ -20,4 +20,6 @@ public interface ClientDetailsService extends AbstractUserDetailsService<ClientD
 
     void addTransaction(Long id, Transaction transaction);
 
+    List<ClientDetailsDto> findClientsByAgentCode(String agentCode);
+
 }

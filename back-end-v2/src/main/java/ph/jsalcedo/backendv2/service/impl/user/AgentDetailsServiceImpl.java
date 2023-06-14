@@ -7,24 +7,27 @@ import ph.jsalcedo.backendv2.dto.user.details.AgentDetailsDto;
 import ph.jsalcedo.backendv2.dto.user.details.ClientDetailsDto;
 import ph.jsalcedo.backendv2.entity.user.details.AgentDetails;
 import ph.jsalcedo.backendv2.mapper.userdetails.AgentEntityDtoMapper;
-import ph.jsalcedo.backendv2.repository.AbstractUserDetailsRepository;
 import ph.jsalcedo.backendv2.repository.AgentDetailsRepository;
+import ph.jsalcedo.backendv2.repository.ClientDetailsRepository;
 import ph.jsalcedo.backendv2.service.AgentDetailsService;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 @Service
 public class AgentDetailsServiceImpl extends AbstractUserDetailsServiceImpl<AgentDetails, AgentDetailsDto,
         AgentEntityDtoMapper<AgentDetails, AgentDetailsDto>> implements AgentDetailsService {
 
     protected  final AgentDetailsRepository repository;
+    protected final ClientDetailsRepository clientDetailsRepository;
     @Autowired
-    public AgentDetailsServiceImpl( AgentDetailsRepository repository,
-                                   @Qualifier("AgentEntityDtoMapper")   AgentEntityDtoMapper<AgentDetails, AgentDetailsDto> mapper) {
+    public AgentDetailsServiceImpl(AgentDetailsRepository repository,
+                                   @Qualifier("AgentEntityDtoMapper")   AgentEntityDtoMapper<AgentDetails, AgentDetailsDto> mapper, ClientDetailsRepository clientDetailsRepository) {
         super(repository, mapper);
         this.repository = repository;
+        this.clientDetailsRepository = clientDetailsRepository;
     }
 
     @Override
@@ -42,10 +45,7 @@ public class AgentDetailsServiceImpl extends AbstractUserDetailsServiceImpl<Agen
 
     }
 
-    @Override
-    public List<ClientDetailsDto> findClientsByAgentCode(String agentCode) {
-        return null;
-    }
+
 
     private String generateCode(){
         Random rnd = new Random();

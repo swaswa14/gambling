@@ -5,107 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9c548d-1100-42f1-803c-1635f7e77506" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/BackEndV2Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/BaseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/TransactionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/details/AbstractUserDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/details/AdminDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/details/AgentDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/dto/user/details/ClientDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/details/AbstractUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/details/AdminDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/details/AgentDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/details/ClientDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/AccountNotEnabledException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/AccountNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/ApiError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/CustomBadCredentialsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/CustomFieldErrorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/DuplicateEmailException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/EmailErrorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/EmptyListException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/EntityDoesNotExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/ErrorEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/FailedToDeleteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/InsufficientFundsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/InvalidDepositAmountException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/InvalidRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/InvalidValueException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/InvalidWithdrawalAmountException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/NullEntityException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/SpecificFieldError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/TokenExpiredException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/UserRegistrationErrorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/ValidationFieldException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/exceptions/validtion_group/Group8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/EntityToDtoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/userdetails/AbstractUserDetailsEntityToDtoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/userdetails/AdminEntityDtoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/userdetails/AgentEntityDtoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/userdetails/ClientEntityDtoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/mapper/userdetails/TransactionDtoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/model/BasicInformation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/model/Name.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/model/Phone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/model/TransactionType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/AbstractUserDetailsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/AdminDetailsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/AgentDetailsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/BaseEntityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/ClientDetailsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/TransactionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/request/AdminRegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/request/AgentRegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/request/BasicRegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/request/ClientRegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/request/ClientTransactionRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/AbstractUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/AgentDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/BaseEntityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/ClientDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/TransactionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/BaseEntityServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/TransactionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/user/AbstractUserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/user/AgentDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/user/ClientDetailsDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/utility/EntityUtilityBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/BackEndV2ApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/repository/AdminDetailsRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/repository/AgentDetailsRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/repository/ClientDetailsRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/repository/UserJPARepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/service/AbstractDetailsServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/service/BaseEntityServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/service/ClientDetailsServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end-v2/src/test/java/ph/jsalcedo/backendv2/service/TransactionServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/request/registration/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ph/cdo/backend/request/registration/UtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/details/ClientDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/entity/user/details/ClientDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/ClientDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/repository/ClientDetailsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/AgentDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/AgentDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/ClientDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/ClientDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/user/AgentDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/user/AgentDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/user/ClientDetailsDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end-v2/src/main/java/ph/jsalcedo/backendv2/service/impl/user/ClientDetailsDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ph/cdo/backend/controller/auth/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ph/cdo/backend/controller/auth/AuthenticationController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,12 +24,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Record" />
         <option value="HTML File" />
         <option value="Dockerfile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -156,44 +65,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "backend",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_directory_selection": "C:/Users/admin/Documents/GitHub/gambling/back-end/src/test/java",
-    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/gambling/back-end",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.smartKeys",
-    "spring.configuration.checksum": "a115a25065b29adfe4c0b73391cd5b3a",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;backend&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/admin/Documents/GitHub/gambling/back-end/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Documents/GitHub/gambling/back-end&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;a115a25065b29adfe4c0b73391cd5b3a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -203,26 +112,11 @@
       <recent name="ph.cdo.backend.service" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ph.cdo.backend.request.registration" />
       <recent name="ph.cdo.backend.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AuthenticationControllerTest">
-    <configuration name="AdminRepositoryTest.testSaveClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="back-end" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.data_jpa_test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.data_jpa_test" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.data_jpa_test.AdminRepositoryTest" />
-      <option name="METHOD_NAME" value="testSaveClient" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UtilTest.shouldBeThree">
     <configuration name="AuthenticationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
@@ -238,32 +132,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BackEndApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilTest.shouldBeFive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.*" />
+          <option name="PATTERN" value="ph.cdo.backend.request.registration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.BackEndApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.request.registration" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.request.registration.UtilTest" />
+      <option name="METHOD_NAME" value="shouldBeFive" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientBasicRegistrationFormValidationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UtilTest.shouldBeThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="back-end" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ph.cdo.backend.service.validation_test.*" />
+          <option name="PATTERN" value="ph.cdo.backend.request.registration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ph.cdo.backend.service.validation_test" />
-      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.service.validation_test.ClientBasicRegistrationFormValidationTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.request.registration" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.request.registration.UtilTest" />
+      <option name="METHOD_NAME" value="shouldBeThree" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilTest.shouldBeTwo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ph.cdo.backend.request.registration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ph.cdo.backend.request.registration" />
+      <option name="MAIN_CLASS_NAME" value="ph.cdo.backend.request.registration.UtilTest" />
+      <option name="METHOD_NAME" value="shouldBeTwo" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -293,20 +205,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.AdminRepositoryTest.testSaveClient" />
+      <item itemvalue="JUnit.UtilTest.shouldBeFive" />
+      <item itemvalue="JUnit.UtilTest.shouldBeThree" />
+      <item itemvalue="JUnit.UtilTest.shouldBeTwo" />
       <item itemvalue="JUnit.AuthenticationControllerTest" />
-      <item itemvalue="JUnit.BackEndApplicationTests" />
-      <item itemvalue="JUnit.ClientBasicRegistrationFormValidationTest" />
       <item itemvalue="JUnit.java in back-end" />
       <item itemvalue="Spring Boot.BackEndApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UtilTest.shouldBeThree" />
+        <item itemvalue="JUnit.UtilTest.shouldBeFive" />
+        <item itemvalue="JUnit.UtilTest.shouldBeTwo" />
         <item itemvalue="JUnit.AuthenticationControllerTest" />
         <item itemvalue="JUnit.java in back-end" />
-        <item itemvalue="JUnit.BackEndApplicationTests" />
-        <item itemvalue="JUnit.ClientBasicRegistrationFormValidationTest" />
-        <item itemvalue="JUnit.AdminRepositoryTest.testSaveClient" />
       </list>
     </recent_temporary>
   </component>
@@ -344,6 +256,7 @@
       <workItem from="1686420810724" duration="37614000" />
       <workItem from="1686641712853" duration="18372000" />
       <workItem from="1686686232900" duration="8126000" />
+      <workItem from="1686714071172" duration="1509000" />
     </task>
     <servers />
   </component>

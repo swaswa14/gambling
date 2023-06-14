@@ -10,5 +10,5 @@ public interface AgentDetailsService extends BaseEntityService<AgentDetails, Age
 
     AgentDetailsDto generateAgentCode(AgentDetails agentDetails); //todo impl
 
-    List<ClientDetailsDto> findClientsByAgentCode(String agentCode); //todo impl
+
 }

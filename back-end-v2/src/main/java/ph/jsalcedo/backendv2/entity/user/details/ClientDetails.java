@@ -2,6 +2,7 @@ package ph.jsalcedo.backendv2.entity.user.details;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -25,6 +26,8 @@ import java.util.List;
 public final class ClientDetails extends AbstractUserDetails{
     private BigDecimal balance;
 
+    @Nullable
+    private String invitationCode;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     @Builder.Default
